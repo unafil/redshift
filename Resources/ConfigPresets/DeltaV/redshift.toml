@@ -1,5 +1,6 @@
 [game]
-desc               = "A medium roleplay fork based around the mysterious Noösphere, featuring unique content, custom maps, new species and a revamped science department."
+hostname           = "[EN][MRP][18+] Redshift [US East]"
+desc               = "A social experiment."
 lobbyenabled       = true
 lobbyduration      = 240
 round_end_pacifist = true
@@ -14,22 +15,11 @@ mob_pushing = false
 
 # New players can't join a server without admins
 [game.panic_bunker]
-enabled = true
-min_overall_minutes = 240
-disable_with_admins = true
-enable_without_admins = true
-show_reason = true
-custom_reason = "You have not played on Delta-V long enough to connect to this server. Due to administrative reasons, new accounts cannot join a server with no game admins."
+enabled = false # whitelist only anyways
 
 [infolinks]
-discord    = "https://discord.gg/deltav"
-github     = "https://github.com/DeltaV-Station/Delta-v"
-website    = "https://www.deltav.gay/"
-wiki       = "https://wiki.deltav.gay/view/Main_Page"
-patreon    = "https://www.patreon.com/c/DeltaVSS14"
-bug_report = "https://github.com/DeltaV-Station/Delta-v/issues/new/choose"
-#forum      = "https://forum.deltav.gay/"
-appeal     = "https://discord.gg/deltav"
+github     = "https://github.com/unafil/redshift"
+bug_report = "https://github.com/unafil/redshift/issues/new/choose"
 
 [net]
 max_connections = 1024
@@ -38,6 +28,12 @@ tickrate = 30
 [vote]
 restart_required_ratio = 0.7
 preset_enabled = false
+
+[ooc]
+enable_during_round = true
+
+[whitelist]
+enabled = true
 
 [netres]
 limit    = 10.0
@@ -50,7 +46,7 @@ allow_multi_server_play = false
 min_players_sharing_connection = 2
 
 [server]
-id         = "deltav"
+#id         = "deltav"
 rules_file = "DeltaVRuleset"
 uptime_restart_minutes = 2880 # 48h
 
@@ -98,7 +94,7 @@ recall_turning_point = 0.33
 easy_mode = false # reclaimer can work on soul-ful bodies, mrp server
 
 [control]
-storage_limit = 2
+storage_limit = 5
 
 [nf14.respawn]
 time = 600
