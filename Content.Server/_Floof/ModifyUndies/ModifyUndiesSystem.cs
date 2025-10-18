@@ -1,5 +1,6 @@
 using System.Linq;
 using Content.Server.Humanoid;
+using Content.Shared._Redshift.Undies;
 using Content.Shared.DoAfter;
 using Content.Shared.FloofStation;
 using Content.Shared.Humanoid;
@@ -47,8 +48,15 @@ public sealed class ModifyUndiesSystem : EntitySystem
             return;
         if (!TryComp<HumanoidAppearanceComponent>(args.Target, out var humApp))
             return;
-        if (args.User != args.Target && _entMan.System<InventorySystem>().TryGetSlotEntity(args.Target, "jumpsuit", out _))
-            return; // mainly so people cant just spy on others undies *too* easily
+        // Begin Redshift Changes
+        //if (args.User != args.Target && _entMan.System<InventorySystem>().TryGetSlotEntity(args.Target, "jumpsuit", out _))
+        //    return; // mainly so people cant just spy on others undies *too* easily
+        BlockUndiesComponent? blockUndies = null;
+        if (_entMan.System<InventorySystem>().TryGetSlotEntity(args.Target, "jumpsuit", out var jumpsuitEnt))
+        {
+            blockUndies = Comp<BlockUndiesComponent>(jumpsuitEnt.Value);
+        }
+        // End Redshift Changes
         var isMine = args.User == args.Target;
         // okay go through their markings, and find all the undershirts and underwear markings
         // <marking_ID>, list:(localized name, bodypart enum, isvisible)
@@ -62,6 +70,10 @@ public sealed class ModifyUndiesSystem : EntitySystem
             var localizedName = Loc.GetString($"marking-{mProt.ID}");
             var partSlot = mProt.BodyPart;
             var isVisible = !humApp.HiddenMarkings.Contains(mProt.ID);
+            // Begin Redshift Changes - check for BlockUndies
+            if (blockUndies != null && blockUndies.BlockedLayers.Contains(partSlot))
+                continue;
+            // End Redshift Changes
             if (mProt.Sprites.Count < 1)
                 continue; // no sprites means its not visible means its kinda already off and you cant put it on
             var undieOrBra = partSlot switch
@@ -92,7 +104,7 @@ public sealed class ModifyUndiesSystem : EntitySystem
                     var doAfterArgs = new DoAfterArgs(
                         EntityManager,
                         args.User,
-                        2f,
+                        isMine ? 2f : 5f, // Redshift - takes longer for others to do
                         ev,
                         args.Target,
                         args.Target,
