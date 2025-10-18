@@ -78,8 +78,8 @@ public sealed class ModifyUndiesSystem : EntitySystem
                 continue; // no sprites means its not visible means its kinda already off and you cant put it on
             var undieOrBra = partSlot switch
             {
-                HumanoidVisualLayers.UndergarmentTop => new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/bra.png")), // RS - undergarment name swap
-                HumanoidVisualLayers.UndergarmentBottom => new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/underpants.png")), // RS - undergarment name swap
+                HumanoidVisualLayers.UndergarmentTop => new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/bra.png")), // Redshift - undergarment name swap
+                HumanoidVisualLayers.UndergarmentBottom => new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/underpants.png")), // Redshift - undergarment name swap
                 _ => new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/undies.png"))
             };
             // add the verb
