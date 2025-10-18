@@ -20,6 +20,7 @@
     hideLayersOnEquip:
     - Hair
     - Snout
+  - type: ModifyUndies # FLOOF CHANGE # RS - not sure why floof needed a redundant one here
   - type: Inventory
     femaleDisplacements:
       jumpsuit:
