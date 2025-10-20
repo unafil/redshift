@@ -99,3 +99,6 @@ storage_limit = 5
 
 [nf14.respawn]
 time = 600
+
+[rmc]
+emote_cooldown_seconds = 0

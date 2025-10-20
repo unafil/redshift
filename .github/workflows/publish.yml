@@ -43,6 +43,7 @@ jobs:
       run: dotnet run --project Content.Packaging client --no-wipe-release
 
     - name: Publish version
+      continue-on-error: true # Redshift - look i just want the changelogs
       run: Tools/publish_multi_request.py
       env:
         PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
