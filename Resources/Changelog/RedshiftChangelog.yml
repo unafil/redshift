@@ -1,0 +1,8 @@
+Entries:
+- author: unafil
+  changes:
+  - message: This changelog WILL be the death of me.
+    type: Tweak
+  id: 1759
+  time: '2025-10-21T18:39:12.0000000+00:00'
+  url: https://github.com/unafil/redshift/pull/7
