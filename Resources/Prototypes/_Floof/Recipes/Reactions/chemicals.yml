@@ -3,8 +3,8 @@
   id: Libidozenithizine
   impact: High
   reactants:
-    #Pomelustine: # Redshift - unobtainable
-    #  amount: 5
+    Pomelustine:
+      amount: 5
     Philterex:
       amount: 5
     Impedrezene:
@@ -13,3 +13,18 @@
       amount: 5
   products:
     Libidozenithizine: 5
+
+# Begin Redshift changes - new lustine real
+- type: reaction
+  id: Pomelustine
+  impact: Medium
+  reactants:
+    Sugar:
+      amount: 1
+    Hydroxide:
+      amount: 1
+    Ethanol:
+      amount: 1
+  products:
+    Pomelustine: 3
+# End Redshift changes

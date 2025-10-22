@@ -1,0 +1,54 @@
+# putting this in _Redshift because A) new name and B) plan to revamp functionality later on
+# not doing philterex YET until said functionality is in. its name is fine
+- type: reagent
+  id: Pomelustine # internal name stays the same so i dont have to fuck with recipies
+  name: reagent-name-lythraceaneum
+  group: Medicine
+  desc: reagent-desc-lythraceaneum
+  physicalDesc: reagent-physical-desc-milky
+  flavor: antifreeze # warm
+  color: "#898ec9"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.03
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-aphrodisiac-mild1"
+          - "reagent-effect-aphrodisiac-mild2"
+          - "reagent-effect-aphrodisiac-mild3"
+          - "reagent-effect-aphrodisiac-mild4"
+          - "reagent-effect-aphrodisiac-mild5"
+        probability: 0.035
+        conditions:
+          - !type:ReagentThreshold
+            max: 50
+      - !type:PopupMessage # Overdose causes nausea and vomiting
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-aphrodisiac-mildoverdose"
+        probability: 0.06
+        conditions:
+          - !type:ReagentThreshold
+            min: 50
+      - !type:Drunk
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+        probability: 0.05
+      - !type:PopupMessage
+        type: Local
+        visualType: Small
+        messages:
+          - "reagent-effect-aphrodisiac-fade" # A decent chance to notify the player when their meds run out, but could happen silently.
+        probability: 0.35
+        conditions:
+          - !type:ReagentThreshold
+            max: 0.1

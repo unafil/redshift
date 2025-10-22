@@ -1,11 +1,11 @@
 - type: reagent
-  id: Libidozenithizine
-  name: reagent-name-libidozenithizine
+  id: Libidozenithizine # look i. just. i dont really. care
+  name: reagent-name-panaxamine
   group: Narcotics
-  desc: reagent-desc-libidozenithizine
-  physicalDesc: reagent-physical-desc-milky
-  flavor: spooky
-  color: "#c90084"
+  desc: reagent-desc-panaxamine
+  physicalDesc: reagent-physical-desc-crystalline
+  flavor: bitter
+  color: "#f0a3ff"
   metabolisms:
     Narcotic:
       metabolismRate : 0.03
