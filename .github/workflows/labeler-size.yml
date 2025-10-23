@@ -1,5 +1,8 @@
 name: "Labels: Size"
 on: pull_request_target
+permissions: # Redshift - waughhh
+  contents: read
+  pull-requests: write
 jobs:
   size-label:
     runs-on: ubuntu-latest
