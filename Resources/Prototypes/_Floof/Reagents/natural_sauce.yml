@@ -29,7 +29,13 @@
   name: reagent-name-nat-lube
   group: NaturalSauce
   desc: reagent-desc-nat-lube
-  slippery: true
+  # Begin Redshift changes - apparently slippery got refactored
+  #slippery: true
+  slipData:
+    paralyzeTime: 0.5
+    launchForwardsMultiplier: 1.2
+    requiredSlipSpeed: 1
+  # End Redshift changes - apparently slippery got refactored
   physicalDesc: reagent-physical-desc-shiny
   flavor: funny
   color: "#d6d6d6"
@@ -45,6 +51,8 @@
       volume: 4
   tileReactions:
   - !type:SpillTileReaction
-    paralyzeTime: 0.5
-    launchForwardsMultiplier: 1.2
-    requiredSlipSpeed: 1
+    # Begin Redshift changes - slip refactor
+    #paralyzeTime: 0.5
+    #launchForwardsMultiplier: 1.2
+    #requiredSlipSpeed: 1
+    # End Redshift changes - slip refactor
