@@ -346,6 +346,8 @@ namespace Content.Server.Connection
             // TODO: replace this with a whitelist config prototype with a connected whitelisted players condition
             if (_cfg.GetCVar(CCVars.WhitelistEnabled))
             {
+                // Begin Redshift changes - make whitelist actually functional
+                /*
                 var connectedPlayers = _plyMgr.PlayerCount;
                 var connectedWhitelist = _connectedWhitelistedPlayers.Count;
 
@@ -362,7 +364,12 @@ namespace Content.Server.Connection
                         msg += "\n" + Loc.GetString("whitelist-playercount-invalid", ("min", slots), ("max", _cfg.GetCVar(CCVars.SoftMaxPlayers)));
 
                     return (ConnectionDenyReason.Whitelist, msg, null);
+                }*/
+                if (await _db.GetWhitelistStatusAsync(userId) == false && adminData is null)
+                {
+                    return (ConnectionDenyReason.Whitelist, Loc.GetString("whitelist-not-whitelisted-redshift"), null);
                 }
+                // End Redshift changes - make whitelist actually functional
             }
 
             // ALWAYS keep this at the end, to preserve the API limit.
