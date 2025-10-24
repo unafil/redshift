@@ -33,8 +33,10 @@ preset_enabled = false
 [ooc]
 enable_during_round = true
 
+# redshift whitelist wauhghh
 [whitelist]
 enabled = true
+prototype_list = basicWhitelist
 
 [netres]
 limit    = 10.0
