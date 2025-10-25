@@ -12,24 +12,28 @@ namespace Content.Shared._Redshift.Sex.Components;
 public sealed partial class GenitalComponent : Component
 {
     [DataField]
-    public string SolutionName;
+    public string SolutionName = "genital";
 
     [DataField, AutoNetworkedField]
-    public ProtoId<ReagentPrototype> ReagentId;
+    public ProtoId<ReagentPrototype> ReagentId = "Cum";
 
     [DataField, AutoNetworkedField]
     public float MaxVolume = 30f;
 
+    [DataField, AutoNetworkedField]
+    public TimeSpan WaveDelay = TimeSpan.FromSeconds(1);
+
+    [ViewVariables]
     public Entity<SolutionComponent>? Solution = null;
 
     [DataField, AutoNetworkedField]
-    public float QuantityPerUpdate = 5;
+    public float QuantityPerUpdate = 1;
 
     [DataField, AutoNetworkedField]
-    public TimeSpan UpdateRate = TimeSpan.FromSeconds(1);
+    public TimeSpan UpdateRate = TimeSpan.FromSeconds(5);
 
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
     [AutoNetworkedField]
     [AutoPausedField]
-    public TimeSpan? NextUpdateTime;
+    public TimeSpan? NextUpdateTime = TimeSpan.FromSeconds(0); // initialize this or face the wrath of god
 }

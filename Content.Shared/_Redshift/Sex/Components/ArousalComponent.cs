@@ -4,7 +4,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 namespace Content.Shared._Redshift.Sex.Components;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(fieldDeltas: true)] // fieldDeltas required for DirtyField
-public sealed partial class ArousalComponent : Component
+public sealed partial class ArousalComponent : Component // todo: un-network like most of this shit it's all on the server anyways
 {
     [DataField]
     [AutoNetworkedField]
@@ -30,4 +30,9 @@ public sealed partial class ArousalComponent : Component
     public TimeSpan? ClimaxTime;
 
     // todo 2: WaveTime for times between emissions, store WaveDelay in GenitalComponent for le modularity
+    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
+    public TimeSpan? WaveTime;
+
+    [DataField]
+    public GenitalComponent? Genital = null; // cache this
 }
