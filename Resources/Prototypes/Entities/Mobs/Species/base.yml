@@ -307,6 +307,7 @@
   - type: FireVisuals
     alternateState: Standing
   - type: LayingDown # WD EDIT
+  - type: Arousal # Redshift - :)
 
 - type: entity
   save: false

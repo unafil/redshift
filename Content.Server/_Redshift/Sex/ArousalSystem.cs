@@ -6,6 +6,7 @@ using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Inventory;
 using Content.Shared.Jittering;
+using Content.Shared.Mind.Components;
 using Content.Shared.Popups;
 using Content.Shared.Stunnable;
 using Content.Shared.Verbs;
@@ -34,9 +35,20 @@ public sealed class ArousalSystem : EntitySystem
         SubscribeLocalEvent<ArousalComponent, ArousalDoAfterEvent>(OnDoAfter);
     }
 
+    public void ModifyArousal(Entity<ArousalComponent> ent, float amount)
+    {
+        ent.Comp.CurrentArousal = Math.Clamp(ent.Comp.CurrentArousal + amount, 0, ent.Comp.MaxArousal);
+
+        DirtyField(ent, ent.Comp, nameof(ArousalComponent.CurrentArousal));
+    }
+
     private void AddVerb(Entity<ArousalComponent> ent, ref GetVerbsEvent<InnateVerb> args)
     {
         if (!args.CanInteract) // todo: tie a args.User != args.Target check to a consent system (once we have one)
+            return;
+
+        // no.
+        if (!HasComp<ActorComponent>(ent) || TryComp<MindContainerComponent>(ent, out var mind) && !mind.HasMind)
             return;
 
         // truly an efficient way to check this! yes!
@@ -124,6 +136,11 @@ public sealed class ArousalSystem : EntitySystem
 
         while (arousalQuery.MoveNext(out var uid, out var arousal)) // the update loop of pain and suffering
         {
+
+            // NO.
+            if (!HasComp<ActorComponent>(uid) || TryComp<MindContainerComponent>(uid, out var mind) && !mind.HasMind)
+                continue;
+
             if (arousal.ClimaxTime == null && arousal.CurrentArousal >= arousal.MaxArousal)
             {
                 arousal.ClimaxTime = _timing.CurTime + arousal.ClimaxDelay;

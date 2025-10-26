@@ -49,3 +49,6 @@
         conditions:
           - !type:ReagentThreshold
             max: 0.1
+      - !type:ModifyArousal
+        amount: 6
+        maxThreshold: 95

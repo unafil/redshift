@@ -5,11 +5,10 @@
   category: Genitals
   cost: 1
   special:
-  - !type:AddComponentSpecial
-    components:
-    - type: Genital # i swear to god if i cant use custom shit when adding this
-      UseVerbText: genital-cock-use-verb
-      ReagentId: Cum
+  components:
+  - type: Genital
+    useVerbText: genital-cock-use-verb
+    reagentId: Cum
 
 - type: trait
   id: Pussy
@@ -17,9 +16,7 @@
   description: trait-genital-pussy-desc
   category: Genitals
   cost: 1
-  special:
-  - !type:AddComponentSpecial
-    components:
-    - type: Genital
-      UseVerbText: genital-pussy-use-verb
-      ReagentId: NaturalLubricant
+  components:
+  - type: Genital
+    useVerbText: genital-pussy-use-verb
+    reagentId: NaturalLubricant

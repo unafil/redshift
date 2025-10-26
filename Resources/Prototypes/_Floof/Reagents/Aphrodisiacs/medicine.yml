@@ -75,3 +75,6 @@
         conditions:
           - !type:ReagentThreshold
             max: 0.1
+      - !type:ModifyArousal # Redshift
+        amount: 4
+        maxThreshold: 65
