@@ -12,6 +12,9 @@ namespace Content.Shared._Redshift.Sex.Components;
 public sealed partial class GenitalComponent : Component
 {
     [DataField]
+    public string UseVerbText = "straight up jork it"; // :godo:
+
+    [DataField]
     public string SolutionName = "genital";
 
     [DataField, AutoNetworkedField]
