@@ -1,6 +1,8 @@
+using Content.Shared._Redshift.Sex;
 using Content.Shared._Redshift.Sex.Components;
 using Content.Shared._Redshift.Sex.Events;
 using Content.Shared._Redshift.Undies;
+using Content.Shared.Alert;
 using Content.Shared.DoAfter;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
@@ -17,7 +19,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Server._Redshift.Sex;
 
-public sealed class ArousalSystem : EntitySystem
+public sealed class ArousalSystem : SharedArousalSystem
 {
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
@@ -35,16 +37,12 @@ public sealed class ArousalSystem : EntitySystem
         SubscribeLocalEvent<ArousalComponent, ArousalDoAfterEvent>(OnDoAfter);
     }
 
-    public void ModifyArousal(Entity<ArousalComponent> ent, float amount)
-    {
-        ent.Comp.CurrentArousal = Math.Clamp(ent.Comp.CurrentArousal + amount, 0, ent.Comp.MaxArousal);
-
-        DirtyField(ent, ent.Comp, nameof(ArousalComponent.CurrentArousal));
-    }
-
     private void AddVerb(Entity<ArousalComponent> ent, ref GetVerbsEvent<InnateVerb> args)
     {
-        if (!args.CanInteract) // todo: tie a args.User != args.Target check to a consent system (once we have one)
+        // so i may be misunderstanding things here, only entities with ArousalComponent can SEE the verb? maybe
+        // i mean it's probably fine
+        // oh okay so it's InnateVerb. we should not be using InnateVerb because it's relayed to inventory items (see: hands)
+        if (!args.CanInteract || args.Target != ent.Owner) // todo: tie a args.User != args.Target check to a consent system (once we have one)
             return;
 
         // no.
@@ -122,7 +120,8 @@ public sealed class ArousalSystem : EntitySystem
             return;
 
         // okay maybe bring back the Modify/SetArousal function this is a bit ridiculous atp
-        ent.Comp.CurrentArousal += ent.Comp.StimulusArousalGain;
+        //ent.Comp.CurrentArousal += ent.Comp.StimulusArousalGain;
+        ModifyArousal(ent, ent.Comp.StimulusArousalGain);
 
         args.Handled = true;
     }
@@ -177,7 +176,8 @@ public sealed class ArousalSystem : EntitySystem
 
                 _jitter.DoJitter(uid, TimeSpan.FromSeconds(0.5f), true, 4f, 2f); // arbitrary values my beloved
 
-                arousal.CurrentArousal /= 2;
+                //arousal.CurrentArousal /= 2;
+                SetArousal((uid, arousal), arousal.CurrentArousal/2);
 
                 if (!empty || arousal.CurrentArousal > 20) // 20 being the threshold where an icon (ideally) appears
                 {
@@ -191,7 +191,8 @@ public sealed class ArousalSystem : EntitySystem
 
             if (arousal.DecayTime <= now)
             {
-                arousal.CurrentArousal = Math.Clamp(arousal.CurrentArousal -= arousal.BaseDecayRate, 0, arousal.MaxArousal);
+                //arousal.CurrentArousal = Math.Clamp(arousal.CurrentArousal -= arousal.BaseDecayRate, 0, arousal.MaxArousal);
+                ModifyArousal((uid, arousal), -arousal.BaseDecayRate);
                 arousal.DecayTime += arousal.DecayDelay;
             }
         }

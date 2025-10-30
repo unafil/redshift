@@ -1,4 +1,6 @@
+using Content.Shared.Alert;
 using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Shared._Redshift.Sex.Components;
@@ -16,7 +18,7 @@ public sealed partial class ArousalComponent : Component // todo: un-network lik
 
     [DataField]
     [AutoNetworkedField]
-    public float BaseDecayRate = 0.1f;
+    public float BaseDecayRate = 0.3f;
 
     [DataField]
     public float StimulusArousalGain = 15f; // maybe move to genital
@@ -44,4 +46,7 @@ public sealed partial class ArousalComponent : Component // todo: un-network lik
 
     [DataField]
     public GenitalComponent? Genital = null; // cache this
+
+    [DataField]
+    public ProtoId<AlertPrototype> ArousalAlert = "Arousal";
 }

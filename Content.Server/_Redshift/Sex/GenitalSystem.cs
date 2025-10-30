@@ -74,9 +74,9 @@ public sealed class GenitalSystem : EntitySystem
         var removedReagentSolution = _solutionContainer.SplitSolution(sol.Value, emissionAmount);
         emissionSolution.AddSolution(removedReagentSolution, _prototypes);
 
-        if (_puddle.TrySpillAt(ent, emissionSolution, out var puddle))
+        if (_puddle.TrySpillAt(ent, emissionSolution, out var puddle, true)) // sound is a bit buggy. todo: un-bug it
         {
-            _forensics.TransferDna(puddle, ent, false); // detective work gonna go crazy
+            _forensics.TransferDna(puddle, ent.Owner, false); // detective work gonna go crazy
         }
 
         return sol.Value.Comp.Solution.Volume > 0; // if empty, signal to ArousalSystem we're done

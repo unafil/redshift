@@ -2,6 +2,7 @@ using Content.Server.Fluids.EntitySystems;
 using Content.Shared._Redshift.Sex.Components;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._Redshift.Sex;
 
@@ -9,6 +10,7 @@ namespace Content.Server._Redshift.Sex;
 public sealed class SetArousalCommand : IConsoleCommand
 {
     [Dependency] private readonly IEntityManager _entities = default!;
+    [Dependency] private readonly ArousalSystem _arousal = default!;
 
     public string Command => "setarousal";
     public string Description => Loc.GetString("set-arousal-command-description");
@@ -31,6 +33,6 @@ public sealed class SetArousalCommand : IConsoleCommand
             return;
         }
 
-        comp.CurrentArousal = Math.Clamp(val, 0, comp.MaxArousal);
+        _arousal.SetArousal((shell.Player.AttachedEntity.Value, comp), val);
     }
 }
