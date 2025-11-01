@@ -62,10 +62,7 @@ public sealed class ArousalSystem : SharedArousalSystem
         if (_entMan.System<InventorySystem>().TryGetSlotEntity(args.Target, "jumpsuit", out var jumpsuitEnt) && TryComp<BlockUndiesComponent>(jumpsuitEnt, out var block))
         {
             if (block.BlockedLayers.Contains(HumanoidVisualLayers.UndergarmentBottom))
-            {
-                Log.Info("bottom is blocked, return");
                 return;
-            }
         }
 
         var verbText = "Rub"; // no genital case
