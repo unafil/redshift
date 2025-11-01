@@ -2,7 +2,6 @@ using Content.Shared._Redshift.Sex;
 using Content.Shared._Redshift.Sex.Components;
 using Content.Shared._Redshift.Sex.Events;
 using Content.Shared._Redshift.Undies;
-using Content.Shared.Alert;
 using Content.Shared.DoAfter;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
@@ -33,15 +32,12 @@ public sealed class ArousalSystem : SharedArousalSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<ArousalComponent, GetVerbsEvent<InnateVerb>>(AddVerb);
+        SubscribeLocalEvent<ArousalComponent, GetVerbsEvent<Verb>>(AddVerb);
         SubscribeLocalEvent<ArousalComponent, ArousalDoAfterEvent>(OnDoAfter);
     }
 
-    private void AddVerb(Entity<ArousalComponent> ent, ref GetVerbsEvent<InnateVerb> args)
+    private void AddVerb(Entity<ArousalComponent> ent, ref GetVerbsEvent<Verb> args)
     {
-        // so i may be misunderstanding things here, only entities with ArousalComponent can SEE the verb? maybe
-        // i mean it's probably fine
-        // oh okay so it's InnateVerb. we should not be using InnateVerb because it's relayed to inventory items (see: hands)
         if (!args.CanInteract || args.Target != ent.Owner) // todo: tie a args.User != args.Target check to a consent system (once we have one)
             return;
 
@@ -56,11 +52,10 @@ public sealed class ArousalSystem : SharedArousalSystem
             {
                 foreach (var marking in markings)
                 {
-                    if (!humApp.HiddenMarkings.Contains(marking.MarkingId))
-                    {
-                        Log.Info("HiddenMarkings did NOT contain " + marking.MarkingId);
-                        return;
-                    }
+                    if (humApp.HiddenMarkings.Contains(marking.MarkingId))
+                        continue;
+
+                    return;
                 }
             }
         }
@@ -79,16 +74,16 @@ public sealed class ArousalSystem : SharedArousalSystem
         if (ent.Comp.Genital == null && TryComp<GenitalComponent>(args.Target, out var gen))
         {
             ent.Comp.Genital = gen; // good a time as any to cache this
-            verbText = ent.Comp.Genital.UseVerbText;
+            verbText = ent.Comp.Genital.LocalizedUseVerbText;
         }
         else if (ent.Comp.Genital != null)
         {
-            verbText = ent.Comp.Genital.UseVerbText;
+            verbText = ent.Comp.Genital.LocalizedUseVerbText;
         }
 
         var user = args.User;
 
-        InnateVerb verb = new()
+        Verb verb = new()
         {
             Act = () => AttemptDoAfter(ent, user),
             Text = verbText,
@@ -101,7 +96,8 @@ public sealed class ArousalSystem : SharedArousalSystem
     private void AttemptDoAfter(Entity<ArousalComponent> ent, EntityUid userUid)
     {
         // todo: put some string here pulled from the genital
-
+        // frankly a massive to-do, need to write strings for all variations of observer/internal/external/target/whatever
+        // and also have a sane way to serialize it all
         _popup.PopupEntity("oooh we jorkin it oughhh", ent, ent, PopupType.Medium);
 
         var doargs = new DoAfterArgs(EntityManager, userUid, 4f, new ArousalDoAfterEvent(), ent, ent)
@@ -119,8 +115,6 @@ public sealed class ArousalSystem : SharedArousalSystem
         if (args.Cancelled || args.Handled)
             return;
 
-        // okay maybe bring back the Modify/SetArousal function this is a bit ridiculous atp
-        //ent.Comp.CurrentArousal += ent.Comp.StimulusArousalGain;
         ModifyArousal(ent, ent.Comp.StimulusArousalGain);
 
         args.Handled = true;
@@ -135,19 +129,18 @@ public sealed class ArousalSystem : SharedArousalSystem
 
         while (arousalQuery.MoveNext(out var uid, out var arousal)) // the update loop of pain and suffering
         {
-
             // NO.
             if (!HasComp<ActorComponent>(uid) || TryComp<MindContainerComponent>(uid, out var mind) && !mind.HasMind)
                 continue;
 
-            if (arousal.ClimaxTime == null && arousal.CurrentArousal >= arousal.MaxArousal)
+            if (arousal.ClimaxTime == null && arousal.CurrentArousal >= arousal.MaxArousal) // climax countdown start
             {
                 arousal.ClimaxTime = _timing.CurTime + arousal.ClimaxDelay;
                 _popup.PopupEntity(Loc.GetString("arousal-popup-climax-start-internal"), uid, Filter.Entities(uid), true, PopupType.Medium);
                 _popup.PopupEntity(Loc.GetString("arousal-popup-climax-start-external", ("target", uid)), uid, Filter.PvsExcept(uid), true, PopupType.Small);
                 _jitter.DoJitter(uid, arousal.ClimaxDelay, true, 0.5f, 6f);
             }
-            if (arousal.ClimaxTime != null && arousal.ClimaxTime <= now)
+            if (arousal.ClimaxTime != null && arousal.ClimaxTime <= now) // climax start
             {
                 arousal.WaveTime = now;
                 arousal.ClimaxTime = null;
@@ -160,8 +153,7 @@ public sealed class ArousalSystem : SharedArousalSystem
                     arousal.Genital = gen;
                 }
             }
-
-            if (arousal.WaveTime != null && arousal.WaveTime <= now)
+            if (arousal.WaveTime != null && arousal.WaveTime <= now) // climax "wave"
             {
                 var empty = true;
                 if (arousal.Genital != null)
@@ -176,10 +168,9 @@ public sealed class ArousalSystem : SharedArousalSystem
 
                 _jitter.DoJitter(uid, TimeSpan.FromSeconds(0.5f), true, 4f, 2f); // arbitrary values my beloved
 
-                //arousal.CurrentArousal /= 2;
                 SetArousal((uid, arousal), arousal.CurrentArousal/2);
 
-                if (!empty || arousal.CurrentArousal > 20) // 20 being the threshold where an icon (ideally) appears
+                if (!empty || arousal.CurrentArousal > 20) // 20 being the threshold where an icon appears
                 {
                     arousal.WaveTime = now + (arousal.Genital != null ? arousal.Genital.WaveDelay : TimeSpan.FromSeconds(1f));
                 }
@@ -189,9 +180,8 @@ public sealed class ArousalSystem : SharedArousalSystem
                 }
             }
 
-            if (arousal.DecayTime <= now)
+            if (arousal.DecayTime <= now) // natural decay
             {
-                //arousal.CurrentArousal = Math.Clamp(arousal.CurrentArousal -= arousal.BaseDecayRate, 0, arousal.MaxArousal);
                 ModifyArousal((uid, arousal), -arousal.BaseDecayRate);
                 arousal.DecayTime += arousal.DecayDelay;
             }

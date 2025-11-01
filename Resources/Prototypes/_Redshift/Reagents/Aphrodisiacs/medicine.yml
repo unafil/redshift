@@ -55,3 +55,22 @@
       - !type:ModifyArousal
         amount: 3
         maxThreshold: 35
+
+- type: reagent
+  id: Drivinine
+  name: reagent-name-drivinine
+  group: Medicine
+  desc: reagent-desc-drivinine
+  physicalDesc: reagent-physical-desc-tart
+  flavor: tingly
+  color: "#40c77f"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.5
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: -2
+      - !type:ModifyArousal
+        amount: 1

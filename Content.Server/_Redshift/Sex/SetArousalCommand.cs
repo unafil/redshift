@@ -1,8 +1,7 @@
-using Content.Server.Fluids.EntitySystems;
+using Content.Server.Administration.Managers;
 using Content.Shared._Redshift.Sex.Components;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
-using Robust.Shared.Prototypes;
 
 namespace Content.Server._Redshift.Sex;
 
@@ -10,7 +9,8 @@ namespace Content.Server._Redshift.Sex;
 public sealed class SetArousalCommand : IConsoleCommand
 {
     [Dependency] private readonly IEntityManager _entities = default!;
-    [Dependency] private readonly ArousalSystem _arousal = default!;
+    [Dependency] private readonly IEntitySystemManager _entity = default!;
+    [Dependency] private readonly IAdminManager _adminManager = default!;
 
     public string Command => "setarousal";
     public string Description => Loc.GetString("set-arousal-command-description");
@@ -27,12 +27,14 @@ public sealed class SetArousalCommand : IConsoleCommand
             return;
         }
 
-        if (val < comp.CurrentArousal)
+        if (val < comp.CurrentArousal && _adminManager.GetAdminData(shell.Player, includeDeAdmin: true) == null) // admins can set it lower (we trust them)
         {
             shell.WriteLine(Loc.GetString("set-arousal-command-failure-cannot-lower"));
             return;
         }
 
-        _arousal.SetArousal((shell.Player.AttachedEntity.Value, comp), val);
+        var arousalSys = _entity.GetEntitySystem<ArousalSystem>(); // can't use normal dependencies in interfaces
+
+        arousalSys.SetArousal((shell.Player.AttachedEntity.Value, comp), val);
     }
 }

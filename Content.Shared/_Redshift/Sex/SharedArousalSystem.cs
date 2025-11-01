@@ -19,8 +19,9 @@ public abstract class SharedArousalSystem : EntitySystem
     {
         ent.Comp.CurrentArousal = Math.Clamp(amount, 0, ent.Comp.MaxArousal);
 
-        DirtyField(ent, ent.Comp, nameof(ArousalComponent.CurrentArousal));
-
+        //this is in shared but it SHOULD only ever be called from the server
+        //so who cares about dirtying, i'm not networking the components for this
+        //DirtyField(ent, ent.Comp, nameof(ArousalComponent.CurrentArousal));
 
         if (ent.Comp.CurrentArousal > 20)
         {

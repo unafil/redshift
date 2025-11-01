@@ -1,0 +1,10 @@
+- type: reaction
+  id: Drivinine
+  impact: Medium
+  reactants:
+    Dylovene:
+      amount: 1
+    Pomelustine:
+      amount: 1
+  products:
+    Drivinine: 3

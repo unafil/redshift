@@ -4,15 +4,11 @@ using Content.Shared._Redshift.Sex.Components;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.FixedPoint;
-using Robust.Shared.Physics.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
 namespace Content.Server._Redshift.Sex;
 
-/// <summary>
-/// This handles...
-/// </summary>
 public sealed class GenitalSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
@@ -32,10 +28,7 @@ public sealed class GenitalSystem : EntitySystem
     private void OnCompInit(Entity<GenitalComponent> ent, ref ComponentStartup args)
     {
         if (!_solutionContainer.EnsureSolution(ent.Owner, ent.Comp.SolutionName, out var solution, ent.Comp.MaxVolume))
-        {
-            Log.Info("Failed to ensure solution!");
             return;
-        }
 
         solution.AddReagent(ent.Comp.ReagentId, ent.Comp.MaxVolume - solution.Volume);
     }
@@ -49,7 +42,7 @@ public sealed class GenitalSystem : EntitySystem
 
         while (queryGenital.MoveNext(out var uid, out var genital))
         {
-            if (now < genital.NextUpdateTime) // evil ass null check (shared solutioncontainer refactor wacky)
+            if (now < genital.NextUpdateTime)
                 continue;
 
             if (!_solutionContainer.ResolveSolution(uid, genital.SolutionName, ref genital.Solution))
@@ -74,7 +67,9 @@ public sealed class GenitalSystem : EntitySystem
         var removedReagentSolution = _solutionContainer.SplitSolution(sol.Value, emissionAmount);
         emissionSolution.AddSolution(removedReagentSolution, _prototypes);
 
-        if (_puddle.TrySpillAt(ent, emissionSolution, out var puddle, true)) // sound is a bit buggy. todo: un-bug it
+        // TrySpillAt fails randomly, not entirely sure why. not vital so i don't particularly care enough to fix it
+        // todo (for future gamers): try to fix it
+        if (_puddle.TrySpillAt(ent, emissionSolution, out var puddle, true))
         {
             _forensics.TransferDna(puddle, ent.Owner, false); // detective work gonna go crazy
         }
