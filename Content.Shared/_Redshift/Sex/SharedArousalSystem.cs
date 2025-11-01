@@ -3,9 +3,6 @@ using Content.Shared.Alert;
 
 namespace Content.Shared._Redshift.Sex;
 
-/// <summary>
-/// This handles...
-/// </summary>
 public abstract class SharedArousalSystem : EntitySystem
 {
     [Dependency] private readonly AlertsSystem _alerts = default!;

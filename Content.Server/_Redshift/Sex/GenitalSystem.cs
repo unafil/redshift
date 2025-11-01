@@ -17,7 +17,6 @@ public sealed class GenitalSystem : EntitySystem
     [Dependency] private readonly PuddleSystem _puddle = default!;
     [Dependency] private readonly ForensicsSystem _forensics = default!;
 
-    /// <inheritdoc/>
     public override void Initialize()
     {
         base.Initialize();
