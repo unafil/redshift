@@ -4,7 +4,6 @@
   description: trait-genital-cock-desc
   category: Genitals
   cost: 1
-  special:
   components:
   - type: Genital
     useVerbText: genital-cock-use-verb
