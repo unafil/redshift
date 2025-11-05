@@ -69,7 +69,7 @@ public sealed class GenitalSystem : EntitySystem
         var pastThreshold = false;
         if (TryComp<ArousalComponent>(ent, out var arousal))
         {
-            ars = (int)arousal.CurrentArousal / 20;
+            ars = (int)arousal.CurrentArousal / 25;
             pastThreshold = arousal.CurrentArousal > ent.Comp.ExamineArousalThreshold;
         }
 

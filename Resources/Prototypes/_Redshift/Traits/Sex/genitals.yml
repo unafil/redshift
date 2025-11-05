@@ -19,4 +19,5 @@
   components:
   - type: Genital
     useVerbText: genital-pussy-use-verb
+    examineText: genital-pussy-examine
     reagentId: NaturalLubricant
