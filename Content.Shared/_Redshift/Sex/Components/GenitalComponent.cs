@@ -15,6 +15,12 @@ public sealed partial class GenitalComponent : Component
 
     public string LocalizedUseVerbText => Loc.GetString(UseVerbText);
 
+    [DataField]
+    public string? ExamineText = null; // locstring ID, MUST be a locstring
+
+    [DataField]
+    public float ExamineArousalThreshold = 50f;
+
     // if people can eventually have multiple genitals, please make sure this is unique per genital proto
     [DataField]
     public string SolutionName = "genital";

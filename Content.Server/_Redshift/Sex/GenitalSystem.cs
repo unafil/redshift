@@ -1,9 +1,14 @@
 using Content.Server.Fluids.EntitySystems;
 using Content.Server.Forensics;
 using Content.Shared._Redshift.Sex.Components;
+using Content.Shared._Redshift.Undies;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
+using Content.Shared.Examine;
 using Content.Shared.FixedPoint;
+using Content.Shared.Humanoid;
+using Content.Shared.Humanoid.Markings;
+using Content.Shared.Inventory;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
@@ -16,12 +21,14 @@ public sealed class GenitalSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _prototypes = default!;
     [Dependency] private readonly PuddleSystem _puddle = default!;
     [Dependency] private readonly ForensicsSystem _forensics = default!;
+    [Dependency] private readonly InventorySystem _inventory = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
         SubscribeLocalEvent<GenitalComponent, ComponentStartup>(OnCompInit);
+        SubscribeLocalEvent<GenitalComponent, ExaminedEvent>(OnExamine);
     }
 
     private void OnCompInit(Entity<GenitalComponent> ent, ref ComponentStartup args)
@@ -30,6 +37,57 @@ public sealed class GenitalSystem : EntitySystem
             return;
 
         solution.AddReagent(ent.Comp.ReagentId, ent.Comp.MaxVolume - solution.Volume);
+    }
+
+    private void OnExamine(Entity<GenitalComponent> ent, ref ExaminedEvent args)
+    {
+        if (ent.Comp.ExamineText == null || !Loc.HasString(ent.Comp.ExamineText))
+            return;
+
+
+        // i will be attempting to handle most logic inside the fluent text itself, because i enjoy masochism
+        // due to this, we will simply pass a fuckton of arguments into GetString
+
+        // underwear goidacode PLEASE cache this shit somewhere instead of doing this massive check 24/7
+        // ffs im stealing this from ArousalSystem and it's ugly there too
+        var hasUnderwear = false;
+        if (TryComp<HumanoidAppearanceComponent>(ent, out var humApp))
+        {
+            if(humApp.MarkingSet.Markings.TryGetValue(MarkingCategories.UndergarmentBottom, out var markings))
+            {
+                foreach (var marking in markings)
+                {
+                    if (humApp.HiddenMarkings.Contains(marking.MarkingId)) // has underwear but it's disabled
+                        continue;
+
+                    hasUnderwear = true;
+                }
+            }
+        }
+
+        int ars = 0;
+        var pastThreshold = false;
+        if (TryComp<ArousalComponent>(ent, out var arousal))
+        {
+            ars = (int)arousal.CurrentArousal / 20;
+            pastThreshold = arousal.CurrentArousal > ent.Comp.ExamineArousalThreshold;
+        }
+
+        // we differentiate solely between skirts and Everything Else via checking clothing BlockUndies values
+        // this is, frankly, horrible
+        var uniformType = "suit";
+        if (_inventory.TryGetSlotEntity(ent, "jumpsuit", out var jumpSuit))
+        {
+            if (TryComp<BlockUndiesComponent>(jumpSuit, out var block) && !block.BlockedLayers.Contains(HumanoidVisualLayers.UndergarmentBottom))
+                uniformType = "skirt";
+        }
+        else
+        {
+            uniformType = "none";
+        }
+
+        // :fear:
+        args.PushMarkup(Loc.GetString(ent.Comp.ExamineText, ("hasUnderwear", hasUnderwear), ("arousal", ars), ("uniformType", uniformType), ("ent", ent), ("pastThreshold", pastThreshold)), -1);
     }
 
     public override void Update(float frameTime)
