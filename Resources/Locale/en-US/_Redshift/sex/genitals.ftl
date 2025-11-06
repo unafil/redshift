@@ -1,5 +1,4 @@
-# examine inputs: ent, hasUnderwear (bool), arousal (float), uniformType (string, either "suit" or "skirt" or "none"), pastThreshold (bool)
-# arousal shouldn't ever really reach 5 for more then a split second since this is always rounded down
+# examine inputs: ent, hasUnderwear (bool), arousal (int), uniformType (string, either "suit" or "skirt" or "none"), pastThreshold (bool)
 # might be worth finding a better way to do this
 # todo: multiple randomly-selected genital nouns (cock, dick, penis)
 
