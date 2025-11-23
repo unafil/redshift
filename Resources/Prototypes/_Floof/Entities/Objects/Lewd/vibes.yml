@@ -20,8 +20,8 @@
     wideAnimationRotation: 180
     attackRate: 1
     angle: 90
-    heavyStaminaCost: 2.5
-    heavyDamageBaseModifier: 1.50
+    #heavyStaminaCost: 2.5 # Redshift - unimplemented
+    #heavyDamageBaseModifier: 1.50 # Redshift - unimplemented
     damage:
       types:
         Blunt: 1

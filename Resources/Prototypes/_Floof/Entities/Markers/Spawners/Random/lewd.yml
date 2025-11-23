@@ -86,5 +86,5 @@
     - id: BoxDarts # we don't have needles so these are the next best thing
     - !type:AllSelector
       children:
-      - id: ShockCollar
+      - id: ClothingNeckShockCollar # Redshift - different protoid
       - id: RemoteSignaller

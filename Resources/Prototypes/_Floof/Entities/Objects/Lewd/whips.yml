@@ -8,10 +8,10 @@
     damage:
       types:
         Slash: 2
-    heavyRateModifier: 0.5
-    heavyDamageBaseModifier: 1.75
-    heavyStaminaCost: 10
-    maxTargets: 1
+    #heavyRateModifier: 0.5 # Redshift - unimplemented
+    #heavyDamageBaseModifier: 1.75 # Redshift - unimplemented
+    #heavyStaminaCost: 10 # Redshift - unimplemented
+    #maxTargets: 1 # Redshift - unimplemented
     angle: 120
     animation: WeaponArcSlash
     soundHit:
