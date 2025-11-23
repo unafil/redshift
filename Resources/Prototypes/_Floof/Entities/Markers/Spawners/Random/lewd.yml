@@ -1,0 +1,90 @@
+- type: entityTable
+  id: LewdMaintLoot
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: LewdVibes
+      weight: 10
+    - !type:NestedSelector
+      tableId: LewdFleshlights
+      weight: 10
+    - !type:NestedSelector
+      tableId: LewdDildos
+      weight: 10
+    - !type:NestedSelector
+      tableId: LewdImpactPlay
+      weight: 5
+    #- !type:NestedSelector # Redshift - most items not present, reimplement later with existing clothes if you feel like it
+    #  tableId: LewdKinkClothing
+    #  weight: 10
+    - !type:NestedSelector
+      tableId: LewdKinkTools
+      weight: 5
+
+- type: entityTable
+  id: LewdVibes
+  table: !type:GroupSelector
+    children:
+    - id: LewdWand
+    - id: LewdVibeGreen
+    - id: LewdVibeTeal
+    - id: LewdVibePink
+    - id: LewdVibeRed
+    - id: LewdVibeYellow
+
+- type: entityTable
+  id: LewdFleshlights
+  table: !type:GroupSelector
+    children:
+    - id: LewdFleshlightGreen
+    - id: LewdFleshlightTeal
+    - id: LewdFleshlightPink
+    - id: LewdFleshlightRed
+    - id: LewdFleshlightYellow
+
+- type: entityTable
+  id: LewdDildos
+  table: !type:GroupSelector
+    children:
+    - id: AvianDildo
+    - id: CanineDildo
+    - id: CanineDildoRed
+    - id: HorseDildo
+    - id: DragonDildo
+    - id: NormalDildo
+    - id: TentacleDildo
+    - id: DoubleDildo
+
+- type: entityTable
+  id: LewdImpactPlay
+  table: !type:GroupSelector
+    children:
+    - id: WhipPink
+    - id: WhipTeal
+    - id: WhipPinkCrotch
+    - id: WhipTealCrotch
+    - id: SpankPinkPaddle
+    - id: SpankTealPaddle
+    - id: Shinai
+      weight: 0.5
+
+- type: entityTable
+  id: LewdKinkTools
+  table: !type:GroupSelector
+    children: # Redshift - commented out items not present
+    #- id: LeashBasic
+    #- id: ClothingEyesHypnoVisor
+    #- id: ClothingMaskGasMuffled
+    - id: ClothingMaskMuzzle
+    - id: ClothingEyesBlindfold
+    #- id: DrinkCumBottleFull
+    - id: Handcuffs
+      weight: 0.5 # Making these a little rarer since they're power items
+    - id: Zipties # These should never actually be used for kink
+    - id: BoxCandle
+    - id: BoxCandleSmall
+    - id: BoxDarts # we don't have needles so these are the next best thing
+    - !type:AllSelector
+      children:
+      - id: ShockCollar
+      - id: RemoteSignaller

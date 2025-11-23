@@ -186,6 +186,9 @@
     # Recursive
     - id: ClosetMaintenanceFilledRandom
       prob: 0.01
+    - !type:NestedSelector # Redshift - floof loot
+      tableId: LewdMaintLoot 
+      prob: 0.3
 
 - type: entity
   id: ClosetMaintenanceFilledRandom
