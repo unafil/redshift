@@ -1,0 +1,8 @@
+- type: Tag # NOTE: Floof stores these in upstream tags.yml, which is dumb so we'll do it ourselves here
+  id: Dildo
+
+- type: Tag
+  id: Fleshlight
+
+- type: Tag
+  id: Whip
