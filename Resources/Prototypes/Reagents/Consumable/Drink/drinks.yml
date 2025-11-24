@@ -447,6 +447,8 @@
       effects:
       - !type:SatiateThirst
         factor: 4
+      - !type:ModifyArousal # Redshift - water...
+        amount: -2
     Gas:
       effects:
       # DeltaV - Begin changes (feroxi)
@@ -516,6 +518,15 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # Begin Redshift - ice changes
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:ModifyArousal
+        amount: -4
+  # End Redshift - ice changes
 
 - type: reagent
   id: DryRamen

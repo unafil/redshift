@@ -15,12 +15,12 @@ public sealed partial class ModifyArousal : EntityEffect
         if (!args.EntityManager.TryGetComponent(args.TargetEntity, out ArousalComponent? arousal))
             return;
 
-        if (MaxThreshold != null && arousal.CurrentArousal + Amount >= MaxThreshold)
+        if (MaxThreshold != null && Amount > 0 && arousal.CurrentArousal + Amount >= MaxThreshold)
             return;
 
         args.EntityManager.System<SharedArousalSystem>().ModifyArousal((args.TargetEntity, arousal), Amount);
     }
 
     protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
-        => Loc.GetString("reagent-effect-guidebook-modify-arousal", ("chance", Probability), ("amount",  Amount), ("max", MaxThreshold == null? -1: MaxThreshold.Value));
+        => Loc.GetString("reagent-effect-guidebook-modify-arousal", ("chance", Probability), ("amount",  Amount), ("max", MaxThreshold == null? -1: MaxThreshold.Value), ("positive", Amount>0));
 }
