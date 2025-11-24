@@ -14,7 +14,7 @@ public sealed partial class ArousalComponent : Component
     public float MaxArousal = 100f;
 
     [DataField]
-    public float BaseDecayRate = 0.3f;
+    public float BaseDecayRate = 0.1f;
 
     [DataField]
     public float StimulusArousalGain = 15f; // maybe move to genital
