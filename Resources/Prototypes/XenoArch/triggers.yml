@@ -28,7 +28,7 @@
     TriggerThrow: 1
     TriggerDeath: 1
     TriggerMagnet: 1
-    TriggerOrgasm: 1 # Redshift
+    TriggerOrgasm: 0.75 # Redshift
 
 - type: xenoArchTrigger
   id: TriggerMusic
