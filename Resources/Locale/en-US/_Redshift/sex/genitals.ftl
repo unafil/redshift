@@ -48,3 +48,31 @@ genital-pussy-examine =
             }
         }
     }
+
+genital-jinglebells-use-verb = Sleigh
+genital-jinglebells-examine =
+    { $uniformType ->
+        *[suit] { $pastThreshold ->
+            [true] [color=pink]Merriment is showing through { POSS-ADJ($ent) } uniform.[/color]
+            *[false] {""}
+        }
+        [skirt] { $hasUnderwear ->
+            *[true] {""}
+            [false] { $pastThreshold -> 
+                [true] [color=pink]There's joy and whimsey poking at { POSS-ADJ($ent) } skirt...[/color]
+                *[false] {""}
+            }
+        }
+        [none] { $hasUnderwear ->
+            [false] [color=pink]You can see { POSS-ADJ($ent) } jingle bells![/color] { $arousal ->
+                *[0] It's flaccid.
+                [1] [color=yellow]It seems joyful![/color]
+                [2] [color=orange]It's decking the halls![/color]
+                [3] [color=red]It throbs, leaking jolliness![/color]
+            }
+            *[true] { $pastThreshold ->
+                [true] [color=pink]There's a gingerbread house in { POSS-ADJ($ent) } undies![/color]
+                *[false] {""}
+            }
+        }
+    }

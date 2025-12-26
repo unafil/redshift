@@ -1,0 +1,5 @@
+- type: xenoArchTrigger
+  id: TriggerOrgasm
+  tip: xenoarch-trigger-tip-orgasm
+  components:
+  - type: ArtifactOrgasmTrigger

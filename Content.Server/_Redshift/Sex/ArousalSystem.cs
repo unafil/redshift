@@ -149,6 +149,10 @@ public sealed class ArousalSystem : SharedArousalSystem
                         continue;
                     arousal.Genital = gen;
                 }
+
+                // raise event (for xenoarch usage, right now)
+                var ev = new OrgasmEvent(uid);
+                RaiseLocalEvent(uid, ev, true);
             }
             if (arousal.WaveTime != null && arousal.WaveTime <= now) // climax "wave"
             {
@@ -183,5 +187,15 @@ public sealed class ArousalSystem : SharedArousalSystem
                 arousal.DecayTime += arousal.DecayDelay;
             }
         }
+    }
+}
+
+public sealed class OrgasmEvent : HandledEntityEventArgs // I lowkey gotta kill myself
+{
+    public EntityUid Uid { get; }
+
+    public OrgasmEvent(EntityUid uid)
+    {
+        Uid = uid;
     }
 }

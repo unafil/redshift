@@ -21,3 +21,15 @@
     useVerbText: genital-pussy-use-verb
     examineText: genital-pussy-examine
     reagentId: NaturalLubricant
+
+- type: trait
+  id: JingleBells
+  name: trait-genital-jinglebells-name
+  description: trait-genital-jinglebells-desc
+  category: Genitals
+  cost: 1
+  components:
+  - type: Genital
+    useVerbText: genital-jinglebells-use-verb
+    examineText: genital-jinglebells-examine
+    reagentId: Eggnog
