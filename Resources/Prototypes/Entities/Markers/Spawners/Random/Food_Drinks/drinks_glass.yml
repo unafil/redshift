@@ -126,14 +126,7 @@
       - DrinkCinnamonCookieGlass
       - DrinkInsideScoopGlass
       # End Den additions
-      # Begin DeltaV additions
-      - LemonLimeBittersGlass
-      - OldFashionedGlass
-      - MnatsaCollinsGlass
-      - AffogatoGlass
-      - FiveOClockGlass
-      # End DeltaV additions
-
+      - LemonLimeBittersGlass # DeltaV
     chance: 0.8
     offset: 0.0
     #rare

@@ -340,7 +340,7 @@ public partial class SharedBodySystem
         AddLeg(partEnt, bodyEnt);
     }
 
-    public virtual void RemovePart( // DeltaV - Made public
+    protected virtual void RemovePart(
         Entity<BodyComponent?> bodyEnt,
         Entity<BodyPartComponent> partEnt,
         string slotId)

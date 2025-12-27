@@ -147,7 +147,7 @@
   # apid-type always weightless movement
   - type: MovementAlwaysTouching
   - type: MovementIgnoreGravity
-    weightless: true
+    gravityState: true
   - type: Physics
     bodyStatus: InAir
   - type: CanMoveInAir

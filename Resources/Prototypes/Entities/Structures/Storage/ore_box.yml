@@ -8,7 +8,6 @@
     price: 500
   - type: Anchorable
   - type: InteractionOutline
-  - type: Dumpable #DeltaV
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Wood

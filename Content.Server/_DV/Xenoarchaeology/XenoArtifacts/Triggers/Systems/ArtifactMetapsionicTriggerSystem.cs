@@ -3,21 +3,16 @@ using Content.Server._DV.Xenoarchaeology.XenoArtifacts.Triggers.Components;
 using Content.Server.Xenoarchaeology.Artifact;
 using Content.Shared.Abilities.Psionics;
 using Content.Shared.Xenoarchaeology.Artifact.Components;
-using Content.Shared.Xenoarchaeology.Artifact.XAT;
 
 namespace Content.Server.Xenoarchaeology.XenoArtifacts.Triggers.Systems;
 
-public sealed class ArtifactMetapsionicTriggerSystem : BaseXATSystem<ArtifactMetapsionicTriggerComponent>
+public sealed class ArtifactMetapsionicTriggerSystem : EntitySystem
 {
     [Dependency] private readonly XenoArtifactSystem _artifact = default!;
-
-    private EntityQuery<XenoArtifactComponent> _xenoArtifactQuery;
 
     public override void Initialize()
     {
         base.Initialize();
-
-        _xenoArtifactQuery = GetEntityQuery<XenoArtifactComponent>();
 
         SubscribeLocalEvent<ArtifactMetapsionicTriggerComponent, PsionicPowerDetectedEvent>(OnPowerDetected);
 
@@ -26,34 +21,37 @@ public sealed class ArtifactMetapsionicTriggerSystem : BaseXATSystem<ArtifactMet
 
     private void OnPowerDetected(Entity<ArtifactMetapsionicTriggerComponent> ent, ref PsionicPowerDetectedEvent args)
     {
-        if (!TryComp<XenoArtifactNodeComponent>(ent, out var node))
+        if (!TryComp<XenoArtifactComponent>(ent, out var artifactComp))
             return;
 
-        if (node.Attached == null)
-            return;
+        var artifactEntity = new Entity<XenoArtifactComponent>(ent, artifactComp);
+        var coords = Transform(ent).Coordinates;
 
-        var artifact = _xenoArtifactQuery.Get(GetEntity(node.Attached.Value));
-
-        if (!CanTrigger(artifact, (ent.Owner, node)))
-            return;
-
-        Trigger(artifact, (ent.Owner, ent.Comp, node));
+        _artifact.TryActivateXenoArtifact(
+            artifactEntity,
+            user: null,
+            target: null,
+            coordinates: coords
+        );
     }
 
     private void OnGlimmerEventEnded(GlimmerEventEndedEvent args)
     {
-        var query = EntityQueryEnumerator<ArtifactMetapsionicTriggerComponent, XenoArtifactNodeComponent>();
-        while (query.MoveNext(out var uid, out var comp, out var node))
+        var query = EntityQueryEnumerator<ArtifactMetapsionicTriggerComponent>();
+        while (query.MoveNext(out var uid, out _))
         {
-            if (node.Attached == null)
+            if (!TryComp<XenoArtifactComponent>(uid, out var artifactComp))
                 continue;
 
-            var artifact = _xenoArtifactQuery.Get(GetEntity(node.Attached.Value));
+            var artifactEntity = new Entity<XenoArtifactComponent>(uid, artifactComp);
+            var coords = Transform(uid).Coordinates;
 
-            if (!CanTrigger(artifact, (uid, node)))
-                continue;
-
-            Trigger(artifact, (uid, comp, node));
+            _artifact.TryActivateXenoArtifact(
+                artifactEntity,
+                user: null,
+                target: null,
+                coordinates: coords
+            );
         }
     }
 }

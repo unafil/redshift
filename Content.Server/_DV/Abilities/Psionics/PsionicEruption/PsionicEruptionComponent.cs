@@ -2,12 +2,11 @@ using Robust.Shared.Audio;
 using Content.Shared.Actions;
 using Content.Shared.DoAfter;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
-namespace Content.Shared._DV.Abilities.Psionics; // why is this in the Shared namespace but the Server folder?
+namespace Content.Shared._DV.Abilities.Psionics;
 
-[RegisterComponent, AutoGenerateComponentPause]
+[RegisterComponent]
 public sealed partial class PsionicEruptionPowerComponent : Component
 {
     [DataField]
@@ -20,9 +19,9 @@ public sealed partial class PsionicEruptionPowerComponent : Component
     public SoundSpecifier SoundUse = new SoundPathSpecifier("/Audio/Nyanotrasen/Psionics/heartbeat_fast.ogg");
     [DataField]
     public SoundSpecifier SoundDetonate = new SoundPathSpecifier("/Audio/Nyanotrasen/Psionics/eruption.ogg");
-    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoPausedField]
+    [DataField]
     public TimeSpan NextAnnoy = TimeSpan.FromSeconds(5);
-    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoPausedField]
+    [DataField]
     public TimeSpan NextSpark = TimeSpan.MaxValue;
     [DataField]
     public bool Warned = false;

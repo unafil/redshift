@@ -30,16 +30,7 @@
   - type: TargetObjective
     title: objective-condition-asakim-terminate-title
   - type: PickRandomPerson
-    filters:
-    - !type:BodyMindFilter
-      whitelist:
-        components:
-        - CommandStaff
-    # Can't have multiple objectives to kill the same person.
-    - !type:TargetObjectiveMindFilter
-      blacklist:
-        components:
-        - KillPersonCondition
+    onlyChoosableJobs: true
   - type: RerollAfterCompletion
     rerollObjectivePrototype: AsakimKillObjective
     rerollObjectiveMessage: objective-condition-asakim-terminate-reroll-message

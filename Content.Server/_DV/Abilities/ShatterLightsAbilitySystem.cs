@@ -1,9 +1,8 @@
-
+using Content.Server.Light.Components;
 using Content.Server.Light.EntitySystems;
 using Content.Shared._DV.Abilities;
 using Content.Shared.Actions;
 using Content.Shared.Coordinates;
-using Content.Shared.Light.Components;
 using Content.Shared.Physics;
 using Robust.Server.Audio;
 using Robust.Shared.Map;

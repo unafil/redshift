@@ -13,7 +13,7 @@
       map: ["enum.GunVisualLayers.MagUnshaded"]
       shader: unshaded
   - type: StaticPrice
-    price: 300
+    price: 420
   - type: HitscanBatteryAmmoProvider
     proto: EmergencyRedLaser
     fireCost: 50

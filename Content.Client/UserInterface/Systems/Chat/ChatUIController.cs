@@ -42,9 +42,9 @@ using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Content.Client.Nyanotrasen.Chat; //Nyano - Summary: chat namespace.
 
-
 namespace Content.Client.UserInterface.Systems.Chat;
 
+// DeltaV - Make partial to implement message highlighting
 public sealed partial class ChatUIController : UIController
 {
     [Dependency] private readonly IClientAdminManager _admin = default!;
@@ -245,7 +245,7 @@ public sealed partial class ChatUIController : UIController
 
         _config.OnValueChanged(CCVars.ChatWindowOpacity, OnChatWindowOpacityChanged);
 
-        InitializeHighlights();
+        InitializeChatHighlights(); // DeltaV - Message highlighting
     }
 
     public void OnScreenLoad()
@@ -432,8 +432,6 @@ public sealed partial class ChatUIController : UIController
     private void OnAttachedChanged(EntityUid uid)
     {
         UpdateChannelPermissions();
-
-        UpdateAutoFillHighlights();
     }
 
     private void AddSpeechBubble(ChatMessage msg, SpeechBubble.SpeechType speechType)
@@ -714,13 +712,6 @@ public sealed partial class ChatUIController : UIController
             box.ChatInput.ChannelSelector.UpdateChannelSelectButton(box.SelectedChannel, null);
         else
             box.ChatInput.ChannelSelector.UpdateChannelSelectButton(prefixChannel, radioChannel);
-
-        // DeltaV begin - refresh indicator change
-        if (CurrentChannel != prefixChannel)
-            _typingIndicator?.ClientSubmittedChatText();
-
-        CurrentChannel = prefixChannel;
-        // DeltaV end
     }
 
     public (ChatSelectChannel chatChannel, string text, RadioChannelPrototype? radioChannel) SplitInputContents(string text)
@@ -849,11 +840,13 @@ public sealed partial class ChatUIController : UIController
                 msg.WrappedMessage = SharedChatSystem.InjectTagInsideTag(msg, "Name", "color", GetNameColor(SharedChatSystem.GetStringInsideTag(msg, "Name")));
         }
 
-        // Color any words chosen by the client.
+        // DeltaV - Message highlighting start
+        // Color any words choosen by the client.
         foreach (var highlight in _highlights)
         {
             msg.WrappedMessage = SharedChatSystem.InjectTagAroundString(msg, highlight, "color", _highlightsColor);
         }
+        // DeltaV - Message highlighting end
 
         // Color any codewords for minds that have roles that use them
         if (_player.LocalUser != null && _mindSystem != null && _roleCodewordSystem != null)

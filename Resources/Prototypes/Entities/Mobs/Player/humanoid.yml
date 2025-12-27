@@ -29,7 +29,7 @@
   components:
   - type: AutoImplant
     implants:
-    - CentCommImplant # Delta-v - Change mindshield implant to centcomm implant
+    - MindShieldImplant
     - DeathRattleImplantCentcomm
 
 ## Death Squad

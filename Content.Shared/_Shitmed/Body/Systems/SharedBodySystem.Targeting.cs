@@ -503,7 +503,7 @@ public partial class SharedBodySystem
             || !TryComp<StandingStateComponent>(uid, out var standingState)
             || _mobState.IsCritical(uid, mobState)
             || _mobState.IsDead(uid, mobState)
-            || !standingState.Standing)
+            || standingState.CurrentState == StandingState.Lying)
             return false;
 
         return true;

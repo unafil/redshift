@@ -54,8 +54,6 @@
         reagents:
         - ReagentId: GreyMatter
           Quantity: 5
-  - type: Edible # DeltaV - Prevent eating brains
-    requiresSpecialDigestion: true
 
 - type: entity
   id: OrganDionaEyes
@@ -156,8 +154,6 @@
   - type: Nymph # This will make the organs turn into a nymph when they're removed. 
     entityPrototype: OrganDionaNymphBrain
     transferMind: true
-  - type: Edible # DeltaV - Prevent eating brains
-    requiresSpecialDigestion: true
 
 - type: entity
   id: OrganDionaStomachNymph

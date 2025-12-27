@@ -1,7 +1,7 @@
 using Content.Server.Psionics;
 using Content.Shared.Mind;
 using Content.Shared.Roles;
-using Content.Shared.Roles.Components;
+using Content.Shared.Roles.Jobs;
 
 namespace Content.Server.GameTicking.Rules;
 

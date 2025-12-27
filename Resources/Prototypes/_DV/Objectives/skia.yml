@@ -19,12 +19,7 @@
   - type: TargetObjective
     title: objective-condition-reap-soul-title
   - type: PickRandomPerson
-    filters:
-    # Can't have multiple objectives to kill the same person.
-    - !type:TargetObjectiveMindFilter
-      blacklist:
-        components:
-        - KillPersonCondition
+    onlyChoosableJobs: true
   - type: RerollAfterCompletion
     rerollObjectivePrototype: SkiaReapObjective
     rerollObjectiveMessage: objective-condition-reap-soul-reroll-message

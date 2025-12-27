@@ -47,12 +47,11 @@
     - state: security
     - state: icon-patrol
   - type: ItemBorgModule
-    hands:
-    - item: FlashlightSecliteRecharging
-    - item: HoloprojectorSecurity
-    - item: SecurityWhistle
-  - type: BorgModuleIcon
-    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: patrol-module }
+    moduleId: Patrol
+    items:
+    - FlashlightSecliteRecharging
+    - HoloprojectorSecurityRecharging
+    - SecurityWhistle
 
 - type: entity
   id: BorgModuleSecurityBastion # Research Locked - AdvancedRiotControl
@@ -64,13 +63,11 @@
     - state: security
     - state: icon-hold
   - type: ItemBorgModule
-    hands:
-    - item: FlashRecharging
-    - item: WeaponLauncherNonLethal
-    - item: SecurityWhistle
-  - type: BorgModuleIcon
-    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: bastion-module }
-
+    moduleId: Bastion
+    items:
+    - FlashRecharging
+    - WeaponLauncherNonLethal
+    - SecurityWhistle
 
 - type: entity
   id: BorgModuleSecurityDeescalate # Research Locked - AdvancedRiotControl
@@ -82,27 +79,23 @@
     - state: security
     - state: icon-detain
   - type: ItemBorgModule
-    hands:
-    - item: StunbatonSelfCharging
-    - item: FlashRecharging
-    - item: FlashlightSecliteRecharging
-    - item: SecurityWhistle
-    - item: Handcuffs
-      hand:
-        emptyRepresentative: Handcuffs
-        emptyLabel: borg-slot-handcuffs
-        whitelist:
-          tags:
-          - Handcuffs
-    - item: Zipties
-      hand:
-        emptyRepresentative: Zipties
-        emptyLabel: borg-slot-handcuffs
-        whitelist:
-          tags:
-          - Handcuffs
-  - type: BorgModuleIcon
-    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: deescalation-module }
+    moduleId: Deescalate
+    items:
+    - StunbatonSelfCharging
+    - FlashRecharging
+    - FlashlightSecliteRecharging
+    - SecurityWhistle
+  - type: DroppableBorgModule
+    moduleId: Deescalate
+    items:
+    - id: Handcuffs
+      whitelist:
+        components:
+        - Handcuff
+    - id: Zipties
+      whitelist:
+        components:
+        - Handcuff
 
 - type: entity
   parent: [ BaseBorgModuleSecurity, BaseProviderBorgModule ]
@@ -115,13 +108,12 @@
     - state: security
     - state: icon-hurt
   - type: ItemBorgModule
-    hands:
-    - item: Truncheon # Anti-Fauna option to stop them being relied on the Seclite (which will be removed when the Laws menu is fixed)
-    - item: CombatKnife # Anti-fauna for blunt resistant slimes
-    - item: WeaponRiotShotgunBorg
-    - item: SecurityWhistle
-  - type: BorgModuleIcon
-    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: escalation-module }
+    moduleId: Escalate
+    items:
+    - Truncheon # Anti-Fauna option to stop them being relied on the Seclite (which will be removed when the Laws menu is fixed)
+    - CombatKnife # Anti-fauna for blunt resistant slimes
+    - WeaponRiotShotgunBorg
+    - SecurityWhistle
 
 - type: entity
   id: BorgModuleSecurityChase # Research Locked - NonLethalAmmunition
@@ -133,12 +125,11 @@
     - state: security
     - state: icon-chase
   - type: ItemBorgModule
-    hands:
-    - item: WeaponDisablerSelfCharge
-    - item: FlashlightSecliteRecharging
-    - item: SecurityWhistle
-  - type: BorgModuleIcon
-    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: chase-module }
+    moduleId: Chase
+    items:
+    - WeaponDisablerSelfCharge
+    - FlashlightSecliteRecharging
+    - SecurityWhistle
 
 # Salvage modules
 
@@ -154,15 +145,17 @@
     - state: icon-carp
       sprite: _DV/Objects/Specific/Robotics/borgmodule.rsi
   - type: ItemBorgModule
-    hands:
-    - item: WeaponProtoKineticAcceleratorOneHanded
-    - item: WeaponCrusherDagger
-    - hand:
-        emptyRepresentative: PKAUpgradeRange
-        emptyLabel: borg-slot-pka-upgrade
-        whitelist:
-          tags:
-          - PKAUpgrade
+    moduleId: Fauna
+    items:
+    - WeaponProtoKineticAcceleratorOneHanded
+    - WeaponCrusherDagger
+  - type: DroppableBorgModule
+    moduleId: Fauna
+    items:
+    - id: PKAUpgradeRange # free upgrade but also lets you use any pka upgrade
+      whitelist:
+        tags:
+        - PKAUpgrade
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: fauna-module }
 
@@ -180,25 +173,21 @@
     - state: icon-deco
       sprite: _DV/Objects/Specific/Robotics/borgmodule.rsi
   - type: ItemBorgModule
-    hands:
-    - item: CrayonMagic
-    - item: HandLabeler
-    - item: SprayPainter
-      hand:
-        emptyRepresentative: SprayPainter
-        emptyLabel: borg-slot-spraypaint
-        whitelist:
-          components:
-          - SprayPainter
-          - SprayPainterAmmo
-    - item: SprayPainterAmmo
-      hand:
-        emptyRepresentative: SprayPainterAmmo
-        emptyLabel: borg-slot-spraypaint
-        whitelist:
-          components:
-          - SprayPainter
-          - SprayPainterAmmo
+    moduleId: Decoration
+    items:
+    - CrayonMagic
+    - HandLabeler
+  - type: DroppableBorgModule
+    moduleId: Decoration
+    items:
+    - id: SprayPainter
+      whitelist:
+        components:
+        - SprayPainter
+    - id: SprayPainterAmmo
+      whitelist:
+        components:
+        - SprayPainterAmmo
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: decoration-module }
 
@@ -210,32 +199,26 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: _DV/Objects/Specific/Robotics/borgmodule.rsi
+    layers:
+    - state: syndicate
+    - state: icon-syndicate
   - type: Item
     inhandVisuals:
       left:
-      - sprite: Objects/Specific/Robotics/borgmodule.rsi
-        state: base-icon-inhand-left
+      - state: base-icon-inhand-left
         color: "#FF0000"
-      - sprite: Objects/Specific/Robotics/borgmodule.rsi
-        state: base-module-inhand-left
+      - state: base-module-inhand-left
         color: "#891417"
-      - sprite: Objects/Specific/Robotics/borgmodule.rsi
-        state: base-part-inhand-left
-      - sprite: Objects/Specific/Robotics/borgmodule.rsi
-        state: base-stripes-inhand-left
+      - state: base-part-inhand-left
+      - state: base-stripes-inhand-left
         color: "#7B0F12"
       right:
-      - sprite: Objects/Specific/Robotics/borgmodule.rsi
-        state: base-icon-inhand-right
+      - state: base-icon-inhand-right
         color: "#FF0000"
-      - sprite: Objects/Specific/Robotics/borgmodule.rsi
-        state: base-module-inhand-right
+      - state: base-module-inhand-right
         color: "#891417"
-      - sprite: Objects/Specific/Robotics/borgmodule.rsi
-        state: base-part-inhand-right
-      - sprite: Objects/Specific/Robotics/borgmodule.rsi
-        state: base-stripes-inhand-right
+      - state: base-part-inhand-right
+      - state: base-stripes-inhand-right
         color: "#7B0F12"
 
 - type: entity
@@ -245,28 +228,26 @@
   description: This unfinished module has a large space for an explosive payload, with "boom" helpfully scribbled under it.
   components:
   - type: ItemBorgModule
-    hands:
-    - item: SelfDestructSeqDud
+    items:
+    - SelfDestructSeqDud
   - type: Construction
     node: start
     defaultTarget: live
 
 - type: entity
-  parent: [ BaseBorgModuleSyndie, BaseProviderBorgModule ]
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
   id: BorgModuleRadioJammerRecharging # locked behind Syndie exofab
   description: "A module that comes with a recharging radio jammer."
   name: radio jammer cyborg module
   components:
   - type: Sprite
-    sprite: _DV/Objects/Specific/Robotics/borgmodule.rsi
     layers:
     - state: syndicate
-    - state: icon-jammer
+    - state: icon-syndicate
   - type: ItemBorgModule
-    hands:
-    - item: RechargingRadioJammer
-  - type: BorgModuleIcon
-    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: syndicate-jammer-module }
+    moduleId: RadioJammer
+    items:
+    - RechargingRadioJammer
 
 - type: entity
   parent: BaseBorgModuleSyndie
@@ -274,15 +255,10 @@
   name: Experimental C.H.I.M.P. cyborg module
   description: "A module that comes with an unrechargable experimental C.H.I.M.P. handcannon. Cheap and disposable."
   components:
-  - type: Sprite
-    layers:
-    - state: syndicate
-    - state: icon-chimp
   - type: ItemBorgModule
-    hands:
-    - item: WeaponPistolCHIMPUpgraded
-  - type: BorgModuleIcon
-    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: syndicate-chimp-module }
+    moduleId: Chimp
+    items:
+    - WeaponPistolCHIMPUpgraded
 
 - type: entity
   parent: [ BaseBorgModuleSyndie, ClothingEyesHudSyndicate]
@@ -290,22 +266,17 @@
   name: syndicate radio cyborg module
   description: "A module that comes with a syndicate handheld radio and pinpointer to the shuttle"
   components:
-  - type: Sprite
-    layers:
-    - state: syndicate
-    - state: icon-radio
   - type: ItemBorgModule
-    hands:
-    - item: RadioHandheldSyndicate
-    - item: RoboNeuroticistPointer
+    moduleId: SyndicateRadio
+    items:
+    - RadioHandheldSyndicate
+    - RoboNeuroticistPointer
   - type: ShowSyndicateIcons
   - type: ShowJobIcons
   - type: ShowHealthIcons
     damageContainers:
     - Biological
     - BiologicalMetaphysical # DeltaV - Kitsune
-  - type: BorgModuleIcon
-    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: syndicate-radio-module }
 
 - type: entity
   parent: BaseBorgModuleSyndie
@@ -313,16 +284,11 @@
   name: infiltrator module
   description: "A module that comes with a crew monitor and camera bug, perfect for spying."
   components:
-  - type: Sprite
-    layers:
-    - state: syndicate
-    - state: icon-infiltrator
   - type: ItemBorgModule
-    hands:
-    - item: SyndiCrewMonitorRecharging
-    - item: CameraBug
-  - type: BorgModuleIcon
-    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: syndicate-infiltrator-module }
+    moduleId: CrewMonitor
+    items:
+    - SyndiCrewMonitorRecharging
+    - CameraBug
 
 - type: entity
   parent: BaseBorgModuleSyndie
@@ -330,15 +296,10 @@
   name: chameleon projector module
   description: "A module used to create a hard-light replica of any object around you."
   components:
-  - type: Sprite
-    layers:
-    - state: syndicate
-    - state: icon-chameleon
   - type: ItemBorgModule
-    hands:
-    - item: ChameleonProjector
-  - type: BorgModuleIcon
-    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: syndicate-chameleon-module }
+    moduleId: ChameleonProjector
+    items:
+    - ChameleonProjector
 
 - type: entity
   parent: BaseBorgModuleSyndie
@@ -346,15 +307,10 @@
   name: cannon cyborg module
   description: "A special module for pirating, come with a cannon with 3 types of shot"
   components:
-  - type: Sprite
-    layers:
-    - state: syndicate
-    - state: icon-cannon
   - type: ItemBorgModule
-    hands:
-    - item: WeaponLauncherPirateCannonBorg
-  - type: BorgModuleIcon
-    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: syndicate-cannon-module }
+    moduleId: Cannon
+    items:
+    - WeaponLauncherPirateCannonBorg
 
 - type: entity
   parent: BaseBorgModuleSyndie
@@ -362,58 +318,21 @@
   name: buccaneer cyborg module
   description: "A module containing a grappling hook, material bag, a cutlass, and a pirate's sidearm"
   components:
-  - type: Sprite
-    layers:
-    - state: syndicate
-    - state: icon-buccaneer
   - type: ItemBorgModule
-    hands:
-    - item: WeaponGrapplingGun
-    - item: MaterialBag
-    - item: Cutlass
-    - item: WeaponBorgBuccaneersRevolver
-  - type: BorgModuleIcon
-    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: syndicate-buccaneer-module }
+    moduleId: Buccaneer
+    items:
+    - WeaponGrapplingGun
+    - MaterialBag
+    - Cutlass
+    - WeaponBorgBuccaneersRevolver
 
 - type: entity
   parent: BaseBorgModuleSyndie
   id: BorgModuleSleeper
-  name: sleeper cyborg module
+  name: sleeper module
   description: "A module with a sleep hypo, for silently abducting victims"
   components:
-  - type: Sprite
-    layers:
-    - state: syndicate
-    - state: icon-sleeper
   - type: ItemBorgModule
-    hands:
-    - item: SyndicateNocturineHypo
-  - type: BorgModuleIcon
-    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: syndicate-sleeper-module }
-
-- type: entity
-  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
-  id: BorgModuleCloakDeviceSyndicate
-  name: syndicate cloaking device cyborg module
-  description: A module with a device that allows the borg to become cloaked for a short amount of time.
-  components:
-  - type: Sprite
-    layers:
-    - sprite: Objects/Specific/Robotics/borgmodule.rsi
-      state: syndicate
-    - sprite: Objects/Specific/Robotics/borgmodule.rsi
-      state: icon-syndicate
-  - type: ItemBorgModule
-    hands:
-    - item: CloakingDeviceSyndicateBorg
-  - type: BorgModuleIcon # Once branch is updated with the new syndicate sprites, this can be uncommented.
-    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: syndicate-infiltrator-module }
-
-- type: entity
-  parent: CloakingDevice
-  id: CloakingDeviceSyndicateBorg
-  description: A device that allows the borg to become cloaked for a short amount of time. Will recharge after 30 seconds of non-use.
-  components:
-  - type: Sprite
-    sprite: Objects/Tools/access_breaker.rsi # Finally using this awesome icon
-    state: icon
+    moduleId: Sleeper
+    items:
+    - SyndicateNocturineHypo

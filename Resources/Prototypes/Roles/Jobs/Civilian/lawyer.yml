@@ -15,11 +15,6 @@
   - Lawyer
   #- Brig # DeltaV - Removed brig access
   - Maintenance
-  special: # Goobstation - Everyone knows lawyers are soulless.
-  - !type:AddComponentSpecial
-    components:
-    - type: Condemned
-      soulOwnedNotDevil: true
 
 - type: startingGear
   id: LawyerGear
@@ -33,7 +28,6 @@
     back:
     - RubberStampLawyer
     - BookSpaceLaw
-    - ForensicScanner # DeltaV - lets lawyers grab evidence
 
 - type: chameleonOutfit
   id: LawyerChameleonOutfit

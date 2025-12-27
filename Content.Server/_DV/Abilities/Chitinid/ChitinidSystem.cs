@@ -1,6 +1,5 @@
 using Content.Shared._DV.Abilities;
 using Content.Shared.Damage;
-using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
@@ -24,15 +23,15 @@ public sealed partial class ChitinidSystem : EntitySystem
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
-        var query = EntityQueryEnumerator<ChitinidComponent, DamageableComponent, MobStateComponent, ItemCougherComponent>();
-        while (query.MoveNext(out var uid, out var comp, out var damageable, out var mobState, out var itemCougher))
+        var query = EntityQueryEnumerator<ChitinidComponent, DamageableComponent>();
+        while (query.MoveNext(out var uid, out var comp, out var damageable))
         {
             if (_timing.CurTime < comp.NextUpdate)
                 continue;
 
             comp.NextUpdate += comp.UpdateInterval;
 
-            if (comp.AmountAbsorbed >= comp.MaximumAbsorbed || _mobState.IsDead(uid, mobState))
+            if (comp.AmountAbsorbed >= comp.MaximumAbsorbed || _mobState.IsDead(uid))
                 continue;
 
             if (_damageable.TryChangeDamage(uid, comp.Healing, damageable: damageable) is not {} delta)
@@ -41,7 +40,7 @@ public sealed partial class ChitinidSystem : EntitySystem
             // damage healed is subtracted, so the delta is negative.
             comp.AmountAbsorbed -= delta.GetTotal();
             if (comp.AmountAbsorbed >= comp.MaximumAbsorbed)
-                _cougher.EnableAction((uid, itemCougher));
+                _cougher.EnableAction(uid);
         }
     }
 

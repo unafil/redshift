@@ -11,9 +11,6 @@
       size: Tiny
     - type: Stack
       count: 1
-    - type: Tag
-      tags:
-      - ConstructionMaterial
 
 - type: entity
   id: MicroManipulatorStockPart
@@ -24,5 +21,8 @@
   components:
     - type: Sprite
       state: micro_mani
+    - type: Tag # DeltaV - engiborgs can hold stock parts
+      tags:
+      - BorgStockPart
     - type: Stack
       stackType: Manipulator

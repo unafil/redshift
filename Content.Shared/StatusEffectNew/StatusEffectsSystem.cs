@@ -55,7 +55,11 @@ public sealed partial class StatusEffectsSystem : EntitySystem
             if (effect.AppliedTo is null)
                 continue;
 
-            PredictedQueueDel(ent);
+            var meta = MetaData(ent);
+            if (meta.EntityPrototype is null)
+                continue;
+
+            TryRemoveStatusEffect(effect.AppliedTo.Value, meta.EntityPrototype);
         }
     }
 
@@ -120,7 +124,48 @@ public sealed partial class StatusEffectsSystem : EntitySystem
         PredictedQueueDel(ent.Owner);
     }
 
-    public bool CanAddStatusEffect(EntityUid uid, EntProtoId effectProto)
+    private void SetStatusEffectTime(EntityUid effect, TimeSpan? duration)
+    {
+        if (!_effectQuery.TryComp(effect, out var effectComp))
+            return;
+
+        if (duration is null)
+        {
+            if(effectComp.EndEffectTime is null)
+                return;
+
+            effectComp.EndEffectTime = null;
+        }
+        else
+            effectComp.EndEffectTime = _timing.CurTime + duration;
+
+        Dirty(effect, effectComp);
+    }
+
+    private void UpdateStatusEffectTime(EntityUid effect, TimeSpan? duration)
+    {
+        if (!_effectQuery.TryComp(effect, out var effectComp))
+            return;
+
+        // It's already infinitely long
+        if (effectComp.EndEffectTime is null)
+            return;
+
+        if (duration is null)
+            effectComp.EndEffectTime = null;
+        else
+        {
+            var newEndTime = _timing.CurTime + duration;
+            if (effectComp.EndEffectTime >= newEndTime)
+                return;
+
+            effectComp.EndEffectTime = newEndTime;
+        }
+
+        Dirty(effect, effectComp);
+    }
+
+    private bool CanAddStatusEffect(EntityUid uid, EntProtoId effectProto)
     {
         if (!_proto.TryIndex(effectProto, out var effectProtoData))
             return false;
@@ -156,10 +201,6 @@ public sealed partial class StatusEffectsSystem : EntitySystem
     )
     {
         statusEffect = null;
-
-        if (duration <= TimeSpan.Zero)
-            return false;
-
         if (!CanAddStatusEffect(target, effectProto))
             return false;
 
@@ -181,39 +222,13 @@ public sealed partial class StatusEffectsSystem : EntitySystem
         return true;
     }
 
-    private void UpdateStatusEffectTime(Entity<StatusEffectComponent?> effect, TimeSpan? duration)
+    private void AddStatusEffectTime(EntityUid effect, TimeSpan delta)
     {
-        if (!_effectQuery.Resolve(effect, ref effect.Comp))
+        if (!_effectQuery.TryComp(effect, out var effectComp))
             return;
 
-        // It's already infinitely long
-        if (effect.Comp.EndEffectTime is null)
-            return;
-
-        TimeSpan? newEndTime = null;
-
-        if (duration is not null)
-        {
-            // Don't update time to a smaller timespan...
-            newEndTime = _timing.CurTime + duration;
-            if (effect.Comp.EndEffectTime >= newEndTime)
-                return;
-        }
-
-        SetStatusEffectEndTime(effect, newEndTime);
-    }
-
-    private void AddStatusEffectTime(Entity<StatusEffectComponent?> effect, TimeSpan delta)
-    {
-        if (!_effectQuery.Resolve(effect, ref effect.Comp))
-            return;
-
-        // It's already infinitely long can't add or subtract from infinity...
-        if (effect.Comp.EndEffectTime is null)
-            return;
-
-        // Add to the current end effect time, if we're here we should have one set already, and if it's null it's probably infinite.
-        SetStatusEffectEndTime((effect, effect.Comp), effect.Comp.EndEffectTime.Value + delta);
+        // If we don't have an end time set, we want to just make the status effect end in delta time from now.
+        SetStatusEffectEndTime((effect, effectComp), (effectComp.EndEffectTime ?? _timing.CurTime) + delta);
     }
 
     private void SetStatusEffectEndTime(Entity<StatusEffectComponent?> ent, TimeSpan? endTime)

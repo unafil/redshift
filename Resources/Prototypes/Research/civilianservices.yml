@@ -113,7 +113,6 @@
   - FauxTileJungleAstroGrass
   - FauxTileAstroIce
   - FauxTileAstroSnow
-  - FauxTileMowedAstroSnow # DeltaV
   - FauxTileAstroAsteroidSand
 
 - type: technology
@@ -216,22 +215,20 @@
   cost: 4000
   recipeUnlocks:
   - PushHorn
-  - BorgModuleAdvancedClowning
 
 # Tier 3
 
-# DeltaV - Kill Speedboots
-# - type: technology
-#   id: QuantumFiberWeaving
-#   name: research-technology-quantum-fiber-weaving
-#   icon:
-#     sprite: Clothing/Shoes/Boots/speedboots.rsi
-#     state: icon
-#   discipline: CivilianServices
-#   tier: 3
-#   cost: 10000
-#   recipeUnlocks:
-#   - ClothingShoesBootsSpeed
+- type: technology
+  id: QuantumFiberWeaving
+  name: research-technology-quantum-fiber-weaving
+  icon:
+    sprite: Clothing/Shoes/Boots/speedboots.rsi
+    state: icon
+  discipline: CivilianServices
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - ClothingShoesBootsSpeed
 
 - type: technology
   id: BluespaceChemistry

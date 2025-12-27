@@ -59,10 +59,10 @@ public sealed partial class CrimeAssistUiFragment : BoxContainer
         {
             string question = $"\n[font size=15]{Loc.GetString(page.LocKey!)}[/font]";
 
-            if (question.ToLower().Contains("employee"))
+            if (question.ToLower().Contains("sophont"))
             {
-                string employeeExplanation = Loc.GetString("crime-assist-employee-explanation");
-                question += $"\n[font size=8][color=#999999]{employeeExplanation}[/color][/font]";
+                string sophontExplanation = Loc.GetString("crime-assist-sophont-explanation");
+                question += $"\n[font size=8][color=#999999]{sophontExplanation}[/color][/font]";
             }
 
             Title.SetMarkup(question);

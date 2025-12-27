@@ -27,8 +27,5 @@ enabled = true
 [hub]
 tags = "lang:en-US,region:am_n_e,rp:med,no_tag_infer"
 
-[discord]
-round_end_role=1440055204451188847
-
 [debug]
 pow3r_disable_parallel = false

@@ -11,7 +11,7 @@
     heldPrefix: bloody
   - type: Crayon
     color: '#a70000'
-    capacity: 2147483647 # DeltaV
+    infinite: true
   - type: BloodCrayon
   - type: Tag
     tags:

@@ -1,7 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Server.Administration.Logs;
 using Content.Server.Atmos.Components;
-using Content.Shared._Goobstation.Atmos;
 using Content.Shared.Alert;
 using Content.Shared.Atmos;
 using Content.Shared.Damage;
@@ -145,7 +144,7 @@ namespace Content.Server.Atmos.EntitySystems
         /// </summary>
         public float GetFeltLowPressure(EntityUid uid, BarotraumaComponent barotrauma, float environmentPressure)
         {
-            if (barotrauma.HasImmunity || HasComp<SpecialPressureImmunityComponent>(uid)) // Goobstation - Special Immunity
+            if (barotrauma.HasImmunity)
             {
                 return Atmospherics.OneAtmosphere;
             }
@@ -159,7 +158,7 @@ namespace Content.Server.Atmos.EntitySystems
         /// </summary>
         public float GetFeltHighPressure(EntityUid uid, BarotraumaComponent barotrauma, float environmentPressure)
         {
-            if (barotrauma.HasImmunity || HasComp<SpecialPressureImmunityComponent>(uid)) // Goobstation - Special Immunity
+            if (barotrauma.HasImmunity)
             {
                 return Atmospherics.OneAtmosphere;
             }

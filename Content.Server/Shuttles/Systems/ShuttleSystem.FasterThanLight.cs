@@ -617,8 +617,11 @@ public sealed partial class ShuttleSystem
         {
             foreach (var child in toKnock)
             {
+                if (!_statusQuery.TryGetComponent(child, out var status))
+                    continue;
+
                 if (!HasComp<FTLKnockdownImmuneComponent>(child)) // Frontier: FTL knockdown immunity
-                    _stuns.TryUpdateParalyzeDuration(child, _hyperspaceKnockdownTime);
+                    _stuns.TryParalyze(child, _hyperspaceKnockdownTime, true, status);
 
                 // If the guy we knocked down is on a spaced tile, throw them too
                 if (grid != null)

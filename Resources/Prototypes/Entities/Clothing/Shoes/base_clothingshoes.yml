@@ -55,7 +55,6 @@
           tags:
           - Knife
           - ConcealCarry # DeltaV - replace Sidearm tag
-        priority: 4
 
 - type: entity
   abstract: true

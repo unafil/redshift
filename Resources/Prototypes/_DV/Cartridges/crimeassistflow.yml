@@ -13,12 +13,12 @@
 - type: crimeAssistPage
   id: "questionWasSomeoneAttacked"
   locKey: "crime-assist-question-wassomeoneattacked"
-  onYes: "questionWasItEmployee"
+  onYes: "questionWasItSophont"
   onNo: "questionIsItBullying"
 
 - type: crimeAssistPage
-  id: "questionWasItEmployee"
-  locKey: "crime-assist-question-wasitemployee"
+  id: "questionWasItSophont"
+  locKey: "crime-assist-question-wasitsophont"
   onYes: "questionDidVictimDie"
   onNo: "resultAnimalCruelty"
 

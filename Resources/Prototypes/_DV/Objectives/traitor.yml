@@ -100,16 +100,7 @@
   - type: TargetObjective
     title: objective-condition-teach-person-title
   - type: PickRandomPerson
-    filters:
-    - !type:BodyMindFilter
-      whitelist:
-        components:
-        - CommandStaff
-    # Can't have multiple objectives to kill the same person.
-    - !type:TargetObjectiveMindFilter
-      blacklist:
-        components:
-        - KillPersonCondition
+    onlyChoosableJobs: true
 
 # Kill fellow traitor objective
 - type: entity

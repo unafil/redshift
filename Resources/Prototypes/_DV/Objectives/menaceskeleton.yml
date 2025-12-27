@@ -37,11 +37,7 @@
   - type: TargetObjective
     title: objective-skeleton-haunt-title
   - type: PickRandomPerson
-    filters:
-    - !type:TargetObjectiveMindFilter
-      blacklist:
-        components:
-        - KillPersonCondition
+    onlyChoosableJobs: true
 
 - type: entity
   parent: SkeletonBaseObjective
@@ -56,11 +52,7 @@
   - type: TargetObjective
     title: objective-skeleton-frame-title
   - type: PickRandomPerson
-    filters:
-    - !type:BodyMindFilter
-      whitelist:
-        components:
-        - CommandStaff
+    onlyChoosableJobs: true
 
 - type: entity
   parent: SkeletonBaseObjective

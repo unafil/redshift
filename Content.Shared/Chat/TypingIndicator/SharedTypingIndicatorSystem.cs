@@ -80,9 +80,7 @@ public abstract class SharedTypingIndicatorSystem : EntitySystem
             return;
         }
 
-        if(ev.State != TypingIndicatorState.Idle) // DeltaV - don't remove override when transitioning to idle
-            SetTypingOverride(uid.Value, ev.OverrideIndicator); // DeltaV
-
+        SetTypingOverride(uid.Value, ev.OverrideIndicator); // DeltaV
         SetTypingIndicatorState(uid.Value, ev.State);
     }
 

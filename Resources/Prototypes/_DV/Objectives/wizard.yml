@@ -88,12 +88,7 @@
   - type: TargetObjective
     title: objective-condition-wizard-preserve-person-title
   - type: PickRandomPerson
-    filters:
-    - !type:BodyMindFilter
-      whitelist:
-        components:
-        - CommandStaff
-        - KillPersonCondition # Should also choose those who have targets on their heads by other antags :3
+    onlyChoosableJobs: true
 
 - type: entity
   parent: [BaseWizardObjective, BaseKillObjective]
@@ -107,12 +102,7 @@
   - type: TargetObjective
     title: objective-condition-wizard-kill-person-title
   - type: PickRandomPerson
-    filters:
-    # Can't have multiple objectives to kill the same person.
-    - !type:TargetObjectiveMindFilter
-      blacklist:
-        components:
-        - KillPersonCondition
+    onlyChoosableJobs: true
   - type: KillPersonCondition
     requireDead: true
 

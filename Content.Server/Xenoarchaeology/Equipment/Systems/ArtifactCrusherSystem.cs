@@ -2,10 +2,10 @@ using Content.Server.Body.Systems;
 using Content.Server.Popups;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Stack;
+using Content.Server.Storage.Components;
 using Content.Shared.Body.Components;
 using Content.Shared.Damage;
 using Content.Shared.Power;
-using Content.Shared.Storage.Components;
 using Content.Shared.Verbs;
 using Content.Shared.Whitelist;
 using Content.Shared.Xenoarchaeology.Equipment;
@@ -106,8 +106,7 @@ public sealed class ArtifactCrusherSystem : SharedArtifactCrusherSystem
             if (!TryComp<BodyComponent>(contained, out var body))
                 Del(contained);
 
-            // DeltaV acidify: false preserves inventory items, which get added to the output container
-            var gibs = _body.GibBody(contained, body: body, acidify: false);
+            var gibs = _body.GibBody(contained, body: body, acidify: true);
             foreach (var gib in gibs)
             {
                 ContainerSystem.Insert((gib, null, null, null), crusher.OutputContainer);

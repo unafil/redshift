@@ -164,7 +164,7 @@ public sealed class ArousalSystem : SharedArousalSystem
                 // this is likely a terrible way to detect if we're moving.
                 if (TryComp(uid, out PhysicsComponent? physics) && physics.LinearVelocity.Length() > 0.5f)
                 {
-                    _stun.TryKnockdown(uid, TimeSpan.FromSeconds(1.25f));
+                    _stun.TryParalyze(uid, TimeSpan.FromSeconds(1.25f), true);
                 }
 
                 _jitter.DoJitter(uid, TimeSpan.FromSeconds(0.5f), true, 4f, 2f); // arbitrary values my beloved

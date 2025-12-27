@@ -20,6 +20,7 @@
     - state: active
   - type: StatusEffects
     allowed:
+    - Stun
     - Corporeal
     - EssenceRegen # Imp
   - type: Hands # Imp
@@ -89,7 +90,3 @@
   - type: Reactive
     groups:
       Acidic: [Touch]
-  - type: Tag
-    tags:
-    - SlowImmune
-    - KnockdownImmune

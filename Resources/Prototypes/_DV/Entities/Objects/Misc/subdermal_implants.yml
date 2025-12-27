@@ -81,7 +81,7 @@
   - type: TriggerOnMobstateChange
     mobState:
     - Critical
-  - type: RattleOnTrigger
+  - type: Rattle
     radioChannel: Security
 
 - type: entity
@@ -95,7 +95,6 @@
     componentsToAdd:
     - type: AntagImmune
     - type: MindShield
-    - type: TargetObjectiveImmune
 
 # Nukie implants
 

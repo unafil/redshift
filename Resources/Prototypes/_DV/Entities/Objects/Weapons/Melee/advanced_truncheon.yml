@@ -1,18 +1,23 @@
 - type: entity
-  parent: Truncheon
+  parent: BaseItem
   id: AdvancedTruncheon
   name: Advanced Truncheon
-  description: A longer, rigid, steel-studded baton, meant to harm more!
+  description: If all else fails, BONK!
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Melee/advanced_truncheon.rsi
     state: icon
+  - type: Item
+    size: Normal
   - type: MeleeWeapon
+    attackRate: 0.75
     range: 1.75
     damage:
       types:
-        Blunt: 22.5
-    bluntStaminaDamageFactor: 1.60 # 36 stamina damage
+        Blunt: 16
+    soundHit:
+      path: /Audio/Nyanotrasen/Weapons/club.ogg
+    bluntStaminaDamageFactor: 1.60 # 25.6 stamina damage
 #  - type: MeleeStaminaCost
 #    swing: 10
 #    wieldCoefficient: 0.35 #if wielded you will only consume 3.5 stam its a weapon after all
@@ -20,10 +25,9 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 7.5
+        Blunt: 14
   - type: Clothing
     sprite: _DV/Objects/Weapons/Melee/advanced_truncheon.rsi
     quickEquip: false
     slots:
     - back
-    - suitStorage

@@ -114,7 +114,6 @@
       10: Dead
   - type: Stamina
     critThreshold: 10
-    animationThreshold: 1
   - type: DamageStateVisuals
     states:
       Alive:
@@ -430,6 +429,8 @@
         gibContents: Skip # Shitmed Change
         recursive: false
   - type: NonSpreaderZombie
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-organic
   - type: MeleeWeapon
     soundHit:
       path: /Audio/Effects/bite.ogg
@@ -1077,10 +1078,10 @@
     growthDelay: 20
   - type: ExaminableHunger
   - type: Wooly
-  - type: Edible
-    destroyOnEmpty: false
+  - type: Food
     solution: wool
     requiresSpecialDigestion: true
+    # Wooly prevents eating wool deleting the goat so its fine
     requireDead: false
   - type: FlavorProfile
     flavors:
@@ -1249,6 +1250,8 @@
       0: Alive
       200: Critical
       250: Dead
+  - type: StaminaResistance
+    damageCoefficient: 0.40
 
 - type: entity
   name: kangaroo
@@ -1618,7 +1621,7 @@
       methods: [ Touch ]
       effects:
       - !type:WashCreamPieReaction
-  - type: Crawler
+# DV End
 
 - type: entity
   name: monkey
@@ -2458,7 +2461,6 @@
       types:
         Heat : 0.2 #per second, scales with temperature & other constants
 
-# TODO: Make grenade penguin voice activated like the rest of the stealth items.
 - type: entity
   name: grenade penguin
   parent: [ MobPenguin, MobCombat, BaseSyndicateContraband ]
@@ -2510,8 +2512,7 @@
   - type: Item
     size: Normal
     sprite: Mobs/Animals/grenadepenguin.rsi
-  - type: TriggerOnUse
-  - type: TimerTrigger
+  - type: OnUseTimerTrigger
     delay: 10
     beepSound:
       path: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg #funny sfx use
@@ -2524,8 +2525,6 @@
     intensitySlope: 20
     totalIntensity: 225
   - type: ExplodeOnTrigger
-    keysIn:
-    - timer
   - type: Destructible
     thresholds:
     - trigger:
@@ -3009,7 +3008,6 @@
   - type: HTN
     rootTask:
       task: RuminantHostileCompound
-  - type: MessyDrinker
   - type: Tag
     tags:
     - VimPilot
@@ -3057,7 +3055,6 @@
       gender: epicene
   - type: MobPrice
     price: 200
-  - type: MessyDrinker
 
 - type: entity
   parent: MobCorgiBase
@@ -3077,6 +3074,8 @@
       amount: 2
   - type: ReplacementAccent
     accent: dog
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-corgi
   - type: Tag
     tags:
     - VimPilot
@@ -3245,10 +3244,6 @@
   - type: HTN # DeltaV - make all cats eat mice
     rootTask:
       task: SimpleHostileCompound
-  - type: JumpAbility # DeltaV - Give cats a pounce :3
-    jumpThrowSpeed: 16 # Fastest it can be without hurting themselves by run+jumping into a wall
-    jumpDistance: 3
-    action: ActionCatJump
   - type: NpcFactionMember # DeltaV - give cats faction so they fight mice
     factions:
     - Cat
@@ -3276,8 +3271,7 @@
   name: syndicat
   id: MobCatSyndy
   parent: MobCatSpace
-  # description: Explosive kitten.
-  description: An adorable cat in a terrifying red suit, prepared to cause trouble. #DeltaV
+  description: Explosive kitten.
   components:
   - type: Sprite
     layers:
@@ -3302,17 +3296,14 @@
     raffle:
       settings: default
   - type: GhostTakeoverAvailable
-  #- type: AutoImplant  # DetlaV
-  #  implants:
-  #  - MicroBombImplant
+  - type: AutoImplant
+    implants:
+    - MicroBombImplant
   - type: ExplosionResistance
     damageCoefficient: 0.2
   - type: NpcFactionMember
     factions:
     - Syndicate
-  - type: Inventory # DeltaV
-    templateId: nfcat
-    speciesId: cat
   - type: Access
     tags:
     - NuclearOperative

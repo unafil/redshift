@@ -33,44 +33,18 @@
     children:
     - !type:NestedSelector # DeltaV
       tableId: BasicAntagEventsTableDeltaV
+    #- id: ClosetSkeleton # DeltaV - replaced with MenaceSkeleton
     - id: DragonSpawn
     - id: ColossusSpawn # DeltaV
-    #- id: ClosetSkeleton # DeltaV - replaced with MenaceSkeleton
     #- id: KingRatMigration # DeltaV - disabled
-    - id: RevenantSpawn
-    - !type:NestedSelector
-      tableId: DerelictBorgEventTable
-
-- type: entityTable
-  id: ModerateAntagEventsTable
-  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
-    children:
-    - id: DragonSpawn
     - id: NinjaSpawn
     - id: ParadoxCloneSpawn
+    - id: RevenantSpawn
     - id: SleeperAgents
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
+    - id: DerelictCyborgSpawn
     - id: WizardSpawn
-    - !type:NestedSelector
-      tableId: DerelictBorgEventTable
-
-- type: entityTable
-  id: DerelictBorgEventTable #For Derelict Borg spawns
-  table: !type:GroupSelector
-    children:
-    - !type:GroupSelector # Standard NT Borgs
-      weight: 85
-      children:
-        - id: DerelictEngineerCyborgSpawn
-        - id: DerelictGenericCyborgSpawn
-        - id: DerelictJanitorCyborgSpawn
-        - id: DerelictMedicalCyborgSpawn
-        - id: DerelictMiningCyborgSpawn
-    - !type:GroupSelector # Other Borgs
-      weight: 15
-      children:
-        - id: DerelictSyndicateAssaultCyborgSpawn
 
 - type: entity
   id: BaseStationEvent
@@ -175,11 +149,6 @@
   - type: BureaucraticErrorRule
     ignoredJobs:
     - StationAi
-    - ResearchAssistant
-    - MedicalIntern
-    - SecurityCadet
-    - TechnicalAssistant
-
 # Clerical Error
 - type: entity
   id: ClericalError
@@ -237,9 +206,6 @@
       pickPlayer: false
       mindRoles:
       - MindRoleDragon
-  - type: DynamicRuleCost
-    cost: 75
-
 # Ninja
 - type: entity
   parent: BaseGameRule
@@ -299,9 +265,7 @@
         nameFormat: name-format-ninja
       mindRoles:
       - MindRoleNinja
-  - type: DynamicRuleCost
-    cost: 75
-
+# Paradox
 - type: entity
   parent: BaseGameRule
   id: ParadoxCloneSpawn
@@ -338,9 +302,6 @@
         sound: /Audio/Misc/paradox_clone_greeting.ogg
       mindRoles:
       - MindRoleParadoxClone
-  - type: DynamicRuleCost
-    cost: 50
-
 # Revenant (standard, not GlimmerRevenantSpawn)
 - type: entity
   parent: BaseGameRule
@@ -613,9 +574,6 @@
       - type: InitialInfected
       mindRoles:
       - MindRoleInitialInfected
-  - type: DynamicRuleCost
-    cost: 200
-
 # Lone Operative
 - type: entity
   parent: BaseNukeopsRule
@@ -655,10 +613,7 @@
         factions:
         - Syndicate
       mindRoles:
-      - MindRoleLoneops
-  - type: DynamicRuleCost
-    cost: 75
-
+      - MindRoleNukeops
 # Sleepers
 - type: entity
   parent: BaseTraitorRule
@@ -768,10 +723,10 @@
 # Derilict Cyborg
 - type: entity
   parent: BaseGameRule
-  id: DerelictEngineerCyborgSpawn
+  id: DerelictCyborgSpawn
   components:
   - type: StationEvent
-    weight: 2.5
+    weight: 5
     earliestStart: 15
     reoccurrenceDelay: 20
     minimumPlayers: 4
@@ -779,115 +734,10 @@
   - type: SpaceSpawnRule
     spawnDistance: 0
   - type: AntagSpawner
-    prototype: PlayerEngineeringBorgDerelictGhostRole
-  - type: AntagSelection
-    definitions:
-    - spawnerPrototype: SpawnPointGhostDerelictEngineeringCyborg
-      min: 1
-      max: 1
-      pickPlayer: false
-
-- type: entity
-  parent: BaseGameRule
-  id: DerelictGenericCyborgSpawn
-  components:
-  - type: StationEvent
-    weight: 2.5
-    earliestStart: 15
-    reoccurrenceDelay: 20
-    minimumPlayers: 4
-    duration: null
-  - type: SpaceSpawnRule
-    spawnDistance: 0
-  - type: AntagSpawner
-    prototype: PlayerBorgDerelictGhostRole
+    prototype: PlayerBorgDerelict
   - type: AntagSelection
     definitions:
     - spawnerPrototype: SpawnPointGhostDerelictCyborg
-      min: 1
-      max: 1
-      pickPlayer: false
-
-- type: entity
-  parent: BaseGameRule
-  id: DerelictJanitorCyborgSpawn
-  components:
-  - type: StationEvent
-    weight: 2.5
-    earliestStart: 15
-    reoccurrenceDelay: 20
-    minimumPlayers: 4
-    duration: null
-  - type: SpaceSpawnRule
-    spawnDistance: 0
-  - type: AntagSpawner
-    prototype: PlayerJanitorBorgDerelictGhostRole
-  - type: AntagSelection
-    definitions:
-    - spawnerPrototype: SpawnPointGhostDerelictJanitorCyborg
-      min: 1
-      max: 1
-      pickPlayer: false
-
-- type: entity
-  parent: BaseGameRule
-  id: DerelictMedicalCyborgSpawn
-  components:
-  - type: StationEvent
-    weight: 2.5
-    earliestStart: 15
-    reoccurrenceDelay: 20
-    minimumPlayers: 4
-    duration: null
-  - type: SpaceSpawnRule
-    spawnDistance: 0
-  - type: AntagSpawner
-    prototype: PlayerMedicalBorgDerelictGhostRole
-  - type: AntagSelection
-    definitions:
-    - spawnerPrototype: SpawnPointGhostDerelictMedicalCyborg
-      min: 1
-      max: 1
-      pickPlayer: false
-
-- type: entity
-  parent: BaseGameRule
-  id: DerelictMiningCyborgSpawn
-  components:
-  - type: StationEvent
-    weight: 2.5
-    earliestStart: 15
-    reoccurrenceDelay: 20
-    minimumPlayers: 4
-    duration: null
-  - type: SpaceSpawnRule
-    spawnDistance: 0
-  - type: AntagSpawner
-    prototype: PlayerMiningBorgDerelictGhostRole
-  - type: AntagSelection
-    definitions:
-    - spawnerPrototype: SpawnPointGhostDerelictMiningCyborg
-      min: 1
-      max: 1
-      pickPlayer: false
-
-- type: entity
-  parent: BaseGameRule
-  id: DerelictSyndicateAssaultCyborgSpawn
-  components:
-  - type: StationEvent
-    weight: 2.5
-    earliestStart: 25
-    reoccurrenceDelay: 20
-    minimumPlayers: 15
-    duration: null
-  - type: SpaceSpawnRule
-    spawnDistance: 0
-  - type: AntagSpawner
-    prototype: PlayerBorgSyndicateDerelictGhostRole
-  - type: AntagSelection
-    definitions:
-    - spawnerPrototype: SpawnPointGhostDerelictSyndicateAssaultCyborg
       min: 1
       max: 1
       pickPlayer: false

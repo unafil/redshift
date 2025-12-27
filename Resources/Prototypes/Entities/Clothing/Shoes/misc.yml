@@ -139,7 +139,6 @@
   - type: ClothingSpeedModifier
     walkModifier: 1.7 # DeltaV
     sprintModifier: 1.7 # DeltaV
-    standing: true
   - type: Appearance
   - type: GenericVisualizer
     visuals:
@@ -191,10 +190,10 @@
     price: 75
   - type: Tag
     tags: [ ]
-  # - type: ReverseEngineering # DeltaV: upgrade moonboots T1 to speedboots T3
-  #   difficulty: 5
-  #   recipes:
-  #   - ClothingShoesBootsSpeed
+  - type: ReverseEngineering # DeltaV: upgrade moonboots T1 to speedboots T3
+    difficulty: 5
+    recipes:
+    - ClothingShoesBootsSpeed
 
 - type: entity
   parent: ClothingShoesBase

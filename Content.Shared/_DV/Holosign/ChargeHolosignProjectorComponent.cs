@@ -1,3 +1,4 @@
+using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
@@ -5,6 +6,7 @@ namespace Content.Shared._DV.Holosign;
 
 /// <summary>
 /// A holosign projector that uses <c>LimitedCharges</c> instead of a power cell slot.
+/// If there is already a sign on the clicked tile it reclaims it for a charge instead of stacking it.
 /// Currently there is no spawning prediction so signs are spawned once in a container and moved out to allow prediction.
 /// </summary>
 [RegisterComponent, NetworkedComponent, Access(typeof(ChargeHolosignSystem))]
@@ -13,22 +15,23 @@ public sealed partial class ChargeHolosignProjectorComponent : Component
     /// <summary>
     /// The entity to spawn.
     /// </summary>
-    [DataField]
-    public EntProtoId SignProto = "HolosignWetFloor";
+    [DataField(required: true)]
+    public EntProtoId SignProto;
 
     /// <summary>
-    /// A whitelist component that the projection has to have in order for the projector to pick it back up.
-    /// For example, HolosignWetFloor has the component Holosign, and while HoloFan has the Holofan component.
-    /// When SignComponentName is Holosign, then it can pick up HolosignWetFloor but not HoloFan.
+    /// Component on <see cref="SignProto"/> to check for duplicates.
     /// </summary>
-    [DataField]
-    public string? SignComponentName = "Holosign";
+    [DataField(required: true)]
+    public string SignComponentName;
 
     public Type SignComponent = default!;
 
     /// <summary>
-    /// If true, the holosign projector can pick up the entity whitelisted in the SignComponentName variable.
+    /// Container to store sign entities in before they are "spawned" on use.
     /// </summary>
     [DataField]
-    public bool CanPickup = true;
+    public string ContainerId = "signs";
+
+    [ViewVariables]
+    public Container Container = default!;
 }

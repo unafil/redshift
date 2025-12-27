@@ -168,7 +168,7 @@ public sealed partial class DCCVars
         CVarDef.Create("game.disable_preset_test", false, CVar.SERVERONLY);
 
     /// <summary>
-    /// A string containing a list of newline-separated strings to be highlighted in the chat. Use this instead of Wizden's CVar.
+    /// A string containing a list of newline-separated strings to be highlighted in the chat.
     /// </summary>
     public static readonly CVarDef<string> ChatHighlights =
         CVarDef.Create("deltav.chat.highlights",
@@ -179,7 +179,6 @@ public sealed partial class DCCVars
     /// <summary>
     /// An option to toggle the automatic filling of the highlights with the character's info, if available.
     /// </summary>
-    [Obsolete("Use CCVar.ChatAutoFillHighlights instead.")]
     public static readonly CVarDef<bool> ChatAutoFillHighlights =
         CVarDef.Create("deltav.chat.auto_fill_highlights",
             false,
@@ -189,7 +188,6 @@ public sealed partial class DCCVars
     /// <summary>
     /// The color in which the highlights will be displayed.
     /// </summary>
-    [Obsolete("Use CCVar.ChatHighlightsColor instead.")]
     public static readonly CVarDef<string> ChatHighlightsColor =
         CVarDef.Create("deltav.chat.highlights_color",
             "#17FFC1FF",

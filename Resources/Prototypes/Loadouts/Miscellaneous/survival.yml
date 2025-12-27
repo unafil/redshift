@@ -28,7 +28,6 @@
     - Thaven
     - Kitsune
     - Avali
-    - Ovinia
     # End DeltaV additions
 
 - type: loadoutEffectGroup
@@ -87,17 +86,6 @@
     - Dwarf
     - Human
     - Reptilian
-    # Begin DeltaV additions
-    - Felinid
-    - Harpy
-    - Oni
-    - Vulpkanin
-    - Rodentia
-    - Chitinid
-    - Thaven
-    - Kitsune
-    - Avali
-    # End DeltaV additions
 
 - type: loadoutEffectGroup
   id: OxygenBreatherMimeMoth

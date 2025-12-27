@@ -32,8 +32,7 @@
   # Begin Redshift changes - apparently slippery got refactored
   #slippery: true
   slipData:
-    knockdownTime: 0.5 # Redshift - knockdown refactor
-    stunTime: 0.5 # Redshift - ditto
+    paralyzeTime: 0.5
     launchForwardsMultiplier: 1.2
     requiredSlipSpeed: 1
   # End Redshift changes - apparently slippery got refactored

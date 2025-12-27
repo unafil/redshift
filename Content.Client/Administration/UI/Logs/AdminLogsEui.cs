@@ -1,6 +1,4 @@
-﻿using System.IO;
-using System.Linq;
-using Content.Client.Administration.UI.Logs.Entries;
+﻿using System.Linq;
 using Content.Client.Eui;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Eui;

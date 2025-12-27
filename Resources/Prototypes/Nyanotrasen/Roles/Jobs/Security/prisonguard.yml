@@ -28,7 +28,7 @@
 - type: startingGear
   id: PrisonGuardGear
   equipment:
-    #eyes: ClothingEyesGlassesSecurity # DeltaV - loadouts
+    eyes: ClothingEyesGlassesSecurity
     id: PrisonGuardPDA
     ears: ClothingHeadsetPrisonGuard # begin DeltaV
   storage:

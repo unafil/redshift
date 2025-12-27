@@ -100,9 +100,3 @@
   recipes:
   - ClothingOuterHardsuitEVAPrisoner
   - ClothingHeadHelmetEVALarge
-
-- type: latheRecipePack
-  id: AdvancedPsionicProsthetics
-  recipes:
-  - PyroLeftArm
-  - ZapLeftArm

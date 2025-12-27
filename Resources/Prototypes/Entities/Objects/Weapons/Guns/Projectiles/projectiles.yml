@@ -229,46 +229,13 @@
   - type: Projectile
     damage:
       types:
-        Shock: 1
+        Heat: 5
     soundHit:
       path: "/Audio/Weapons/Guns/Hits/taser_hit.ogg"
     forceSound: true
-  - type: TimedDespawn
-    lifetime: 0.170 # Very short range
-  - type: StunOnCollide
-    stunAmount: 0
-    knockdownAmount: 2.5 # Enough to subdue and follow up with a stun batong
-    slowdownAmount: 2.5
-    walkSpeedModifier: 0.5
-    sprintSpeedModifier: 0.5
-
-- type: entity
-  parent: BulletTaser
-  id: BulletTaserSuper
-  categories: [ HideSpawnMenu ]
-  name: taser bolt
-  description: If you can see this, you've probably been stun-meta'd
-  components:
-  - type: Sprite
-    noRot: true
-    sprite: Structures/Power/Generation/Tesla/energy_miniball.rsi
-    color: "#ffff33"
-    layers:
-    - state: tesla_projectile
-      shader: unshaded
-  - type: PointLight
-    enabled: true
-    color: "#ffff33"
-    radius: 2.0
-    energy: 7.01
-  - type: TimedDespawn
-    lifetime: 1.0 # Not so short range
   - type: StunOnCollide
     stunAmount: 5
-    knockdownAmount: 10
-    slowdownAmount: 10
-    walkSpeedModifier: 0.5
-    sprintSpeedModifier: 0.5
+    knockdownAmount: 5
 
 - type: entity
   name : disabler bolt
@@ -882,6 +849,8 @@
     range: 7
   - type: SpawnOnTrigger
     proto: GrenadeFlashEffect
+  - type: ActiveTimerTrigger
+    timeRemaining: 0.3
   - type: DeleteOnTrigger
 
 - type: entity
@@ -897,7 +866,7 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 30 # Delta-V
+    totalIntensity: 50
     intensitySlope: 1
     maxIntensity: 5
     canCreateVacuum: false
@@ -905,9 +874,8 @@
     containers:
       cluster-payload: !type:Container
   - type: ProjectileGrenade
-    fillPrototype: PelletClusterLethal # Delta-V
-    capacity: 15 # Delta-V
-    triggerKey: trigger # Delta-V
+    fillPrototype: PelletClusterLessLethal
+    capacity: 30
 
 - type: entity
   parent: BaseBulletTrigger
@@ -919,6 +887,8 @@
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
     - state: cleanade
+  - type: ActiveTimerTrigger
+    timeRemaining: 0.3
   - type: SmokeOnTrigger
     duration: 3.5
     spreadAmount: 30
@@ -927,9 +897,8 @@
       reagents:
       - ReagentId: SpaceCleaner
         Quantity: 30
-  - type: EmitSoundOnTrigger
+  - type: SoundOnTrigger
     sound: /Audio/Items/smoke_grenade_smoke.ogg
-    positional: true
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
@@ -1284,7 +1253,7 @@
           bounds: "-0.15,-0.3,0.15,0.3"
         hard: false
         mask:
-       # - Impassable
+       # - Impassable 
        # - BulletImpassable
         - Opaque # Delta-V changed from impassable so that they can go through windows
       fly-by: *flybyfixture

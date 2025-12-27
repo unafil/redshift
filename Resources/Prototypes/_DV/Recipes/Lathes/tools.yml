@@ -32,7 +32,7 @@
 - type: latheRecipe
   parent: BaseToolRecipe
   id: HoloprojectorEngineering
-  result: HoloprojectorEngineering
+  result: HoloprojectorEngineeringEmpty
   completetime: 8
   materials:
     Steel: 300

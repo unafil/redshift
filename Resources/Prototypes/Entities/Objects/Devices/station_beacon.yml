@@ -221,7 +221,7 @@
     defaultText: station-beacon-detective
 
 - type: entity
-  parent: DefaultStationBeaconJustice # Delta V - Courtroom uses justice colors
+  parent: DefaultStationBeaconSecurity
   id: DefaultStationBeaconCourtroom
   suffix: Courtroom
   components:
@@ -229,7 +229,7 @@
     defaultText: station-beacon-courtroom
 
 - type: entity
-  parent: DefaultStationBeaconJustice # Delta V - Law office uses justice colors
+  parent: DefaultStationBeaconService #Delta V - Lawer is Service until Justice Dept is a thing
   id: DefaultStationBeaconLawOffice
   suffix: Law Office
   components:
@@ -659,7 +659,7 @@
     defaultText: station-beacon-chapel
 
 - type: entity
-  parent: DefaultStationBeaconScience #Delta V - Library is in Epi
+  parent: DefaultStationBeacon
   id: DefaultStationBeaconLibrary
   suffix: Library
   components:
@@ -667,7 +667,7 @@
     defaultText: station-beacon-library
 
 - type: entity
-  parent: DefaultStationBeaconService # Delta V - Use Service colors
+  parent: DefaultStationBeacon
   id: DefaultStationBeaconTheater
   suffix: Theater
   components:

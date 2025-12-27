@@ -3,10 +3,12 @@ using Content.Client.Ghost;
 using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Client.UserInterface.Systems.Ghost.Widgets;
 using Content.Shared.Ghost;
+using Robust.Client.Console; // Frontier
 using Robust.Shared.Console; // Frontier
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
-using Content.Shared._Corvax.Respawn; // Frontier
+using Content.Client._Corvax.Respawn; // Frontier
+using Content.Shared._NF.CCVar; // Frontier
 using Robust.Shared.Configuration; // Frontier
 
 namespace Content.Client.UserInterface.Systems.Ghost;
@@ -19,9 +21,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
     [Dependency] private readonly IConfigurationManager _cfg = default!; // Frontier
 
     [UISystemDependency] private readonly GhostSystem? _system = default;
-
-    // Updated when get death time from the server.
-    private TimeSpan? DeathTime;
+    [UISystemDependency] private readonly RespawnSystem? _respawn = default; // Frontier
 
     private GhostGui? Gui => UIManager.GetActiveUIWidgetOrNull<GhostGui>();
 
@@ -32,9 +32,6 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         var gameplayStateLoad = UIManager.GetUIController<GameplayStateLoadController>();
         gameplayStateLoad.OnScreenLoad += OnScreenLoad;
         gameplayStateLoad.OnScreenUnload += OnScreenUnload;
-
-        // DeltaV
-        SubscribeNetworkEvent<RespawnResetEvent>(OnRespawnReseted);
     }
 
     private void OnScreenLoad()
@@ -67,14 +64,23 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         system.GhostRoleCountUpdated -= OnRoleCountUpdated;
     }
 
-    // Begin DeltaV
-    private void OnRespawnReseted(RespawnResetEvent ev, EntitySessionEventArgs args)
+    // Begin Frontier
+    public void OnSystemLoaded(RespawnSystem system)
     {
-        DeathTime = ev.Time;
-        UpdateGui();
-        UpdateRespawn();
+        system.RespawnReseted += OnRespawnReseted;
     }
-    // End DeltaV
+
+    public void OnSystemUnloaded(RespawnSystem system)
+    {
+        system.RespawnReseted -= OnRespawnReseted;
+    }
+
+    private void OnRespawnReseted()
+    {
+        UpdateGui();
+        UpdateRespawn(_respawn?.RespawnResetTime);
+    }
+    // End Frontier
 
     public void UpdateGui()
     {
@@ -88,9 +94,9 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
     }
 
     // Begin Frontier
-    private void UpdateRespawn()
+    private void UpdateRespawn(TimeSpan? timeOfDeath)
     {
-        Gui?.UpdateRespawn(DeathTime);
+        Gui?.UpdateRespawn(timeOfDeath);
     }
     // End Frontier
 
@@ -110,7 +116,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
             return;
 
         Gui.Visible = true;
-        UpdateRespawn(); // Frontier, DeltaV
+        UpdateRespawn(_respawn?.RespawnResetTime); // Frontier
         UpdateGui();
     }
 
@@ -197,4 +203,11 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
     {
         _system?.OpenGhostRoles();
     }
+
+    // Begin Frontier
+    private void RespawnPressed()
+    {
+        IoCManager.Resolve<IClientConsoleHost>().RemoteExecuteCommand(null, "ghostrespawn");
+    }
+    // End Frontier
 }

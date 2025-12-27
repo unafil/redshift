@@ -231,7 +231,6 @@
   children:
   - Fires
   - Spacing
-  - DeltaPressure
 
 - type: guideEntry
   id: Fires
@@ -242,11 +241,6 @@
   id: Spacing
   name: guide-entry-spacing
   text: "/ServerInfo/Guidebook/Engineering/Spacing.xml"
-
-- type: guideEntry
-  id: DeltaPressure
-  name: guide-entry-deltapressure
-  text: "/ServerInfo/Guidebook/Engineering/DeltaPressure.xml"
 
 - type: guideEntry
   id: AtmosTools

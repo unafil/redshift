@@ -580,7 +580,7 @@
   desc: reagent-desc-antifreeze
   physicalDesc: reagent-physical-desc-translucent
   flavor: antifreeze
-  color: "#31f0ff" # DeltaV: Color changed
+  color: "#ff7d63"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/antifreeze.rsi
     state: icon_empty
@@ -774,7 +774,7 @@
   desc: reagent-desc-brave-bull
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: bravebull
-  color: "#9c968d" #DeltaV: Color changed
+  color: "#664300"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/bravebullglass.rsi
     state: icon_empty
@@ -975,7 +975,7 @@
   desc: reagent-desc-driest-martini
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: driestmartini
-  color: "#7e3e13" # DeltaV: Color changed
+  color: "#2E6671"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/driestmartiniglass.rsi
     state: icon_empty
@@ -1067,7 +1067,7 @@
   desc: reagent-desc-gin-fizz
   physicalDesc: reagent-physical-desc-fizzy
   flavor: ginfizz
-  color: "#ffffaa" # DeltaV: Color changed
+  color: "#664300"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/ginfizzglass.rsi
     state: icon_empty
@@ -1091,7 +1091,7 @@
   desc: reagent-desc-gin-tonic
   physicalDesc: reagent-physical-desc-fizzy
   flavor: gintonic
-  color: "#cbdbdd" # DeltaV: Color changed
+  color: "#004166"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/gintonicglass.rsi
     state: icon_empty
@@ -1136,25 +1136,15 @@
   name: reagent-name-grog
   parent: BaseAlcohol
   desc: reagent-desc-grog
-  physicalDesc: reagent-physical-desc-diluted # DeltaV: Desc changed
+  physicalDesc: reagent-physical-desc-strong-smelling
   flavor: grog
-  color: "#cc953d" # DeltaV: Color Changed
+  color: "#e3e77b"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/beerstein.rsi
     state: icon_empty
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
-  # Begin DeltaV additions
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 3
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: .04
-  # End DeltaV additions
 
 - type: reagent
   id: HippiesDelight
@@ -1176,17 +1166,9 @@
   name: reagent-name-hooch
   parent: BaseAlcohol
   desc: reagent-desc-hooch
-  physicalDesc: reagent-physical-desc-pungent # DeltaV: Desc changed
+  physicalDesc: reagent-physical-desc-strong-smelling
   flavor: hooch
-  color: "#706a58" # DeltaV: color changed
-  # Begin DeltaV additions
-  metamorphicSprite:
-    sprite: _DV/Objects/Consumable/Drinks/hooch.rsi # DeltaV: Sprite changed
-    state: icon_empty
-  metamorphicMaxFillLevels: 6
-  metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false
-  # End DeltaV additions
+  color: "#664e00"
 
 - type: reagent
   id: IcedBeer
@@ -1195,7 +1177,7 @@
   desc: reagent-desc-iced-beer
   physicalDesc: reagent-physical-desc-bubbly
   flavor: icedbeer
-  color: "#e3e799" # DeltaV: Color changed
+  color: "#664300"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/iced_beerglass.rsi
     state: icon_empty
@@ -1211,7 +1193,7 @@
   desc: reagent-desc-irish-slammer
   physicalDesc: reagent-physical-desc-bubbly
   flavor: irishslammer
-  color: "#47210a" #DeltaV: Color changed
+  color: "#2E6671"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/irishslammer.rsi
     state: icon_empty
@@ -1234,7 +1216,7 @@
   desc: reagent-desc-irish-cream
   physicalDesc: reagent-physical-desc-creamy
   flavor: irish-cream #Delta-V Flavor additions
-  color: "#d9c7ac" #DeltaV: Color changed
+  color: "#664300"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/irishcreamglass.rsi
     state: icon_empty
@@ -1257,7 +1239,7 @@
   desc: reagent-desc-irish-coffee
   physicalDesc: reagent-physical-desc-cloudy
   flavor: irishcoffee
-  color: "#7e3e13" #DeltaV: Color changed
+  color: "#664300"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/irishcoffeeglass.rsi
     state: icon_empty
@@ -1325,7 +1307,7 @@
   desc: reagent-desc-long-island-iced-tea
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: longisland
-  color: "#ff6633" # DeltaV: Color changed
+  color: "#664300"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/longislandicedteaglass.rsi
     state: icon_empty
@@ -1348,7 +1330,7 @@
   desc: reagent-desc-manhattan
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: manhattan
-  color: "#ff6633" # DeltaV: Color changed
+  color: "#664300"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/manhattanglass.rsi
     state: icon_empty
@@ -1363,7 +1345,7 @@
   desc: reagent-desc-manhattan-project
   physicalDesc: reagent-physical-desc-overpowering
   flavor: manhattanproject
-  color: "#52e223" # DeltaV: Color changed
+  color: "#664300"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/proj_manhattanglass.rsi
     state: icon_empty
@@ -1378,7 +1360,7 @@
   desc: reagent-desc-manly-dorf
   physicalDesc: reagent-physical-desc-fizzy-and-creamy
   flavor: rocksandstones
-  color: "#744200" # DeltaV: Color changed
+  color: "#664300"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/manlydorfglass.rsi
     state: icon_empty
@@ -1409,7 +1391,7 @@
   desc: reagent-desc-martini
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: martini
-  color: "#bedaba" # DeltaV: Color changed
+  color: "#664300"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/martiniglass.rsi
     state: icon_empty
@@ -1432,7 +1414,7 @@
   desc: reagent-desc-mead
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: mead
-  color: "#e0c05e" # DeltaV: Color changed
+  color: "#664300"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/beerstein.rsi
     state: icon_empty
@@ -1464,7 +1446,7 @@
   desc: reagent-desc-monkey-business
   physicalDesc: reagent-physical-desc-tart
   flavor: monkeybusiness
-  color: "#f75147" # DeltaV: Color changed
+  color: "#d6b929"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/monkeybusiness.rsi
     state: icon_empty
@@ -1479,11 +1461,11 @@
   desc: reagent-desc-moonshine
   physicalDesc: reagent-physical-desc-pungent
   flavor: moonshine
-  color: "#d4d3cd" # DeltaV: Color changed
+  color: "#d1d7d155"
   metamorphicSprite:
-    sprite: _DV/Objects/Consumable/Drinks/moonshinebottle.rsi # DeltaV: Sprite changed
+    sprite: Objects/Consumable/Drinks/moonshineglass.rsi
     state: icon_empty
-  metamorphicMaxFillLevels: 4 # DeltaV: Fill levels reduced
+  metamorphicMaxFillLevels: 6
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
@@ -1638,7 +1620,7 @@
   desc: reagent-desc-sbiten
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: sbiten
-  color: "#d8d7af" # DeltaV: Color changed
+  color: "#004166"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/sbitenglass.rsi
     state: icon_empty
@@ -1700,7 +1682,7 @@
   name: reagent-name-silencer
   parent: BaseAlcohol
   desc: reagent-desc-silencer
-  physicalDesc: reagent-physical-desc-nothing # DeltaV: Desc changed
+  physicalDesc: reagent-physical-desc-strong-smelling
   flavor: silencer #Delta-V Flavor additions
   color: "#878787"
   metamorphicSprite:
@@ -1883,7 +1865,7 @@
   desc: reagent-desc-vodka-martini
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: vodkamartini
-  color: "#bedaba" # DeltaV: Color changed
+  color: "#004666"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/martiniglass.rsi
     state: icon_empty
@@ -1906,7 +1888,7 @@
   desc: reagent-desc-vodka-tonic
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: vodkatonic
-  color: "#e9f6fa" # DeltaV: Color changed
+  color: "#0064C8"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/vodkatonicglass.rsi
     state: icon_empty

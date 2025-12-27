@@ -1,6 +1,6 @@
 using Content.Server.Objectives.Components;
 using Content.Shared.Objectives.Components;
-using Content.Shared.Roles.Components;
+using Content.Shared.Roles;
 
 namespace Content.Server.Objectives.Systems;
 
@@ -27,7 +27,7 @@ public sealed class NotJobsRequirementSystem : EntitySystem
 
         foreach (var forbidJob in ent.Comp.Jobs)
         {
-            foreach (var roleId in args.Mind.MindRoleContainer.ContainedEntities)
+            foreach (var roleId in args.Mind.MindRoles)
             {
                 if (_query.CompOrNull(roleId)?.JobPrototype == forbidJob)
                     args.Cancelled = true;

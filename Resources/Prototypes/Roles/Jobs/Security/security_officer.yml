@@ -25,7 +25,7 @@
 - type: startingGear
   id: SecurityOfficerGear
   equipment:
-    #eyes: ClothingEyesGlassesSecurity # DeltaV - loadouts
+    eyes: ClothingEyesGlassesSecurity
     ears: ClothingHeadsetSecurity
     #pocket1: WeaponPistolMk58Nonlethal # DeltaV - loadouts
   storage:

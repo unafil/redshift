@@ -196,7 +196,7 @@
     sprite: Clothing/Head/Misc/fancycrown.rsi
   - type: Clothing
     sprite: Clothing/Head/Misc/fancycrown.rsi
-  - type: StaticPrice
+  - type: MobPrice
     price: 3000
 #  - type: AddAccentClothing # DeltaV - remove clothing-forced accents
 #    accent: MobsterAccent
@@ -313,16 +313,15 @@
   - type: Clothing
     slots:
     - HEAD
-  - type: Edible
-    edible: Drink
+  - type: Food
     solution: drink
+    useSound: /Audio/Items/drink.ogg
+    eatMessage: drink-component-try-use-drink-success-slurp
     delay: 0.5
     forceFeedDelay: 1.5
   - type: FlavorProfile
     flavors:
       - water
-  - type: DrainableSolution
-    solution: drink
   - type: SolutionContainerManager
     solutions:
       drink:

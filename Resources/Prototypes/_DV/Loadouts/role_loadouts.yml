@@ -10,7 +10,6 @@
   - CourierPDA
   - CourierBackpack
   - CourierShoes
-  - Glasses
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
@@ -40,7 +39,6 @@
   - SecurityShoes
   - BrigMedicOuterClothing
   - MedicalGloves
-  - CorpsmanEyewear
   - SurvivalSecurity
   - Trinkets
   - GroupSpeciesBreathToolCorpsman
@@ -61,7 +59,7 @@
   - MedicalDoctorOuterClothing
   - MedicalShoes
   - SurgeonPDA
-  - MedicalEyewear
+  - Glasses
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
@@ -122,7 +120,7 @@
   - RoboticistGloves
   - RoboticistShoes
   - RoboticistPDA
-  - RoboticistGlasses
+  - Glasses
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool

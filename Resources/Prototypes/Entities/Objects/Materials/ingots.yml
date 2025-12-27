@@ -14,7 +14,7 @@
   - type: Tag
     tags:
     - Ingot
-    - ConstructionMaterial
+    - BorgMaterial # DeltaV
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic

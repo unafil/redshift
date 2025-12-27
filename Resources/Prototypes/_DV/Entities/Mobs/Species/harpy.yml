@@ -6,10 +6,6 @@
   abstract: true
   components:
   - type: HarpySinger
-  - type: Flight # EE - Flight
-    isLayerAnimated: true
-    layer: "/Textures/_EE/Mobs/Customization/Harpy/harpy_wings.rsi"
-    animationKey: "Flap"
   - type: Instrument
     allowPercussion: false
     program: 52
@@ -121,8 +117,8 @@
     allowedEmotes: ['Meow', 'Hiss', 'Mew', 'Purr', 'Growl', 'Bark', 'Snarl', 'Whine', 'Howl', 'Awoo', 'HarpyHonk', 'HarpyRing', 'HarpyPew', 'HarpyBang', 'HarpyBeep', 'HarpyRev', 'HarpyCaw', 'HarpySquish', 'Chitter', 'Chirp', 'Squeak', 'Click', 'Gnash']
   - type: Vocal
     sounds:
-      Male: SoundsHarpyMale
-      Female: SoundsHarpyFemale
+      Male: SoundsHarpy
+      Female: SoundsHarpy
       Unsexed: SoundsHarpy
   - type: InstrumentVisuals
   - type: GenericVisualizer
@@ -240,16 +236,5 @@
   - type: Action
     icon: _DV/Interface/Actions/harpy_syrinx.png
     itemIconStyle: BigAction
-
-- type: entity
-  id: ActionToggleFlight
-  name: Fly
-  description: Make use of your wings to fly. Beat the flightless bird allegations.
-  components:
-  - type: Action
-    itemIconStyle: BigAction
-    icon: { sprite: _EE/Interface/Actions/flight.rsi, state: flight_off }
-    iconOn: { sprite : _EE/Interface/Actions/flight.rsi, state: flight_on }
-    checkCanInteract: false
   - type: InstantAction
-    event: !type:ToggleFlightEvent
+    event: !type:VoiceMaskSetNameEvent

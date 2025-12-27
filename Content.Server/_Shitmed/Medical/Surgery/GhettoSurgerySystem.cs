@@ -1,4 +1,4 @@
-using Content.Shared.Kitchen.Components;
+using Content.Server.Kitchen.Components;
 using Content.Shared._Shitmed.Medical.Surgery.Tools;
 using Robust.Shared.Audio;
 

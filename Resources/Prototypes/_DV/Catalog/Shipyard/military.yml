@@ -1,9 +1,9 @@
 - type: vessel
   id: Bulwark
-  name: NTMI-TR Bulwark
+  name: NTSP Bulwark
   description: A compact security shuttle with cells for 2 prisoners and plenty of donuts.
-  price: 47000
-  path: /Maps/_DV/Shuttles/Shipyard/ntsy_bulwark.yml
+  price: 44000
+  path: /Maps/_DV/Shuttles/Shipyard/ntsp-bulwark.yml
   categories:
   - Military
   - Small

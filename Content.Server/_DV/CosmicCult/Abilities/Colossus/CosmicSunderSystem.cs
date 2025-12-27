@@ -27,7 +27,7 @@ public sealed class CosmicSunderSystem : EntitySystem
         _appearance.SetData(ent, ColossusVisuals.Status, ColossusStatus.Action);
         _transform.SetCoordinates(ent, args.Target);
         _transform.AnchorEntity(ent);
-        _stun.TryAddStunDuration(ent, ent.Comp.AttackWait);
+        _stun.TryStun(ent, ent.Comp.AttackWait, true);
 
         comp.Attacking = true;
         comp.AttackHoldTimer = comp.AttackWait + _timing.CurTime;

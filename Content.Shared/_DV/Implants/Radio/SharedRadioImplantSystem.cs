@@ -22,7 +22,8 @@ public abstract class SharedRadioImplantSystem : EntitySystem
     /// </summary>
     private void OnImplanted(Entity<RadioImplantComponent> ent, ref ImplantImplantedEvent args)
     {
-        var user = args.Implanted;
+        if (args.Implanted is not {} user)
+            return;
 
         ent.Comp.Implantee = user;
         Dirty(ent, ent.Comp);

@@ -648,8 +648,7 @@
   description: A sign indicating the library.
   components:
   - type: Sprite
-    sprite: _DV/Structures/Wallmounts/signs.rsi # DeltaV - resprite library sign
-    state: library # DeltaV - resprite library sign
+    state: biblio
 
 - type: entity
   parent: BaseSign
@@ -1252,7 +1251,6 @@
   description: A sign depicting the detective's office.
   components:
   - type: Sprite
-    sprite: _DV/Structures/Wallmounts/signs.rsi # DeltaV - resprite detective signs
     state: detective
 
 - type: entity

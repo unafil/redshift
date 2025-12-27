@@ -47,14 +47,3 @@
   id: StasecWinterCoatCorpsman
   equipment:
     outerClothing: ClothingOuterCoatStasecCorpsman
-
-# Eyewear
-- type: loadout
-  id: CorpsmanGlasses
-  equipment:
-    eyes: ClothingEyesGlassesCorpsman
-
-- type: loadout
-  id: PrescriptionCorpsmanGlasses
-  equipment:
-    eyes: ClothingEyesPrescriptionCorpsmanGlasses

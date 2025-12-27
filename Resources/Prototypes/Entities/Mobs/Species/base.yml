@@ -35,7 +35,6 @@
     - map: [ "outerClothing" ]
     - map: [ "back" ]
     - map: [ "neck" ]
-    - map: [ "enum.HumanoidVisualLayers.SnoutCover" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
@@ -82,7 +81,6 @@
     horizontalRotation: 90
   - type: HumanoidAppearance
     species: Human
-  - type: TypingIndicator
   - type: SlowOnDamage
     speedModifierThresholds:
       60: 0.8 # DV - Was 0.7
@@ -121,7 +119,13 @@
       - !type:WashCreamPieReaction
   - type: StatusEffects
     allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Stutter
     - Electrocution
+    - Drunk
+    - SlurredSpeech
     - RatvarianLanguage
     - PressureImmunity
     - Muted
@@ -173,7 +177,6 @@
   - type: SleepEmitSound
   - type: SSDIndicator
   - type: StandingState
-  - type: Crawler
   - type: Dna
   - type: MindContainer
     showExamineInfo: true
@@ -225,6 +228,7 @@
     - AnomalyHost
   - type: PotentialPsionic # DeltaV - organic species can all be psionic
   - type: FootPrints # DeltaV port from EE, blood splatter
+  - type: LayingDown # WD EDIT
   - type: Targeting # Shitmed Change
   - type: SurgeryTarget # Shitmed Change
   - type: CosmicCenserTarget # DeltaV - Cosmic Cult
@@ -300,9 +304,10 @@
         Asphyxiation: -1.0
   - type: FireVisuals
     alternateState: Standing
-  #- type: StunVisuals # DeltaV - No stars
-  - type: CanDoCPR # DeltaV - Addition of CPR
+  - type: LayingDown # WD EDIT
   - type: Arousal # Redshift - :)
+  #- type: StunVisuals # DeltaV - disabled stun visuals for now
+  - type: CanDoCPR # DeltaV - Addition of CPR
 
 - type: entity
   save: false
@@ -350,7 +355,6 @@
     - map: [ "outerClothing" ]
     - map: [ "back" ]
     - map: [ "neck" ]
-    - map: [ "enum.HumanoidVisualLayers.SnoutCover" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]

@@ -12,7 +12,7 @@
     sprite: Nyanotrasen/Objects/Specific/Chapel/holylight.rsi
   - type: Spellbook
     spellActions:
-      ActionForceWallBookOfMysteries: null
+      ActionForceWall: -1
   - type: Summonable
     specialItem: SpawnPointGhostIfrit
   - type: Tag

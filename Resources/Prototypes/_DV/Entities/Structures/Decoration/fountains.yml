@@ -24,9 +24,11 @@
         Quantity: 100
   - type: Drink
     solution: fountain
-  - type: ExaminableSolution
+  - type: DrawableSolution
     solution: fountain
   - type: DrainableSolution
+    solution: fountain
+  - type: ExaminableSolution
     solution: fountain
   - type: InteractionOutline
   - type: Prayable
@@ -39,10 +41,9 @@
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 0.5
+          radius: 0.75
         density: 400
-        layer:
-        - WallLayer
+        hard: false
 
 - type: entity
   parent: BaseStructure
@@ -60,3 +61,12 @@
       - state: large-round-top
       - state: large-round-top-water
       - state: large-round-flows
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.5
+        density: 400
+        layer:
+        - WallLayer

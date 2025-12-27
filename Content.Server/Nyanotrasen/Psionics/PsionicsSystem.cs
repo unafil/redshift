@@ -178,13 +178,5 @@ namespace Content.Server.Psionics
             RollPsionics(uid, psionic, multiplier: bonusMuliplier);
             psionic.Rerolled = true;
         }
-
-        public void GrantNewPsionicReroll(EntityUid uid, PotentialPsionicComponent? psionic = null)
-        {
-            if (!Resolve(uid, ref psionic, false))
-                return;
-
-            psionic.Rerolled = false;
-        }
     }
 }

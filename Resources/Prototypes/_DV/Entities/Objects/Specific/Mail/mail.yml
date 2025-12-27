@@ -1177,7 +1177,7 @@
     - id: FoodDonutJellySweetpea
       amount: 2
       orGroup: Food
-    - id: FoodDonutJellyScurret
+    - id: FoodDonutJellySlugcat
       amount: 2
       orGroup: Food
     - id: FoodFrozenSandwich # ah yes, baked goods
@@ -1763,15 +1763,5 @@
   components:
   - type: Mail
     contents:
-    - id: PaperWrittenGorlexGirlfriendsSubscriptionNotice
+    - id: PaperWrittenSubscriptionNotice
     - id: BookGorlexGirlfriends
-
-- type: entity
-  parent: BaseMail
-  id: MailCentcommChads
-  suffix: Centcomm Chads
-  components:
-  - type: Mail
-    contents:
-    - id: PaperWrittenCentcommChadsSubscriptionNotice
-    - id: BookCentcommChads

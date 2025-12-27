@@ -15,7 +15,8 @@ public sealed class AddComponentsImplantSystem : EntitySystem
 
     private void OnImplantImplantedEvent(Entity<AddComponentsImplantComponent> ent, ref ImplantImplantedEvent args)
     {
-        var target = args.Implanted;
+        if (args.Implanted is not {} target)
+            return;
 
         foreach (var component in ent.Comp.ComponentsToAdd)
         {

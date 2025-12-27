@@ -5,7 +5,6 @@ using Content.Shared.Damage;
 using Content.Shared.Mobs.Components;
 using Robust.Shared.Prototypes;
 using Content.Shared.Actions.Events;
-using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Psionics.Events;
 using Content.Shared.StatusEffect;
@@ -22,7 +21,6 @@ namespace Content.Shared.Abilities.Psionics
         [Dependency] private readonly SharedPopupSystem _popup = default!;
         [Dependency] private readonly SharedPsionicAbilitiesSystem _psionics = default!;
         [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
-        [Dependency] private readonly MovementModStatusSystem _movementMod = default!;
 
         public override void Initialize()
         {
@@ -70,7 +68,7 @@ namespace Content.Shared.Abilities.Psionics
                 }
             }
 
-            _movementMod.TryUpdateMovementSpeedModDuration(ent, MovementModStatusSystem.PsionicSlowdown, ent.Comp.UseDelay, 0.5f);
+            _statusEffects.TryAddStatusEffect<SlowedDownComponent>(ent, "SlowedDown", ent.Comp.UseDelay, true);
 
             _doAfter.TryStartDoAfter(doAfterArgs, out var doAfterId);
             ent.Comp.DoAfter = doAfterId;

@@ -37,12 +37,6 @@
   id: BeltSlotNotBelt #not a 'belt'
 
 - type: Tag
-  id: BlueprintAmmoTechfab
-
-- type: Tag
-  id: BlueprintSecurityTechfab
-
-- type: Tag
   id: BluespaceCrystal
 
 - type: Tag
@@ -52,6 +46,9 @@
   id: BorgSecurityArmour
 
 - type: Tag
+  id: BorgMaterial # for materials that can be used in a borg construction module
+
+- type: Tag
   id: BorgStockPart
 
 - type: Tag
@@ -59,9 +56,6 @@
 
 - type: Tag
   id: CartridgeLaser
-
-- type: Tag
-  id: CartridgeLMGAntiMateriel
 
 - type: Tag
   id: CartridgeSpecial # For the .38 special ammo and revolver
@@ -121,9 +115,6 @@
   id: MagazineLaser
 
 - type: Tag
-  id: MagazineLMGAntiMaterielBox # For the NT-3
-
-- type: Tag
   id: MagazinePistolSpecial # For the .38 special ammo and pistol
 
 - type: Tag
@@ -140,9 +131,6 @@
 
 - type: Tag
   id: MothroachHide
-
-- type: Tag
-  id: Natural
 
 - type: Tag
   id: NormalityCrystal
@@ -215,15 +203,3 @@
 
 - type: Tag
   id: DisplayCaseBoard
-
-- type: Tag
-  id: BeamDevastator
-
-- type: Tag # Ovinia, allows them to use specified emotes
-  id: OviniaEmotes
-
-- type: Tag
-  id: GenderScarf
-
-- type: Tag
-  id: GenderCloak
