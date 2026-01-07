@@ -11,6 +11,8 @@
   - type: Edible # Redshift - drink->edible upstream refactor
     edible: Drink
     solution: fleshlight
+    destroyOnEmpty: false
+    utensil: None
   - type: SolutionContainerManager
     solutions:
       fleshlight:
