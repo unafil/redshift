@@ -450,8 +450,6 @@
       effects:
       - !type:SatiateThirst
         factor: 4
-      - !type:ModifyArousal # Redshift - water...
-        amount: -2
     Gas:
       effects:
       - !type:HealthChange
