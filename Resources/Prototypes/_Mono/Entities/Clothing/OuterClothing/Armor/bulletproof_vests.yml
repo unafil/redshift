@@ -17,13 +17,13 @@
         Piercing: 0.45
         Heat: 0.85
         Caustic: 0.9 # Frontier
-  - type: Tag  # Mono
-    tags:
-    - Kevlar
+  #- type: Tag  # Redshift - nuke tags
+  #  tags:
+  #  - Kevlar
   - type: StaminaResistance # Redshift - different stamina resistance comp
     damageCoefficient: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.90
   - type: StaticPrice
     price: 5000
-    vendPrice: 8000
+    #vendPrice: 8000 # Redshift - no vend

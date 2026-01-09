@@ -8,7 +8,7 @@
   components:
   - type: StaticPrice
     price: 1000
-    vendPrice: 1500
+    #vendPrice: 1500 # Redshift - no vend
   - type: Sprite
     sprite: _Mono/Clothing/Belt/webbings_normal_tsf.rsi
   - type: Clothing
@@ -26,7 +26,7 @@
   components:
   - type: StaticPrice
     price: 1500
-    vendPrice: 2500
+    #vendPrice: 2500 # Redshift - no vend
   - type: Sprite
     sprite: _Mono/Clothing/Belt/webbings_big_tsf.rsi
   - type: Clothing
