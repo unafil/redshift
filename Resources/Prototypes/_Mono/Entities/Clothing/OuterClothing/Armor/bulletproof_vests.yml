@@ -20,8 +20,8 @@
   - type: Tag  # Mono
     tags:
     - Kevlar
-  - type: StaminaDamageResistance # Mono - Stamres
-    coefficient: 0.8
+  - type: StaminaResistance # Redshift - different stamina resistance comp
+    damageCoefficient: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.90
   - type: StaticPrice
