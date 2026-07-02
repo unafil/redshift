@@ -218,3 +218,39 @@
   id: 1785
   time: '2026-01-09T01:15:57.0000000+00:00'
   url: https://github.com/unafil/redshift/pull/38
+- author: unafil
+  changes:
+  - message: They weren't lying! That upstream sure can merge!
+    type: Add
+  - message: '**TRAITS HAVE BEEN RESET**. Make sure to reselect them in the trait
+      menu!'
+    type: Tweak
+  - message: New genital type, Cocks. Plural. As in two. For all the shark lovers
+      out there.
+    type: Add
+  id: 1786
+  time: '2026-02-01T07:13:43.0000000+00:00'
+  url: https://github.com/unafil/redshift/pull/39
+- author: unafil
+  changes:
+  - message: everything except shitmed removal
+    type: Add
+  - message: IPCs because feather preening takes priority
+    type: Remove
+  id: 1787
+  time: '2026-05-24T20:56:34.0000000+00:00'
+  url: https://github.com/unafil/redshift/pull/41
+- author: marigauge
+  changes:
+  - message: admeme grid
+    type: Add
+  id: 1788
+  time: '2026-07-02T21:31:54.0000000+00:00'
+  url: https://github.com/unafil/redshift/pull/42
+- author: unafil
+  changes:
+  - message: Merged upstream changes since January.
+    type: Add
+  id: 1789
+  time: '2026-05-08T06:29:00.0000000+00:00'
+  url: https://github.com/unafil/redshift/pull/40
