@@ -1,0 +1,444 @@
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 M3739 <47579354+M3739@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Sapphire <98045970+sapphirescript@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 Tonk-GCR <190437025+Tonk-GCR@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: marking
+  id: FaceBindi
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#a12222"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: bindi
+
+- type: marking
+  id: FaceFullblush
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#e07e7e"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: fullblush
+
+- type: marking
+  id: FaceCheekspotRight
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: cheekspot_r
+
+- type: marking
+  id: FaceCheekspotLeft
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: cheekspot_l
+
+- type: marking
+  id: FaceChesireRight
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: chesire_r
+
+- type: marking
+  id: FaceChesireLeft
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: chesire_l
+
+- type: marking
+  id: FaceCrowRight
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#242424"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: crow_r
+
+- type: marking
+  id: FaceCrowLeft
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#242424"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: crow_l
+
+- type: marking
+  id: FaceEarRight
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: ear_r
+
+- type: marking
+  id: FaceEarLeft
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: ear_l
+
+- type: marking
+  id: FaceEyebrowRight
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#242424"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: eyebrow_r
+
+
+- type: marking
+  id: FaceEyebrowLeft
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#242424"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: eyebrow_l
+
+
+- type: marking
+  id: FaceEyebrows
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#242424"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: eyebrows
+
+- type: marking
+  id: FaceEyecornerRight
+  bodyPart: Eyes # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#242424"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: eyecorner_r
+
+- type: marking
+  id: FaceEyecornerLeft
+  bodyPart: Eyes # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#242424"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: eyecorner_l
+
+- type: marking
+  id: FaceEyelashRight
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#141414"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: eyelash_r
+
+- type: marking
+  id: FaceEyelashLeft
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#141414"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: eyelash_l
+
+- type: marking
+  id: FaceEyestripe
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#a1a1a1"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: eyestripe
+
+- type: marking
+  id: FaceLipcornerRight
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: lipcorner_r
+
+- type: marking
+  id: FaceLipcornerLeft
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: lipcorner_l
+
+- type: marking
+  id: FaceGlabella
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: glabella
+
+- type: marking
+  id: FaceLowercheekRight
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#242424"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: lowercheek_r
+
+- type: marking
+  id: FaceLowercheekLeft
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#242424"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: lowercheek_l
+
+- type: marking
+  id: FaceNosetape
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: nosetape
+
+- type: marking
+  id: FaceNosetip
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: nosetip
+
+
+- type: marking
+  id: FaceNosestripe
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: nosestripe
+
+- type: marking
+  id: FaceUnibrow
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#242424"
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: unibrow
+
+- type: marking
+  id: FaceNeckSlim
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  followSkinColor: true
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: neck_f
+
+- type: marking
+  id: FaceNeckWide
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  followSkinColor: true
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: neck_m
+
+- type: marking
+  id: FaceNeckSlimThick
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  followSkinColor: true
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: neck_thick_f
+
+- type: marking
+  id: FaceNeckWideThick
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  followSkinColor: true
+  sprites:
+  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+    state: neck_thick_m
+
+- type: marking
+  id: IronJaw
+  bodyPart: Head # Redshift
+  markingCategory: Head # Redshift
+  ##speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: _ADT/_EE/mobs/Customization/augments/headaugs.rsi
+    state: iron_jaw
