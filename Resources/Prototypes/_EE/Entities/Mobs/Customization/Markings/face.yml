@@ -19,7 +19,7 @@
         !type:SimpleColoring
           color: "#a12222"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: bindi
 
 - type: marking
@@ -33,7 +33,7 @@
         !type:SimpleColoring
           color: "#e07e7e"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: fullblush
 
 - type: marking
@@ -47,7 +47,7 @@
         !type:SimpleColoring
           color: "#ffffff"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: cheekspot_r
 
 - type: marking
@@ -61,7 +61,7 @@
         !type:SimpleColoring
           color: "#ffffff"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: cheekspot_l
 
 - type: marking
@@ -75,7 +75,7 @@
         !type:SimpleColoring
           color: "#ffffff"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: chesire_r
 
 - type: marking
@@ -89,7 +89,7 @@
         !type:SimpleColoring
           color: "#ffffff"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: chesire_l
 
 - type: marking
@@ -103,7 +103,7 @@
         !type:SimpleColoring
           color: "#242424"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: crow_r
 
 - type: marking
@@ -117,7 +117,7 @@
         !type:SimpleColoring
           color: "#242424"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: crow_l
 
 - type: marking
@@ -131,7 +131,7 @@
         !type:SimpleColoring
           color: "#ffffff"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: ear_r
 
 - type: marking
@@ -145,7 +145,7 @@
         !type:SimpleColoring
           color: "#ffffff"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: ear_l
 
 - type: marking
@@ -159,7 +159,7 @@
         !type:SimpleColoring
           color: "#242424"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: eyebrow_r
 
 
@@ -174,7 +174,7 @@
         !type:SimpleColoring
           color: "#242424"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: eyebrow_l
 
 
@@ -189,7 +189,7 @@
         !type:SimpleColoring
           color: "#242424"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: eyebrows
 
 - type: marking
@@ -203,7 +203,7 @@
         !type:SimpleColoring
           color: "#242424"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: eyecorner_r
 
 - type: marking
@@ -217,7 +217,7 @@
         !type:SimpleColoring
           color: "#242424"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: eyecorner_l
 
 - type: marking
@@ -231,7 +231,7 @@
         !type:SimpleColoring
           color: "#141414"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: eyelash_r
 
 - type: marking
@@ -245,7 +245,7 @@
         !type:SimpleColoring
           color: "#141414"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: eyelash_l
 
 - type: marking
@@ -259,7 +259,7 @@
         !type:SimpleColoring
           color: "#a1a1a1"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: eyestripe
 
 - type: marking
@@ -273,7 +273,7 @@
         !type:SimpleColoring
           color: "#ffffff"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: lipcorner_r
 
 - type: marking
@@ -287,7 +287,7 @@
         !type:SimpleColoring
           color: "#ffffff"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: lipcorner_l
 
 - type: marking
@@ -301,7 +301,7 @@
         !type:SimpleColoring
           color: "#ffffff"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: glabella
 
 - type: marking
@@ -315,7 +315,7 @@
         !type:SimpleColoring
           color: "#242424"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: lowercheek_r
 
 - type: marking
@@ -329,7 +329,7 @@
         !type:SimpleColoring
           color: "#242424"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: lowercheek_l
 
 - type: marking
@@ -343,7 +343,7 @@
         !type:SimpleColoring
           color: "#ffffff"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: nosetape
 
 - type: marking
@@ -357,7 +357,7 @@
         !type:SimpleColoring
           color: "#ffffff"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: nosetip
 
 
@@ -372,7 +372,7 @@
         !type:SimpleColoring
           color: "#ffffff"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: nosestripe
 
 - type: marking
@@ -386,7 +386,7 @@
         !type:SimpleColoring
           color: "#242424"
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: unibrow
 
 - type: marking
@@ -396,7 +396,7 @@
   #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
   followSkinColor: true
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: neck_f
 
 - type: marking
@@ -406,7 +406,7 @@
   #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
   followSkinColor: true
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: neck_m
 
 - type: marking
@@ -416,7 +416,7 @@
   #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
   followSkinColor: true
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: neck_thick_f
 
 - type: marking
@@ -426,7 +426,7 @@
   #speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, Canid, Kitsune] # The Den - Add Canid # Redshift - no species restriction
   followSkinColor: true
   sprites:
-  - sprite: _EE/mobs/Customization/face.rsi # Redshift - ee namespace
+  - sprite: _EE/Mobs/Customization/face.rsi # Redshift - ee namespace
     state: neck_thick_m
 
 - type: marking
@@ -440,5 +440,5 @@
         !type:EyeColoring
           negative: true
   sprites:
-  - sprite: _ADT/_EE/mobs/Customization/augments/headaugs.rsi
+  - sprite: _ADT/_EE/Mobs/Customization/augments/headaugs.rsi
     state: iron_jaw
