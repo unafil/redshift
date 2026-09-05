@@ -67,6 +67,11 @@ public sealed class ArousalSystem : SharedArousalSystem
 
         var verbText = "Rub"; // no genital case
 
+        // update: i lied. lazy update to disable verb. yes this should be somewhere else but idgaf this is
+        // all getting rebased to den2 anyways
+        if (ent.Comp.Genital == null)
+            return;
+
         // nobody writes code like me
         if (ent.Comp.Genital == null && TryComp<GenitalComponent>(args.Target, out var gen))
         {

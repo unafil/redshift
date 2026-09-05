@@ -1,0 +1,211 @@
+# SPDX-FileCopyrightText: 2024 Sushiburger
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Aikakakah
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 BloodfiendishOperator
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 Tabitha
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: MIT AND AGPL-3.0-or-later
+
+# Redshift Note: 5c64c9439427515106599817c53555a1e3d11a45. Fuck.
+
+- type: marking
+  id: BunnyTail
+  bodyPart: Tail
+  markingCategory: Tail
+  #speciesRestriction: [Human, SlimePerson, IPC] # Redshift - nuke species restriction
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+    state: bunnytail
+
+- type: marking
+  id: BunnyTailAnimated
+  bodyPart: Tail
+  markingCategory: Tail
+  #speciesRestriction: [] # Redshift - nuke species restriction
+  sprites:
+    - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+      state: bunnytail_wag
+
+- type: marking
+  id: BunnyTailAlt
+  bodyPart: Tail
+  markingCategory: Tail
+  #speciesRestriction: [Human] # Redshift - nuke species restriction
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+    state: bunnytailalt
+
+- type: marking
+  id: DobleFur
+  bodyPart: Tail
+  markingCategory: Tail
+  #speciesRestriction: [Human, SlimePerson, IPC] # Redshift - nuke species restriction
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+    state: doblefurtailtone1
+  - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+    state: doblefurtailtone2
+
+- type: marking
+  id: FluffyTail
+  bodyPart: Tail
+  markingCategory: Tail
+  #speciesRestriction: [Human, SlimePerson, IPC] # Redshift - nuke species restriction
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+    state: fluffytail
+
+- type: marking
+  id: FoxNineTails
+  bodyPart: Tail
+  markingCategory: Tail
+  #speciesRestriction: [Human, SlimePerson, IPC, Canid] # The Den - Add Canid # Redshift - nuke species restriction
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+    state: foxninetailstone1
+  - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+    state: foxninetailstone2
+
+- type: marking
+  id: FoxThreeTails
+  bodyPart: Tail
+  markingCategory: Tail
+  #speciesRestriction: [Human, SlimePerson, IPC, Canid] # The Den - Add Canid # Redshift - nuke species restriction
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+    state: foxthreetailstone1
+  - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+    state: foxthreetailstone2
+
+- type: marking
+  id: HorseTailCulty
+  bodyPart: Tail
+  markingCategory: Tail
+  #speciesRestriction: [Human, SlimePerson, IPC, Oni, Ovinia] # Redshift - nuke species restriction
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+    state: horsetailculty
+
+- type: marking
+  id: HorseTailLong
+  bodyPart: Tail
+  markingCategory: Tail
+  #speciesRestriction: [Human, SlimePerson, IPC, Ovinia] # Redshift - nuke species restriction
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+    state: horsetaillong
+
+- type: marking
+  id: SharkTail
+  bodyPart: Tail
+  markingCategory: Tail
+  #speciesRestriction: [Human, SlimePerson, IPC] # Redshift - nuke species restriction
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+    state: sharktail
+
+- type: marking
+  id: TasselTail
+  bodyPart: Tail
+  markingCategory: Tail
+  #speciesRestriction: [Human, SlimePerson, IPC, Oni] # Redshift - nuke species restriction
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+    state: tasseltailtone1
+  - sprite: _EE/Mobs/Customization/kemonomimi-tails.rsi # Redshift - _EE namespace
+    state: tasseltailtone2

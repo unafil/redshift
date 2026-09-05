@@ -1,0 +1,1689 @@
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: MIT AND AGPL-3.0-or-later
+
+# Redshift Note: Taken from d1b79f266a1878fe76165c1c76ba924acfec8989. sog
+
+##### TAILS #####
+
+- type: marking
+  id: TailFox
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/fox.rsi
+    state: tail_fox_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/fox.rsi
+    state: tail_fox_primary
+  #End Den additions
+
+- type: marking
+  id: Tail9sune
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_9sune_BEHIND_primary: TailBehind
+  #  m_tail_9sune_BEHIND_secondary: TailBehind
+  #  m_tail_9sune_FRONT_primary: TailOversuit
+  #  m_tail_9sune_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_9sune_BEHIND_primary: m_tail_9sune_FRONT_primary
+  #  m_tail_9sune_BEHIND_secondary: m_tail_9sune_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/9sune.rsi
+    state: m_tail_9sune_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/9sune.rsi
+    state: m_tail_9sune_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/9sune.rsi
+    state: m_tail_9sune_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/9sune.rsi
+    state: m_tail_9sune_BEHIND_secondary
+  #End Den additions
+
+# COOKIECUT!
+- type: marking
+  id: TailAvian1
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_avian1_BEHIND_primary: TailBehind
+  #  m_tail_avian1_BEHIND_secondary: TailBehind
+  #  m_tail_avian1_FRONT_primary: TailOversuit
+  #  m_tail_avian1_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_avian1_BEHIND_primary: m_tail_avian1_FRONT_primary
+  #  m_tail_avian1_BEHIND_secondary: m_tail_avian1_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/avian1.rsi
+    state: m_tail_avian1_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/avian1.rsi
+    state: m_tail_avian1_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/avian1.rsi
+    state: m_tail_avian1_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/avian1.rsi
+    state: m_tail_avian1_BEHIND_secondary
+  #End Den additions
+
+# COOKIECUT!
+- type: marking
+  id: TailAvian2
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_avian2_BEHIND_primary: TailBehind
+  #  m_tail_avian2_BEHIND_secondary: TailBehind
+  #  m_tail_avian2_FRONT_primary: TailOversuit
+  #  m_tail_avian2_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_avian2_BEHIND_primary: m_tail_avian2_FRONT_primary
+  #  m_tail_avian2_BEHIND_secondary: m_tail_avian2_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/avian2.rsi
+    state: m_tail_avian2_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/avian2.rsi
+    state: m_tail_avian2_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/avian2.rsi
+    state: m_tail_avian2_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/avian2.rsi
+    state: m_tail_avian2_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailBatl
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_batl_BEHIND_primary: TailBehind
+  #  m_tail_batl_BEHIND_secondary: TailBehind
+  #  m_tail_batl_FRONT_primary: TailOversuit
+  #  m_tail_batl_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_batl_BEHIND_primary: m_tail_batl_FRONT_primary
+  #  m_tail_batl_BEHIND_secondary: m_tail_batl_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/bat_long.rsi
+    state: m_tail_batl_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/bat_long.rsi
+    state: m_tail_batl_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/bat_long.rsi
+    state: m_tail_batl_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/bat_long.rsi
+    state: m_tail_batl_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailBats
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_bats_BEHIND_primary: TailBehind
+  #  m_tail_bats_BEHIND_secondary: TailBehind
+  #  m_tail_bats_FRONT_primary: TailOversuit
+  #  m_tail_bats_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_bats_BEHIND_primary: m_tail_bats_FRONT_primary
+  #  m_tail_bats_BEHIND_secondary: m_tail_bats_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/bat_short.rsi
+    state: m_tail_bats_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/bat_short.rsi
+    state: m_tail_bats_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/bat_short.rsi
+    state: m_tail_bats_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/bat_short.rsi
+    state: m_tail_bats_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailBee
+  bodyPart: Tail
+  markingCategory: Tail
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_bee_BEHIND_primary: TailBehind
+  #  m_tail_bee_BEHIND_secondary: TailBehind
+  #  m_tail_bee_FRONT_primary: TailOversuit
+  #  m_tail_bee_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_bee_BEHIND_primary: m_tail_bee_FRONT_primary
+  #  m_tail_bee_BEHIND_secondary: m_tail_bee_FRONT_secondary
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/bee.rsi
+    state: m_tail_bee_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/bee.rsi
+    state: m_tail_bee_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/bee.rsi
+    state: m_tail_bee_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/bee.rsi
+    state: m_tail_bee_BEHIND_secondary
+  #End Den additions
+
+# COOKIECUT!
+- type: marking
+  id: TailCable
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_cable_BEHIND_primary: TailBehind
+  #  m_tail_cable_BEHIND_secondary: TailBehind
+  #  m_tail_cable_FRONT_primary: TailOversuit
+  #  m_tail_cable_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_cable_BEHIND_primary: m_tail_cable_FRONT_primary
+  #  m_tail_cable_BEHIND_secondary: m_tail_cable_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/cable.rsi
+    state: m_tail_cable_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/cable.rsi
+    state: m_tail_cable_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailCat
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_cat_BEHIND: TailBehind
+  #  m_tail_cat_FRONT: Tail #should go over backpack!
+  #colorLinks:
+  #  m_tail_cat_BEHIND: m_tail_cat_FRONT
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/cat.rsi
+    state: m_tail_cat_FRONT
+  - sprite: _Floof/Mobs/Customization/Skyrattails/cat.rsi
+    state: m_tail_cat_BEHIND
+  #End Den additions
+
+- type: marking
+  id: TailCatBig
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_catbig_BEHIND: TailBehind
+  #  m_tail_catbig_FRONT: TailOversuit
+  #colorLinks:
+  #  m_tail_catbig_BEHIND: m_tail_catbig_FRONT
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/catbig.rsi
+    state: m_tail_catbig_FRONT
+  - sprite: _Floof/Mobs/Customization/Skyrattails/catbig.rsi
+    state: m_tail_catbig_BEHIND
+  #End Den additions
+
+- type: marking
+  id: TailCow
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Ovinia, Oni] # Den-Added Oni
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_cow_BEHIND_primary: TailBehind
+  #  m_tail_cow_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_cow_BEHIND_primary: m_tail_cow_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/cow.rsi
+    state: m_tail_cow_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/cow.rsi
+    state: m_tail_cow_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailCrow
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_crow_BEHIND_primary: TailBehind
+  #  m_tail_crow_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_crow_BEHIND_primary: m_tail_crow_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/crow.rsi
+    state: m_tail_crow_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/crow.rsi
+    state: m_tail_crow_BEHIND_primary
+  #End Den additions
+
+# ERROR!!!!!!!
+#- type: marking
+#  id: TailDatashark
+#  bodyPart: Tail
+#  markingCategory: Tail
+#  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+#  sprites:
+#  - sprite: Floof/Mobs/Customization/skyrattails.rsi
+#    state: m_tail_datashark_FRONT_primary
+#  - sprite: Floof/Mobs/Customization/skyrattails.rsi
+#    state: m_tail_datashark_FRONT_secondary
+#  - sprite: Floof/Mobs/Customization/skyrattails.rsi
+#    state: m_tail_datashark_BEHIND_primary
+#  - sprite: Floof/Mobs/Customization/skyrattails.rsi
+#    state: m_tail_datashark_BEHIND_secondary
+
+# COOKIECUT?
+- type: marking
+  id: TailDeer
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_deer_BEHIND_primary: TailBehind
+  #  m_tail_deer_BEHIND_secondary: TailBehind
+  #  m_tail_deer_FRONT_primary: TailOversuit
+  #  m_tail_deer_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_deer_BEHIND_primary: m_tail_deer_FRONT_primary
+  #  m_tail_deer_BEHIND_secondary: m_tail_deer_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/deer.rsi
+    state: m_tail_deer_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/deer.rsi
+    state: m_tail_deer_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/deer.rsi
+    state: m_tail_deer_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/deer.rsi
+    state: m_tail_deer_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailDeerTwo
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_deer_two_BEHIND: TailBehind
+  #  m_tail_deer_two_FRONT: TailOversuit
+  #colorLinks:
+  #  m_tail_deer_two_BEHIND: m_tail_deer_two_FRONT
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/deer.rsi
+    state: m_tail_deer_two_FRONT
+  - sprite: _Floof/Mobs/Customization/Skyrattails/deer.rsi
+    state: m_tail_deer_two_BEHIND
+  #End Den additions
+
+# COOKIECUT!
+- type: marking
+  id: TailDoubleKitsune
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_doublekitsune_BEHIND_primary: TailBehind
+  #  m_tail_doublekitsune_BEHIND_secondary: TailBehind
+  #  m_tail_doublekitsune_FRONT_primary: TailOversuit
+  #  m_tail_doublekitsune_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_doublekitsune_BEHIND_primary: m_tail_doublekitsune_FRONT_primary
+  #  m_tail_doublekitsune_BEHIND_secondary: m_tail_doublekitsune_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/doublekits.rsi
+    state: m_tail_doublekitsune_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/doublekits.rsi
+    state: m_tail_doublekitsune_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/doublekits.rsi
+    state: m_tail_doublekitsune_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/doublekits.rsi
+    state: m_tail_doublekitsune_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailDTiger
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_dtiger_BEHIND: TailBehind
+  #  m_tail_dtiger_FRONT: TailOversuit
+  #colorLinks:
+  #  m_tail_dtiger_BEHIND: m_tail_dtiger_FRONT
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/dtiger.rsi
+    state: m_tail_dtiger_FRONT
+  - sprite: _Floof/Mobs/Customization/Skyrattails/dtiger.rsi
+    state: m_tail_dtiger_BEHIND
+  #End Den additions
+
+- type: marking
+  id: TailEevee
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_eevee_BEHIND_primary: TailBehind
+  #  m_tail_eevee_BEHIND_secondary: TailBehind
+  #  m_tail_eevee_FRONT_primary: TailOversuit
+  #  m_tail_eevee_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_eevee_BEHIND_primary: m_tail_eevee_FRONT_primary
+  #  m_tail_eevee_BEHIND_secondary: m_tail_eevee_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/eevee.rsi
+    state: m_tail_eevee_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/eevee.rsi
+    state: m_tail_eevee_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/eevee.rsi
+    state: m_tail_eevee_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/eevee.rsi
+    state: m_tail_eevee_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailFennec
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_fennec_BEHIND_primary: TailBehind
+  #  m_tail_fennec_BEHIND_secondary: TailBehind
+  #  m_tail_fennec_FRONT_primary: TailOversuit
+  #  m_tail_fennec_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_fennec_BEHIND_primary: m_tail_fennec_FRONT_primary
+  #  m_tail_fennec_BEHIND_secondary: m_tail_fennec_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/fennec.rsi
+    state: m_tail_fennec_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/fennec.rsi
+    state: m_tail_fennec_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/fennec.rsi
+    state: m_tail_fennec_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/fennec.rsi
+    state: m_tail_fennec_BEHIND_secondary
+  #End Den additions
+
+# COOKIECUT!
+- type: marking
+  id: TailFox2
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_fox2_BEHIND_primary: TailBehind
+  #  m_tail_fox2_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_fox2_BEHIND_primary: m_tail_fox2_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/fox2.rsi
+    state: m_tail_fox2_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/fox2.rsi
+    state: m_tail_fox2_BEHIND_primary
+  #End Den additions
+
+# COOKIECUT?
+- type: marking
+  id: TailFox3
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_fox3_BEHIND_primary: TailBehind
+  #  m_tail_fox3_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_fox3_BEHIND_primary: m_tail_fox3_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/fox3.rsi
+    state: m_tail_fox3_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/fox3.rsi
+    state: m_tail_fox3_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailGuilmon
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_guilmon_BEHIND_primary: TailBehind
+  #  m_tail_guilmon_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_guilmon_BEHIND_primary: m_tail_guilmon_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/guilmon.rsi
+    state: m_tail_guilmon_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/guilmon.rsi
+    state: m_tail_guilmon_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailHawk
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_hawk_BEHIND_primary: TailBehind
+  #  m_tail_hawk_BEHIND_secondary: TailBehind
+  #  m_tail_hawk_FRONT_primary: TailOversuit
+  #  m_tail_hawk_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_hawk_BEHIND_primary: m_tail_hawk_FRONT_primary
+  #  m_tail_hawk_BEHIND_secondary: m_tail_hawk_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/hawk.rsi
+    state: m_tail_hawk_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/hawk.rsi
+    state: m_tail_hawk_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/hawk.rsi
+    state: m_tail_hawk_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/hawk.rsi
+    state: m_tail_hawk_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailHorse
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Ovinia]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_horse_BEHIND: TailBehind
+  #  m_tail_horse_FRONT: TailOversuit
+  #colorLinks:
+  #  m_tail_horse_BEHIND: m_tail_horse_FRONT
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/horse.rsi
+    state: m_tail_horse_FRONT
+  - sprite: _Floof/Mobs/Customization/Skyrattails/horse.rsi
+    state: m_tail_horse_BEHIND
+  #End Den additions
+
+- type: marking
+  id: TailHusk
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_husk_BEHIND_primary: TailBehind
+  #  m_tail_husk_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_husk_BEHIND_primary: m_tail_husk_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/husk.rsi
+    state: m_tail_husk_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/husk.rsi
+    state: m_tail_husk_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailHusky
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_husky_BEHIND_primary: TailBehind
+  #  m_tail_husky_BEHIND_secondary: TailBehind
+  #  m_tail_husky_FRONT_primary: Tail # is an uppy tail
+  #  m_tail_husky_FRONT_secondary: Tail
+  #colorLinks:
+  #  m_tail_husky_BEHIND_primary: m_tail_husky_FRONT_primary
+  #  m_tail_husky_BEHIND_secondary: m_tail_husky_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/husky.rsi
+    state: m_tail_husky_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/husky.rsi
+    state: m_tail_husky_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/husky.rsi
+    state: m_tail_husky_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/husky.rsi
+    state: m_tail_husky_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailInsect
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_insect_BEHIND_primary: TailBehind
+  #  m_tail_insect_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_insect_BEHIND_primary: m_tail_insect_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/insect.rsi
+    state: m_tail_insect_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/insect.rsi
+    state: m_tail_insect_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailKangaroo
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_kangaroo_BEHIND_primary: TailBehind
+  #  m_tail_kangaroo_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_kangaroo_BEHIND_primary: m_tail_kangaroo_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/kangaroo.rsi
+    state: m_tail_kangaroo_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/kangaroo.rsi
+    state: m_tail_kangaroo_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailKitsune
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_kitsune_BEHIND_primary: TailBehind
+  #  m_tail_kitsune_BEHIND_secondary: TailBehind
+  #  m_tail_kitsune_FRONT_primary: Tail
+  #  m_tail_kitsune_FRONT_secondary: Tail
+  #colorLinks:
+  #  m_tail_kitsune_BEHIND_primary: m_tail_kitsune_FRONT_primary
+  #  m_tail_kitsune_BEHIND_secondary: m_tail_kitsune_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/kitsune.rsi
+    state: m_tail_kitsune_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/kitsune.rsi
+    state: m_tail_kitsune_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/kitsune.rsi
+    state: m_tail_kitsune_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/kitsune.rsi
+    state: m_tail_kitsune_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailLab
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_lab_BEHIND_primary: TailBehind
+  #  m_tail_lab_FRONT_primary: Tail
+  #colorLinks:
+  #  m_tail_lab_BEHIND_primary: m_tail_lab_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/lab.rsi
+    state: m_tail_lab_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/lab.rsi
+    state: m_tail_lab_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailLeopard
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_leopard_BEHIND_primary: TailBehind
+  #  m_tail_leopard_BEHIND_tertiary: TailBehind
+  #  m_tail_leopard_FRONT_primary: TailOversuit
+  #  m_tail_leopard_FRONT_tertiary: TailOversuit
+  #colorLinks:
+  #  m_tail_leopard_BEHIND_primary: m_tail_leopard_FRONT_primary
+  #  m_tail_leopard_BEHIND_tertiary: m_tail_leopard_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/leopard.rsi
+    state: m_tail_leopard_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/leopard.rsi
+    state: m_tail_leopard_FRONT_tertiary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/leopard.rsi
+    state: m_tail_leopard_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/leopard.rsi
+    state: m_tail_leopard_BEHIND_tertiary
+  #End Den additions
+
+- type: marking
+  id: TailLTiger
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_ltiger_BEHIND: TailBehind
+  #  m_tail_ltiger_FRONT: Tail
+  #colorLinks:
+  #  m_tail_ltiger_BEHIND: m_tail_ltiger_FRONT
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/ltiger.rsi
+    state: m_tail_ltiger_FRONT
+  - sprite: _Floof/Mobs/Customization/Skyrattails/ltiger.rsi
+    state: m_tail_ltiger_BEHIND
+  #End Den additions
+
+- type: marking
+  id: TailLunasune
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_lunasune_BEHIND: TailBehind
+  #  m_tail_lunasune_FRONT: Tail
+  #colorLinks:
+  #  m_tail_lunasune_BEHIND: m_tail_lunasune_FRONT
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/lunasune.rsi
+    state: m_tail_lunasune_FRONT
+  - sprite: _Floof/Mobs/Customization/Skyrattails/lunasune.rsi
+    state: m_tail_lunasune_BEHIND
+  #End Den additions
+
+# ERROR!!!!!!!
+#- type: marking
+#  id: TailMFox
+#  bodyPart: Tail
+#  markingCategory: Tail
+#  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+#  sprites:
+#  - sprite: Floof/Mobs/Customization/skyrattails.rsi
+#    state: m_tail_fox_FRONT_primary
+#  - sprite: Floof/Mobs/Customization/skyrattails.rsi
+#    state: m_tail_fox_BEHIND_primary
+
+- type: marking
+  id: TailMurid
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_murid_BEHIND_primary: TailBehind
+  #  m_tail_murid_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_murid_BEHIND_primary: m_tail_murid_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/murid.rsi
+    state: m_tail_murid_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/murid.rsi
+    state: m_tail_murid_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailMuridTwo
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_murid_two_BEHIND_primary: TailBehind
+  #  m_tail_murid_two_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_murid_two_BEHIND_primary: m_tail_murid_two_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/murid.rsi
+    state: m_tail_murid_two_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/murid.rsi
+    state: m_tail_murid_two_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailOrca
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_orca_BEHIND_primary: TailBehind
+  #  m_tail_orca_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_orca_BEHIND_primary: m_tail_orca_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/orca.rsi
+    state: m_tail_orca_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/orca.rsi
+    state: m_tail_orca_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailOtie
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_otie_BEHIND_primary: TailBehind
+  #  m_tail_otie_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_otie_BEHIND_primary: m_tail_otie_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/otie.rsi
+    state: m_tail_otie_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/otie.rsi
+    state: m_tail_otie_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailPede
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_pede_BEHIND_primary: TailBehind
+  #  m_tail_pede_BEHIND_secondary: TailBehind
+  #  m_tail_pede_BEHIND_tertiary: TailBehind
+  #  m_tail_pede_FRONT_primary: Tail
+  #  m_tail_pede_FRONT_secondary: Tail
+  #  m_tail_pede_FRONT_tertiary: Tail
+  #colorLinks:
+  #  m_tail_pede_BEHIND_primary: m_tail_pede_FRONT_primary
+  #  m_tail_pede_BEHIND_secondary: m_tail_pede_FRONT_secondary
+  #  m_tail_pede_BEHIND_tertiary: m_tail_pede_FRONT_tertiary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/pede.rsi
+    state: m_tail_pede_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/pede.rsi
+    state: m_tail_pede_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/pede.rsi
+    state: m_tail_pede_FRONT_tertiary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/pede.rsi
+    state: m_tail_pede_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/pede.rsi
+    state: m_tail_pede_BEHIND_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/pede.rsi
+    state: m_tail_pede_BEHIND_tertiary
+  #End Den additions
+
+- type: marking
+  id: TailPlugTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_plugtail_BEHIND_primary: TailBehind
+  #  m_tail_plugtail_BEHIND_secondary: TailBehind
+  #  m_tail_plugtail_BEHIND_tertiary: TailBehind
+  #  m_tail_plugtail_FRONT_primary: TailOversuit
+  #  m_tail_plugtail_FRONT_secondary: TailOversuit
+  #  m_tail_plugtail_FRONT_tertiary: TailOversuit
+  #colorLinks:
+  #  m_tail_plugtail_BEHIND_primary: m_tail_plugtail_FRONT_primary
+  #  m_tail_plugtail_BEHIND_secondary: m_tail_plugtail_FRONT_secondary
+  #  m_tail_plugtail_BEHIND_tertiary: m_tail_plugtail_FRONT_tertiary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/plug.rsi
+    state: m_tail_plugtail_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/plug.rsi
+    state: m_tail_plugtail_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/plug.rsi
+    state: m_tail_plugtail_FRONT_tertiary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/plug.rsi
+    state: m_tail_plugtail_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/plug.rsi
+    state: m_tail_plugtail_BEHIND_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/plug.rsi
+    state: m_tail_plugtail_BEHIND_tertiary
+  #End Den additions
+
+- type: marking
+  id: TailQueenBee
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_queenbee_BEHIND_primary: TailBehind
+  #  m_tail_queenbee_BEHIND_secondary: TailBehind
+  #  m_tail_queenbee_FRONT_primary: TailOversuit
+  #  m_tail_queenbee_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_queenbee_BEHIND_primary: m_tail_queenbee_FRONT_primary
+  #  m_tail_queenbee_BEHIND_secondary: m_tail_queenbee_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/queenbee.rsi
+    state: m_tail_queenbee_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/queenbee.rsi
+    state: m_tail_queenbee_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/queenbee.rsi
+    state: m_tail_queenbee_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/queenbee.rsi
+    state: m_tail_queenbee_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailQueenInsect
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_queeninsect_BEHIND_primary: TailBehind
+  #  m_tail_queeninsect_BEHIND_secondary: TailBehind
+  #  m_tail_queeninsect_FRONT_primary: TailOversuit
+  #  m_tail_queeninsect_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_queeninsect_BEHIND_primary: m_tail_queeninsect_FRONT_primary
+  #  m_tail_queeninsect_BEHIND_secondary: m_tail_queeninsect_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/queeninsect.rsi
+    state: m_tail_queeninsect_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/queeninsect.rsi
+    state: m_tail_queeninsect_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailRabbit
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_rabbit_BEHIND_primary: TailBehind
+  #  m_tail_rabbit_FRONT_primary: Tail
+  #colorLinks:
+  #  m_tail_rabbit_BEHIND_primary: m_tail_rabbit_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/rabbit.rsi
+    state: m_tail_rabbit_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/rabbit.rsi
+    state: m_tail_rabbit_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailRabbitAlt
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_rabbit_alt_FRONT_primary: Tail
+  #  m_tail_rabbit_alt_FRONT_secondary: Tail
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/rabbit.rsi
+    state: m_tail_rabbit_alt_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/rabbit.rsi
+    state: m_tail_rabbit_alt_FRONT_secondary
+  #End Den additions
+
+- type: marking
+  id: TailRaccoon
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_raccoon_BEHIND_primary: TailBehind
+  #  m_tail_raccoon_BEHIND_secondary: TailBehind
+  #  m_tail_raccoon_FRONT_primary: TailOversuit
+  #  m_tail_raccoon_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_raccoon_BEHIND_primary: m_tail_raccoon_FRONT_primary
+  #  m_tail_raccoon_BEHIND_secondary: m_tail_raccoon_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/raccoon.rsi
+    state: m_tail_raccoon_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/raccoon.rsi
+    state: m_tail_raccoon_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/raccoon.rsi
+    state: m_tail_raccoon_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/raccoon.rsi
+    state: m_tail_raccoon_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailRaptor
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_raptor_BEHIND_primary: TailBehind
+  #  m_tail_raptor_BEHIND_secondary: TailBehind
+  #  m_tail_raptor_BEHIND_tertiary: TailBehind
+  #  m_tail_raptor_FRONT_primary: Tail
+  #  m_tail_raptor_FRONT_secondary: Tail
+  #  m_tail_raptor_FRONT_tertiary: Tail
+  #colorLinks:
+  #  m_tail_raptor_BEHIND_primary: m_tail_raptor_FRONT_primary
+  #  m_tail_raptor_BEHIND_secondary: m_tail_raptor_FRONT_secondary
+  #  m_tail_raptor_BEHIND_tertiary: m_tail_raptor_FRONT_tertiary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/raptor.rsi
+    state: m_tail_raptor_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/raptor.rsi
+    state: m_tail_raptor_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/raptor.rsi
+    state: m_tail_raptor_FRONT_tertiary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/raptor.rsi
+    state: m_tail_raptor_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/raptor.rsi
+    state: m_tail_raptor_BEHIND_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/raptor.rsi
+    state: m_tail_raptor_BEHIND_tertiary
+  #End Den additions
+
+- type: marking
+  id: TailReptileSlim
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_reptileslim_BEHIND: TailBehind
+  #  m_tail_reptileslim_FRONT: Tail
+  #colorLinks:
+  #  m_tail_reptileslim_BEHIND: m_tail_reptileslim_FRONT
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/reptileslim.rsi
+    state: m_tail_reptileslim_FRONT
+  - sprite: _Floof/Mobs/Customization/Skyrattails/reptileslim.rsi
+    state: m_tail_reptileslim_BEHIND
+  #End Den additions
+
+- type: marking
+  id: TailSabresune
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_sabresune_BEHIND_primary: TailBehind
+  #  m_tail_sabresune_BEHIND_secondary: TailBehind
+  #  m_tail_sabresune_FRONT_primary: Tail
+  #  m_tail_sabresune_FRONT_secondary: Tail
+  #colorLinks:
+  #  m_tail_sabresune_BEHIND_primary: m_tail_sabresune_FRONT_primary
+  #  m_tail_sabresune_BEHIND_secondary: m_tail_sabresune_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/sabresune.rsi
+    state: m_tail_sabresune_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/sabresune.rsi
+    state: m_tail_sabresune_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/sabresune.rsi
+    state: m_tail_sabresune_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/sabresune.rsi
+    state: m_tail_sabresune_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailSegmentedTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_segmentedtail_BEHIND_primary: TailBehind
+  #  m_tail_segmentedtail_BEHIND_secondary: TailBehind
+  #  m_tail_segmentedtail_BEHIND_tertiary: TailBehind
+  #  m_tail_segmentedtail_FRONT_primary: Tail
+  #  m_tail_segmentedtail_FRONT_secondary: Tail
+  #  m_tail_segmentedtail_FRONT_tertiary: Tail
+  #colorLinks:
+  #  m_tail_segmentedtail_BEHIND_primary: m_tail_segmentedtail_FRONT_primary
+  #  m_tail_segmentedtail_BEHIND_secondary: m_tail_segmentedtail_FRONT_secondary
+  #  m_tail_segmentedtail_BEHIND_tertiary: m_tail_segmentedtail_FRONT_tertiary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/segmented.rsi
+    state: m_tail_segmentedtail_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/segmented.rsi
+    state: m_tail_segmentedtail_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/segmented.rsi
+    state: m_tail_segmentedtail_FRONT_tertiary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/segmented.rsi
+    state: m_tail_segmentedtail_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/segmented.rsi
+    state: m_tail_segmentedtail_BEHIND_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/segmented.rsi
+    state: m_tail_segmentedtail_BEHIND_tertiary
+  #End Den additions
+
+- type: marking
+  id: TailSergal
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_sergal_BEHIND_primary: TailBehind
+  #  m_tail_sergal_BEHIND_secondary: TailBehind
+  #  m_tail_sergal_FRONT_primary: TailOversuit
+  #  m_tail_sergal_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_sergal_BEHIND_primary: m_tail_sergal_FRONT_primary
+  #  m_tail_sergal_BEHIND_secondary: m_tail_sergal_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/sergal.rsi
+    state: m_tail_sergal_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/sergal.rsi
+    state: m_tail_sergal_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/sergal.rsi
+    state: m_tail_sergal_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/sergal.rsi
+    state: m_tail_sergal_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailSevenKitsune
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_sevenkitsune_BEHIND_primary: TailBehind
+  #  m_tail_sevenkitsune_BEHIND_secondary: TailBehind
+  #  m_tail_sevenkitsune_FRONT_primary: TailOversuit
+  #  m_tail_sevenkitsune_FRONT_secondary: TailOversuit
+  #colorLinks:
+  #  m_tail_sevenkitsune_BEHIND_primary: m_tail_sevenkitsune_FRONT_primary
+  #  m_tail_sevenkitsune_BEHIND_secondary: m_tail_sevenkitsune_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/sevenkitsune.rsi
+    state: m_tail_sevenkitsune_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/sevenkitsune.rsi
+    state: m_tail_sevenkitsune_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/sevenkitsune.rsi
+    state: m_tail_sevenkitsune_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/sevenkitsune.rsi
+    state: m_tail_sevenkitsune_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailShark
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_shark_BEHIND_primary: TailBehind
+  #  m_tail_shark_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_shark_BEHIND_primary: m_tail_shark_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/shark.rsi
+    state: m_tail_shark_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/shark.rsi
+    state: m_tail_shark_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailSharkNoFin
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_sharknofin_BEHIND_primary: TailBehind
+  #  m_tail_sharknofin_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_sharknofin_BEHIND_primary: m_tail_sharknofin_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/shark.rsi
+    state: m_tail_sharknofin_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/shark.rsi
+    state: m_tail_sharknofin_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailShepherd
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_shepherd_BEHIND_secondary: TailBehind
+  #  m_tail_shepherd_BEHIND_tertiary: TailBehind
+  #  m_tail_shepherd_FRONT_secondary: Tail
+  #  m_tail_shepherd_FRONT_tertiary: Tail
+  #colorLinks:
+  #  m_tail_shepherd_BEHIND_secondary: m_tail_shepherd_FRONT_secondary
+  #  m_tail_shepherd_BEHIND_tertiary: m_tail_shepherd_FRONT_tertiary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/shepherd.rsi
+    state: m_tail_shepherd_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/shepherd.rsi
+    state: m_tail_shepherd_FRONT_tertiary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/shepherd.rsi
+    state: m_tail_shepherd_BEHIND_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/shepherd.rsi
+    state: m_tail_shepherd_BEHIND_tertiary
+  #End Den additions
+
+- type: marking
+  id: TailSkunk
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_skunk_BEHIND_primary: TailBehind
+  #  m_tail_skunk_BEHIND_secondary: TailBehind
+  #  m_tail_skunk_BEHIND_tertiary: TailBehind
+  #  m_tail_skunk_FRONT_primary: Tail
+  #  m_tail_skunk_FRONT_secondary: Tail
+  #  m_tail_skunk_FRONT_tertiary: Tail
+  #colorLinks:
+  #  m_tail_skunk_BEHIND_primary: m_tail_skunk_FRONT_primary
+  #  m_tail_skunk_BEHIND_secondary: m_tail_skunk_FRONT_secondary
+  #  m_tail_skunk_BEHIND_tertiary: m_tail_skunk_FRONT_tertiary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/skunk.rsi
+    state: m_tail_skunk_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/skunk.rsi
+    state: m_tail_skunk_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/skunk.rsi
+    state: m_tail_skunk_FRONT_tertiary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/skunk.rsi
+    state: m_tail_skunk_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/skunk.rsi
+    state: m_tail_skunk_BEHIND_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/skunk.rsi
+    state: m_tail_skunk_BEHIND_tertiary
+  #End Den additions
+
+- type: marking
+  id: TailSmooth
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_smooth_BEHIND: TailBehind
+  #  m_tail_smooth_FRONT: TailOversuit
+  #colorLinks:
+  #  m_tail_smooth_BEHIND: m_tail_smooth_FRONT
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/smooth.rsi
+    state: m_tail_smooth_FRONT
+  - sprite: _Floof/Mobs/Customization/Skyrattails/smooth.rsi
+    state: m_tail_smooth_BEHIND
+  #End Den additions
+
+- type: marking
+  id: TailSnakeDual
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Reptilian]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_snakedual_BEHIND_primary: TailBehind
+  #  m_tail_snakedual_BEHIND_secondary: TailBehind
+  #  m_tail_snakedual_FRONT_primary: Tail
+  #  m_tail_snakedual_FRONT_secondary: Tail
+  #colorLinks:
+  #  m_tail_snakedual_BEHIND_primary: m_tail_snakedual_FRONT_primary
+  #  m_tail_snakedual_BEHIND_secondary: m_tail_snakedual_FRONT_secondary
+  sprites:
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakedual_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakedual_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakedual_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakedual_BEHIND_secondary
+
+- type: marking
+  id: TailSnakeStripe
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Reptilian]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_snakestripe_BEHIND_primary: TailBehind
+  #  m_tail_snakestripe_BEHIND_secondary: TailBehind
+  #  m_tail_snakestripe_FRONT_primary: Tail
+  #  m_tail_snakestripe_FRONT_secondary: Tail
+  #colorLinks:
+  #  m_tail_snakestripe_BEHIND_primary: m_tail_snakestripe_FRONT_primary
+  #  m_tail_snakestripe_BEHIND_secondary: m_tail_snakestripe_FRONT_secondary
+  sprites:
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakestripe_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakestripe_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakestripe_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakestripe_BEHIND_secondary
+
+- type: marking
+  id: TailSnakeStripeAlt
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Reptilian]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_snakestripealt_BEHIND_primary: TailBehind
+  #  m_tail_snakestripealt_BEHIND_secondary: TailBehind
+  #  m_tail_snakestripealt_FRONT_primary: Tail
+  #  m_tail_snakestripealt_FRONT_secondary: Tail
+  #colorLinks:
+  #  m_tail_snakestripealt_BEHIND_primary: m_tail_snakestripealt_FRONT_primary
+  #  m_tail_snakestripealt_BEHIND_secondary: m_tail_snakestripealt_FRONT_secondary
+  sprites:
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakestripealt_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakestripealt_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakestripealt_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakestripealt_BEHIND_secondary
+
+- type: marking
+  id: TailSnakeStripeU
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Reptilian]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_snakestripe_BEHIND_primary: TailBehind
+  #  m_tail_snakestripe_BEHIND_secondary: TailBehind
+  #  m_tail_snakestripe_FRONT_primary: Tail
+  #  m_tail_snakestripe_FRONT_secondary: Tail
+  #colorLinks:
+  #  m_tail_snakestripe_BEHIND_primary: m_tail_snakestripe_FRONT_primary
+  #  m_tail_snakestripe_BEHIND_secondary: m_tail_snakestripe_FRONT_secondary
+  sprites:
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakestripe_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakestripe_BEHIND_secondary
+  #shader: unshaded # Redshift - i dont think we have this
+
+- type: marking
+  id: TailSnakeStripeAltU
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Reptilian]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_snakestripealt_BEHIND_primary: TailBehind
+  #  m_tail_snakestripealt_BEHIND_secondary: TailBehind
+  #  m_tail_snakestripealt_FRONT_primary: Tail
+  #  m_tail_snakestripealt_FRONT_secondary: Tail
+  #colorLinks:
+  #  m_tail_snakestripealt_BEHIND_primary: m_tail_snakestripealt_FRONT_primary
+  #  m_tail_snakestripealt_BEHIND_secondary: m_tail_snakestripealt_FRONT_secondary
+  sprites:
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakestripealt_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakestripealt_BEHIND_secondary
+  #shader: unshaded # Redshift - i dont think we have this
+
+- type: marking
+  id: TailSnakeTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_snaketail_BEHIND: TailBehind
+  #  m_tail_snaketail_FRONT: Tail
+  #colorLinks:
+  #  m_tail_snaketail_BEHIND: m_tail_snaketail_FRONT
+  sprites:
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snaketail_FRONT
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snaketail_BEHIND
+
+- type: marking
+  id: TailSnakeUnder
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Reptilian]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_snakeunder_BEHIND_primary: TailBehind
+  #  m_tail_snakeunder_BEHIND_secondary: TailBehind
+  #  m_tail_snakeunder_FRONT_primary: Tail
+  #  m_tail_snakeunder_FRONT_secondary: Tail
+  #colorLinks:
+  #  m_tail_snakeunder_BEHIND_primary: m_tail_snakeunder_FRONT_primary
+  #  m_tail_snakeunder_BEHIND_secondary: m_tail_snakeunder_FRONT_secondary
+  sprites:
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakeunder_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakeunder_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakeunder_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakeunder_BEHIND_secondary
+
+- type: marking
+  id: TailSnakeUnderU
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Reptilian]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_snakeunder_BEHIND_primary: TailBehind
+  #  m_tail_snakeunder_BEHIND_secondary: TailBehind
+  #  m_tail_snakeunder_FRONT_primary: Tail
+  #  m_tail_snakeunder_FRONT_secondary: Tail
+  #colorLinks:
+  #  m_tail_snakeunder_BEHIND_primary: m_tail_snakeunder_FRONT_primary
+  #  m_tail_snakeunder_BEHIND_secondary: m_tail_snakeunder_FRONT_secondary
+  sprites:
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakeunder_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/fixedskyrattails.rsi
+    state: m_tail_snakeunder_BEHIND_secondary
+  #shader: unshaded # Redshift - i dont think we have this
+
+- type: marking
+  id: TailSpade
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_spade_BEHIND_primary: TailBehind
+  #  m_tail_spade_FRONT_primary: TailOversuit
+  #colorLinks:
+  #  m_tail_spade_BEHIND_primary: m_tail_spade_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/spade.rsi
+    state: m_tail_spade_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/spade.rsi
+    state: m_tail_spade_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailSpikes
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_spikes_BEHIND: TailBehind
+  #  m_tail_spikes_FRONT: TailOversuit
+  #colorLinks:
+  #  m_tail_spikes_BEHIND: m_tail_spikes_FRONT
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/spikes.rsi
+    state: m_tail_spikes_FRONT
+  - sprite: _Floof/Mobs/Customization/Skyrattails/spikes.rsi
+    state: m_tail_spikes_BEHIND
+  #End Den additions
+
+- type: marking
+  id: TailSquirrel
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_squirrel_BEHIND: TailBehind
+  #  m_tail_squirrel_FRONT: Tail
+  #colorLinks:
+  #  m_tail_squirrel_BEHIND: m_tail_squirrel_FRONT
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/squirrel.rsi
+    state: m_tail_squirrel_FRONT
+  - sprite: _Floof/Mobs/Customization/Skyrattails/squirrel.rsi
+    state: m_tail_squirrel_BEHIND
+  #End Den additions
+
+- type: marking
+  id: TailStraightTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_straighttail_BEHIND_primary: TailBehind
+  #  m_tail_straighttail_FRONT_primary: Tail
+  #colorLinks:
+  #  m_tail_straighttail_BEHIND_primary: m_tail_straighttail_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/straight.rsi
+    state: m_tail_straighttail_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/straight.rsi
+    state: m_tail_straighttail_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailStripe
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_stripe_BEHIND_primary: TailBehind
+  #  m_tail_stripe_BEHIND_secondary: TailBehind
+  #  m_tail_stripe_FRONT_primary: Tail
+  #  m_tail_stripe_FRONT_secondary: Tail
+  #colorLinks:
+  #  m_tail_stripe_BEHIND_primary: m_tail_stripe_FRONT_primary
+  #  m_tail_stripe_BEHIND_secondary: m_tail_stripe_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/stripe.rsi
+    state: m_tail_stripe_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/stripe.rsi
+    state: m_tail_stripe_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/stripe.rsi
+    state: m_tail_stripe_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/stripe.rsi
+    state: m_tail_stripe_BEHIND_secondary
+  #End Den additions
+
+# TODO: overhaul wag so it work good
+#- type: marking
+#  id: TailMawWag
+#  bodyPart: Tail
+#  markingCategory: Tail
+#  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+#  layering:
+#    m_tail_tailmawwag_BEHIND_primary: TailBehind
+#    m_tail_tailmawwag_FRONT_primary: Tail
+#  colorLinks:
+#    m_tail_tailmawwag_BEHIND_primary: m_tail_tailmawwag_FRONT_primary
+#  sprites:
+#  - sprite: Floof/Mobs/Customization/Skyrattails/mawwag.rsi
+#    state: m_tail_tailmawwag_FRONT
+#  - sprite: Floof/Mobs/Customization/Skyrattails/mawwag.rsi
+#    state: m_tail_tailmawwag_BEHIND
+
+- type: marking
+  id: TailThreeCat
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_threecat_BEHIND_primary: TailBehind
+  #  m_tail_threecat_FRONT_primary: Tail
+  #colorLinks:
+  #  m_tail_threecat_BEHIND_primary: m_tail_threecat_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/threecat.rsi
+    state: m_tail_threecat_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/threecat.rsi
+    state: m_tail_threecat_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailTiger
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_tiger_BEHIND_primary: TailBehind
+  #  m_tail_tiger_BEHIND_secondary: TailBehind
+  #  m_tail_tiger_BEHIND_tertiary: TailBehind
+  #  m_tail_tiger_FRONT_primary: Tail
+  #  m_tail_tiger_FRONT_secondary: Tail
+  #  m_tail_tiger_FRONT_tertiary: Tail
+  #colorLinks:
+  #  m_tail_tiger_BEHIND_primary: m_tail_tiger_FRONT_primary
+  #  m_tail_tiger_BEHIND_secondary: m_tail_tiger_FRONT_secondary
+  #  m_tail_tiger_BEHIND_tertiary: m_tail_tiger_FRONT_tertiary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/tiger.rsi
+    state: m_tail_tiger_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/tiger.rsi
+    state: m_tail_tiger_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/tiger.rsi
+    state: m_tail_tiger_FRONT_tertiary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/tiger.rsi
+    state: m_tail_tiger_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/tiger.rsi
+    state: m_tail_tiger_BEHIND_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/tiger.rsi
+    state: m_tail_tiger_BEHIND_tertiary
+  #End Den additions
+
+- type: marking
+  id: TailTiger2
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_tiger2_BEHIND_primary: TailBehind
+  #  m_tail_tiger2_BEHIND_secondary: TailBehind
+  #  m_tail_tiger2_BEHIND_tertiary: TailBehind
+  #  m_tail_tiger2_FRONT_primary: Tail
+  #  m_tail_tiger2_FRONT_secondary: Tail
+  #  m_tail_tiger2_FRONT_tertiary: Tail
+  #colorLinks:
+  #  m_tail_tiger2_BEHIND_primary: m_tail_tiger2_FRONT_primary
+  #  m_tail_tiger2_BEHIND_secondary: m_tail_tiger2_FRONT_secondary
+  #  m_tail_tiger2_BEHIND_tertiary: m_tail_tiger2_FRONT_tertiary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/tiger2.rsi
+    state: m_tail_tiger2_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/tiger2.rsi
+    state: m_tail_tiger2_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/tiger2.rsi
+    state: m_tail_tiger2_FRONT_tertiary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/tiger2.rsi
+    state: m_tail_tiger2_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/tiger2.rsi
+    state: m_tail_tiger2_BEHIND_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/tiger2.rsi
+    state: m_tail_tiger2_BEHIND_tertiary
+  #End Den additions
+
+- type: marking
+  id: TailTwoCat
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_twocat_BEHIND_primary: TailBehind
+  #  m_tail_twocat_FRONT_primary: Tail
+  #colorLinks:
+  #  m_tail_twocat_BEHIND_primary: m_tail_twocat_FRONT_primary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/twocat.rsi
+    state: m_tail_twocat_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/twocat.rsi
+    state: m_tail_twocat_BEHIND_primary
+  #End Den additions
+
+- type: marking
+  id: TailWah
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_wah_BEHIND_primary: TailBehind
+  #  m_tail_wah_BEHIND_secondary: TailBehind
+  #  m_tail_wah_FRONT_primary: Tail
+  #  m_tail_wah_FRONT_secondary: Tail
+  #colorLinks:
+  #  m_tail_wah_BEHIND_primary: m_tail_wah_FRONT_primary
+  #  m_tail_wah_BEHIND_secondary: m_tail_wah_FRONT_secondary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/wah.rsi
+    state: m_tail_wah_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/wah.rsi
+    state: m_tail_wah_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/wah.rsi
+    state: m_tail_wah_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/wah.rsi
+    state: m_tail_wah_BEHIND_secondary
+  #End Den additions
+
+- type: marking
+  id: TailWolf
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_wolf_BEHIND: TailBehind
+  #  m_tail_wolf_FRONT: Tail
+  #colorLinks:
+  #  m_tail_wolf_BEHIND: m_tail_wolf_FRONT
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/wolf.rsi
+    state: m_tail_wolf_FRONT
+  - sprite: _Floof/Mobs/Customization/Skyrattails/wolf.rsi
+    state: m_tail_wolf_BEHIND
+  #End Den additions
+
+- type: marking
+  id: TailZorgoia
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni]
+  #layering: # Redshift - no layering/colorLinks
+  #  m_tail_zorgoia_BEHIND_primary: TailBehind
+  #  m_tail_zorgoia_BEHIND_secondary: TailBehind
+  #  m_tail_zorgoia_BEHIND_tertiary: TailBehind
+  #  m_tail_zorgoia_FRONT_primary: Tail
+  #  m_tail_zorgoia_FRONT_secondary: Tail
+  #  m_tail_zorgoia_FRONT_tertiary: Tail
+  #colorLinks:
+  #  m_tail_zorgoia_BEHIND_primary: m_tail_zorgoia_FRONT_primary
+  #  m_tail_zorgoia_BEHIND_secondary: m_tail_zorgoia_FRONT_secondary
+  #  m_tail_zorgoia_BEHIND_tertiary: m_tail_zorgoia_FRONT_tertiary
+  #Begin Den additions - organized skyrattails textures
+  sprites:
+  - sprite: _Floof/Mobs/Customization/Skyrattails/zorgoia.rsi
+    state: m_tail_zorgoia_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/zorgoia.rsi
+    state: m_tail_zorgoia_FRONT_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/zorgoia.rsi
+    state: m_tail_zorgoia_FRONT_tertiary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/zorgoia.rsi
+    state: m_tail_zorgoia_BEHIND_primary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/zorgoia.rsi
+    state: m_tail_zorgoia_BEHIND_secondary
+  - sprite: _Floof/Mobs/Customization/Skyrattails/zorgoia.rsi
+    state: m_tail_zorgoia_BEHIND_tertiary
+  #End Den additions

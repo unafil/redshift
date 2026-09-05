@@ -61,9 +61,9 @@
       points: 1
       required: false
     HeadTop:
-      points: 1
-      required: true
-      defaultMarkings: [ RodentiaHeadTopEarDefault ]
+      points: 3 # Redshift - harvey gaming. was 1
+      required: false
+      # defaultMarkings: [ RodentiaHeadTopEarDefault ] # fuuuuck man
     HeadSide:
       points: 1
       required: false
