@@ -87,3 +87,8 @@
   license: "CC-BY-4.0"
   copyright: "Gilzar - Winner of the Delta V art contest"
   source: "https://discord.gg/deltav"
+
+- files: ["Superstructure14.png"]
+  license: "CC-BY-SA-4.0"
+  copyright: "unafil (GitHub)"
+  source: "https://github.com/unafil/redshift"
