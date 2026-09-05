@@ -440,5 +440,5 @@
         !type:EyeColoring
           negative: true
   sprites:
-  - sprite: _ADT/_EE/Mobs/Customization/augments/headaugs.rsi
+  - sprite: _ADT/Mobs/Customization/augments/headaugs.rsi
     state: iron_jaw
