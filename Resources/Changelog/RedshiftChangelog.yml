@@ -254,3 +254,22 @@
   id: 1789
   time: '2026-05-08T06:29:00.0000000+00:00'
   url: https://github.com/unafil/redshift/pull/40
+- author: unafil
+  changes:
+  - message: It's a huge day for magical jackalopes and stuttering lizards.
+    type: Add
+  - message: You can no longer jork it with no genitals. I think. I didn't actually
+      test this one
+    type: Tweak
+  id: 1790
+  time: '2026-09-05T04:30:58.0000000+00:00'
+  url: https://github.com/unafil/redshift/pull/44
+- author: unafil
+  changes:
+  - message: Redshift lobby art! Singular!
+    type: Add
+  - message: DV lobby art! Plural!
+    type: Remove
+  id: 1791
+  time: '2026-09-05T07:45:23.0000000+00:00'
+  url: https://github.com/unafil/redshift/pull/45
