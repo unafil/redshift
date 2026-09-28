@@ -1,4 +1,6 @@
-i'll update this readme someday
+12/24/2025: i'll update this readme someday. 
+9/27/2026: Today is not that day, I just update this file when I need to force a new version for robustcdn.
+- unafil
 
 <div class="header" align="center">  
 <img alt="Delta-V Logo" width="128" height="128" src="https://raw.githubusercontent.com/DeltaV-Station/Delta-v/master/Resources/Textures/Logo/logo.png" />
